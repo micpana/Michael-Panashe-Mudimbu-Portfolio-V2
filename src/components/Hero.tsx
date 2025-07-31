@@ -1,19 +1,14 @@
 import React from 'react';
 import { Download, Github, Linkedin } from 'lucide-react';
+import IntroImage from '../images/intro_image.jpg'
+import MichaelPanasheMudimbuCV from '../documents/Michael Panashe Mudimbu - CV.pdf';
 
 const Hero: React.FC = () => {
-  // Placeholder for intro image - replace with actual image when available
-  // const introImageSrc = IntroImage; // Uncomment when actual image is available
-  const introImageSrc = 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1600';
-  
-  // Placeholder for CV - replace with actual CV when available
   const handleDownloadCV = () => {
-    // const link = document.createElement('a');
-    // link.href = MichaelPanasheMudimbuCV;
-    // link.download = 'Michael Panashe Mudimbu - CV.pdf';
-    // link.click();
-    // This will be replaced with actual CV import
-    alert('CV download functionality will be implemented with actual file');
+    const link = document.createElement('a');
+    link.href = MichaelPanasheMudimbuCV;
+    link.download = 'Michael Panashe Mudimbu - CV.pdf';
+    link.click();
   };
 
   return (
@@ -84,7 +79,7 @@ const Hero: React.FC = () => {
             <div className="relative">
               <div className="w-80 h-80 rounded-2xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
                 <img
-                  src={introImageSrc}
+                  src={IntroImage}
                   alt="Michael Panashe Mudimbu"
                   className="w-full h-full object-cover"
                 />
