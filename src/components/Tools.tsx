@@ -7,6 +7,7 @@ import {
   GitBranch, 
   Container, 
   Terminal, 
+  Server,
   Database as DatabaseIcon 
 } from 'lucide-react';
 
@@ -20,7 +21,8 @@ const Tools: React.FC = () => {
     { icon: DatabaseIcon, name: 'SQL', color: 'from-orange-500 to-red-500' },
     { icon: GitBranch, name: 'Git', color: 'from-orange-600 to-red-600' },
     { icon: Container, name: 'Docker', color: 'from-blue-400 to-blue-600' },
-    { icon: Terminal, name: 'Ubuntu', color: 'from-orange-500 to-orange-600' }
+    { icon: Terminal, name: 'Ubuntu', color: 'from-orange-500 to-orange-600' },
+    { icon: Server, name: 'NGINX', color: 'from-orange-500 to-orange-600' },
   ];
 
   return (

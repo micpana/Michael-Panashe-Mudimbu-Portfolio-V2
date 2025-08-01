@@ -1,5 +1,6 @@
 import React from 'react';
 import { User, Award, Target } from 'lucide-react';
+import { ProjectsData } from '../data/projects_data';
 
 const About: React.FC = () => {
   return (
@@ -66,11 +67,11 @@ const About: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 gap-6">
             <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">17+</div>
-              <div className="text-gray-600 dark:text-gray-300">Projects Completed</div>
+              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">{ProjectsData.length}+</div>
+              <div className="text-gray-600 dark:text-gray-300">Public Projects Completed</div>
             </div>
             <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">3+</div>
+              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">7+</div>
               <div className="text-gray-600 dark:text-gray-300">Years Experience</div>
             </div>
             <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">

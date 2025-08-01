@@ -1,54 +1,47 @@
 import React from 'react';
-import { GraduationCap, Award, BookOpen } from 'lucide-react';
+import { GraduationCap, Award, BookOpen, BookIcon } from 'lucide-react';
 
 const Education: React.FC = () => {
   const education = [
     {
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'University of Zimbabwe',
-      period: '2018 - 2022',
+      degree: 'Bachelor of Technology Honours Degree in Information Technology',
+      institution: 'Harare Institute of Technology',
+      period: '2016 - 2025 (deferment inbetween)',
       location: 'Harare, Zimbabwe',
       description: [
-        'Graduated with First Class Honours',
-        'Specialized in Software Engineering and Artificial Intelligence',
-        'Dissertation: "AI-Powered Skin Condition Diagnosis Mobile Application"',
-        'Relevant coursework: Data Structures, Algorithms, Database Systems, Machine Learning'
+        'Dissertation: "AI-Powered Skin Facial Condition Diagnosis Mobile Application"',
+        // 'Relevant coursework: Data Structures, Algorithms, Database Systems, Machine Learning'
       ],
       icon: GraduationCap
     },
     {
       degree: 'Advanced Level Certificate',
-      institution: 'Local High School',
-      period: '2016 - 2017',
-      location: 'Zimbabwe',
+      institution: 'Kwekwe High School',
+      period: '2014 - 2015',
+      location: 'Kwekwe, Zimbabwe',
       description: [
-        'Mathematics, Physics, and Computer Science',
-        'Achieved excellent grades across all subjects',
-        'Developed early interest in programming and technology',
-        'Participated in coding competitions and tech clubs'
+        // 'Mathematics, Physics, and Computer Science',
       ],
       icon: BookOpen
+    },
+    {
+      degree: 'Ordinary Level Certificate',
+      institution: 'Rio Tinto Zhombe High School',
+      period: '2010 - 2013',
+      location: 'Zhombe, Zimbabwe',
+      description: [
+        // 'Mathematics, Physics, Biology, Integrated Science, Geography, Accounting, History, English Language, and Shona Language'
+      ],
+      icon: BookIcon
     }
   ];
 
   const certifications = [
     {
-      name: 'AWS Certified Developer',
-      issuer: 'Amazon Web Services',
-      year: '2023',
+      name: 'Computer Operations and Packages',
+      issuer: 'HEXCO',
+      year: '2013',
       description: 'Cloud development and deployment expertise'
-    },
-    {
-      name: 'React Native Certification',
-      issuer: 'Meta',
-      year: '2022',
-      description: 'Advanced mobile app development with React Native'
-    },
-    {
-      name: 'Python for Data Science',
-      issuer: 'IBM',
-      year: '2021',
-      description: 'Data analysis and machine learning with Python'
     }
   ];
 
@@ -156,8 +149,7 @@ const Education: React.FC = () => {
               </h4>
               <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                 I believe in lifelong learning and staying updated with the latest technologies. 
-                I regularly participate in online courses, attend tech conferences, and contribute 
-                to open-source projects to enhance my skills and knowledge.
+                I take every opportunity I can to enhance my skills and knowledge.
               </p>
             </div>
           </div>

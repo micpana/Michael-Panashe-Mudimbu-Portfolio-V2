@@ -6,40 +6,36 @@ const Experience: React.FC = () => {
     {
       title: 'Freelance Software Developer',
       company: 'Self-Employed',
-      period: '2021 - Present',
+      period: '2019 - Present',
       location: 'Remote',
       description: [
-        'Developed 17+ web applications and mobile apps for clients across various industries',
-        'Specialized in React.js, React Native, Python, and Flask development',
-        'Built AI-powered solutions including trading systems and mobile health applications',
-        'Implemented secure payment systems and RESTful APIs for e-commerce platforms',
-        'Maintained 100% client satisfaction rate through quality delivery and communication'
+        "Developing web applications using a ReactJS, Python, MongoDB, and REST API technology stack",
+        "Building and maintaining websites and web applications for various clients",
+        "Developing mobile applications using React Native, Python, MongoDB, and REST API technology stack",
+        "Creating AI-driven systems using Python for various domains, including data analysis and automation"
       ]
     },
     {
-      title: 'Full Stack Developer',
-      company: 'Various Client Projects',
-      period: '2020 - 2021',
-      location: 'Remote',
-      description: [
-        'Collaborated with international clients to deliver custom software solutions',
-        'Developed responsive web applications using modern JavaScript frameworks',
-        'Created mobile applications with offline functionality and data synchronization',
-        'Implemented chatbot solutions for WhatsApp and Telegram platforms',
-        'Optimized application performance and implemented security best practices'
-      ]
-    },
-    {
-      title: 'Software Development Intern',
-      company: 'Tech Startup',
+      title: 'Intern FullStack Developer',
+      company: 'Health Informatics Training and Research Advancement Center (HITRAC)',
       period: '2019 - 2020',
-      location: 'Zimbabwe',
+      location: 'Harare, Zimbabwe',
       description: [
-        'Gained hands-on experience in full-stack web development',
-        'Worked with senior developers on large-scale applications',
-        'Learned industry best practices for code quality and testing',
-        'Contributed to open-source projects and internal tools',
-        'Developed strong problem-solving and debugging skills'
+        "Developed frontend components using ReactJS and mobile applications with React Native",
+        "Assisted in backend development using Java Spring Boot",
+        "Trained healthcare professionals on the use of Impilo, Zimbabwe's Electronic Health Records (EHR) system",
+        "Provided on-the-ground support for EHR implementation at Arcadia Clinic and Mbare Poly Clinic"
+      ]
+    },
+    {
+      title: 'Intern Web Developer',
+      company: 'Hansole Investments',
+      period: '2019 - 2019',
+      location: 'Harare, Zimbabwe',
+      description: [
+        "Developed websites for clients using WordPress",
+        "Managed bulk SMS platform operations, ensuring seamless delivery and performance",
+        "Handled client communications, including renewal notices for domains and hosting"
       ]
     }
   ];
