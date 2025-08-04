@@ -41,7 +41,7 @@ const Education: React.FC = () => {
       name: 'Computer Operations and Packages',
       issuer: 'HEXCO',
       year: '2013',
-      description: 'Cloud development and deployment expertise'
+      description: 'Foundational training in essential computer skills, and basic IT operations'
     }
   ];
 
