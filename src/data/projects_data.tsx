@@ -284,9 +284,57 @@ import WisdomLibraryImage11 from '../images/projects/Wisdom Library/11.png'
 import WisdomLibraryImage12 from '../images/projects/Wisdom Library/12.png'
 import WisdomLibraryImage13 from '../images/projects/Wisdom Library/13.png'
 // ****************************************************************************
+// Golden Knot Holdings *******************************************************
+import GoldenKnotHoldingsImage1 from '../images/projects/Golden Knot Holdings/1.png'
+import GoldenKnotHoldingsImage2 from '../images/projects/Golden Knot Holdings/2.png'
+import GoldenKnotHoldingsImage3 from '../images/projects/Golden Knot Holdings/3.png'
+import GoldenKnotHoldingsImage4 from '../images/projects/Golden Knot Holdings/4.png'
+import GoldenKnotHoldingsImage5 from '../images/projects/Golden Knot Holdings/5.png'
+import GoldenKnotHoldingsImage6 from '../images/projects/Golden Knot Holdings/6.png'
+import GoldenKnotHoldingsImage7 from '../images/projects/Golden Knot Holdings/7.png'
+import GoldenKnotHoldingsImage8 from '../images/projects/Golden Knot Holdings/8.png'
+import GoldenKnotHoldingsImage9 from '../images/projects/Golden Knot Holdings/9.png'
+import GoldenKnotHoldingsImage10 from '../images/projects/Golden Knot Holdings/10.png'
+import GoldenKnotHoldingsImage11 from '../images/projects/Golden Knot Holdings/11.png'
+import GoldenKnotHoldingsImage12 from '../images/projects/Golden Knot Holdings/12.png'
+import GoldenKnotHoldingsImage13 from '../images/projects/Golden Knot Holdings/13.png'
+import GoldenKnotHoldingsImage14 from '../images/projects/Golden Knot Holdings/14.png'
+import GoldenKnotHoldingsImage15 from '../images/projects/Golden Knot Holdings/15.png'
+import GoldenKnotHoldingsImage16 from '../images/projects/Golden Knot Holdings/16.png'
+import GoldenKnotHoldingsImage17 from '../images/projects/Golden Knot Holdings/17.png'
+import GoldenKnotHoldingsImage18 from '../images/projects/Golden Knot Holdings/18.png'
+import GoldenKnotHoldingsImage19 from '../images/projects/Golden Knot Holdings/19.png'
+import GoldenKnotHoldingsImage20 from '../images/projects/Golden Knot Holdings/20.png'
+import GoldenKnotHoldingsImage21 from '../images/projects/Golden Knot Holdings/21.png'
+import GoldenKnotHoldingsImage22 from '../images/projects/Golden Knot Holdings/22.png'
+import GoldenKnotHoldingsImage23 from '../images/projects/Golden Knot Holdings/23.png'
+import GoldenKnotHoldingsImage24 from '../images/projects/Golden Knot Holdings/24.png'
+import GoldenKnotHoldingsImage25 from '../images/projects/Golden Knot Holdings/25.png'
+import GoldenKnotHoldingsImage26 from '../images/projects/Golden Knot Holdings/26.png'
+// ****************************************************************************
 
 // list of projects done and their attributes
 export const ProjectsData = [
+    {
+        title: 'Golden Knot Holdings',
+        category: 'Web App',
+        description: `
+            The Golden Knot Holdings Executive Dashboard is a comprehensive, centralized digital system designed to modernize and integrate the core business operations of the organization. Its purpose is to replace fragmented manual processes with a unified platform that delivers real-time visibility and stringent control across all departments and branches. The project's core function is to centralize management of financial and client-related workflows, including tracking Collections revenue across multiple currencies (USD and ZWG), digitizing the Expenses approval cycle, and managing the full lifecycle of client Claims (legal and funeral).
+
+            A foundational element of the system is its robust security architecture, which features Role-Based Authentication to differentiate between Admin and standard User access, critically paired with Branch-Level Access restrictions. This security model, powered by Supabase and PostgreSQL's Row-Level Security (RLS), ensures that regular users can only interact with data pertinent to their specific branch, while executives maintain a global, aggregated view of performance. Furthermore, the dashboard serves as a vital business intelligence tool, offering granular tracking of Targets & Actuals for performance evaluation across different Strategic Business Units (SBUs) and departments. Overall, the project represents a strategic enterprise management solution built on a modern React 18 + TypeScript and Supabase stack, aimed at improving operational efficiency, data security, and strategic decision-making.
+        `,
+        main_url: 'https://github.com/micpana/Golden-Knot-Holdings',
+        backup_url: '#',
+        images: [
+            GoldenKnotHoldingsImage1, GoldenKnotHoldingsImage2, GoldenKnotHoldingsImage3, GoldenKnotHoldingsImage4, GoldenKnotHoldingsImage5,
+            GoldenKnotHoldingsImage6, GoldenKnotHoldingsImage7, GoldenKnotHoldingsImage8, GoldenKnotHoldingsImage9, GoldenKnotHoldingsImage10,
+            GoldenKnotHoldingsImage11, GoldenKnotHoldingsImage12, GoldenKnotHoldingsImage13, GoldenKnotHoldingsImage14, GoldenKnotHoldingsImage15,
+            GoldenKnotHoldingsImage16, GoldenKnotHoldingsImage17, GoldenKnotHoldingsImage18, GoldenKnotHoldingsImage19, GoldenKnotHoldingsImage20,
+            GoldenKnotHoldingsImage21, GoldenKnotHoldingsImage22, GoldenKnotHoldingsImage23, GoldenKnotHoldingsImage24, GoldenKnotHoldingsImage25,
+            GoldenKnotHoldingsImage26
+        ],
+        technologies: 'ReactJs, TypeScript, Supabase, PostgreSQL, Tailwind CSS'
+    },
     {
         title: 'Wisdom Library',
         category: 'Web App',
