@@ -4,10 +4,24 @@ import { Briefcase, Calendar } from 'lucide-react';
 const Experience: React.FC = () => {
   const experiences = [
     {
+      title: 'Software Developer (Fullstack & AI)',
+      company: 'Nuvantica Software',
+      period: '2025 - Present',
+      location: 'Czech Republic',
+      type: 'Remote',
+      description: [
+        "Architecting and developing AI-dense software solutions using a fullstack architecture comprising React, TypeScript, and Tailwind CSS on the frontend, with Python and FastAPI on the backend.",
+        "Implementing advanced AI capabilities, including Computer Vision and LLM integrations.",
+        "Managing production deployments on Ubuntu servers using Nginx and ASGI, ensuring high availability and performance.",
+        "Designing and maintaining robust PostgreSQL database schemas for complex data requirements."
+      ]
+    },
+    {
       title: 'Freelance Software Developer',
       company: 'Self-Employed',
       period: '2019 - Present',
-      location: 'Remote',
+      location: 'Worldwide',
+      type: 'Remote',
       description: [
         "Developing web applications using a ReactJS, Python, MongoDB, and REST API technology stack",
         "Building and maintaining websites and web applications for various clients",
@@ -16,10 +30,23 @@ const Experience: React.FC = () => {
       ]
     },
     {
+      title: 'Fullstack Software Developer ',
+      company: 'ESpace',
+      period: '2021 - 2023',
+      location: 'Harare, Zimbabwe',
+      type: 'Remote',
+      description: [
+        "Collaborated remotely as the primary Fullstack Developer, delivering web and mobile solutions for clients sourced by the agency.",
+        "Built scalable applications using ReactJS, React Native, Python, and MongoDB.",
+        "Translated client requirements into functional, high-performance software products within strict deadlines."
+      ]
+    },
+    {
       title: 'Intern FullStack Developer',
       company: 'Health Informatics Training and Research Advancement Center (HITRAC)',
       period: '2019 - 2020',
       location: 'Harare, Zimbabwe',
+      type: 'On-site',
       description: [
         "Developed frontend components using ReactJS and mobile applications with React Native",
         "Assisted in backend development using Java Spring Boot",
@@ -32,6 +59,7 @@ const Experience: React.FC = () => {
       company: 'Hansole Investments',
       period: '2019 - 2019',
       location: 'Harare, Zimbabwe',
+      type: 'On-site',
       description: [
         "Developed websites for clients using WordPress",
         "Managed bulk SMS platform operations, ensuring seamless delivery and performance",
@@ -82,7 +110,7 @@ const Experience: React.FC = () => {
                   </div>
 
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                    {exp.location}
+                    {exp.location} – {exp.type}
                   </p>
 
                   <ul className="space-y-2">
