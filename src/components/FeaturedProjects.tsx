@@ -6,7 +6,7 @@ import { ProjectsData } from '../data/projects_data';
 
 const FeaturedProjects: React.FC = () => {
   // Show first 5 projects as featured
-  const featuredProjects = ProjectsData.slice(0, 5);
+  const featuredProjects = ProjectsData.slice(0, 6);
 
   return (
     <section className="py-20 bg-white dark:bg-gray-900" id="projects">
