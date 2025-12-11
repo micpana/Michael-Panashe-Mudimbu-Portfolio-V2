@@ -8,7 +8,9 @@ import {
   Container, 
   Terminal, 
   Server,
-  Database as DatabaseIcon 
+  Database as DatabaseIcon, 
+  Network,
+  NetworkIcon
 } from 'lucide-react';
 
 const Tools: React.FC = () => {
@@ -19,6 +21,10 @@ const Tools: React.FC = () => {
     { icon: Coins, name: 'Solidity', color: 'from-gray-700 to-gray-900' },
     { icon: Database, name: 'MongoDB', color: 'from-green-500 to-green-600' },
     { icon: DatabaseIcon, name: 'SQL', color: 'from-orange-500 to-red-500' },
+    { icon: Database, name: 'PostgreSQL', color: 'from-blue-600 to-blue-800' },
+    { icon: DatabaseIcon, name: 'Supabase', color: 'from-yellow-400 to-yellow-600' },
+    { icon: Network, name: 'RestAPI', color: 'from-yellow-500 to-yellow-700' },
+    { icon: NetworkIcon, name: 'FastAPI', color: 'from-green-400 to-green-600' },
     { icon: GitBranch, name: 'Git', color: 'from-orange-600 to-red-600' },
     { icon: Container, name: 'Docker', color: 'from-blue-400 to-blue-600' },
     { icon: Terminal, name: 'Ubuntu', color: 'from-orange-500 to-orange-600' },
