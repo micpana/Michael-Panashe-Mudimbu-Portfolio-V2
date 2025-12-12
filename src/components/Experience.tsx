@@ -4,16 +4,17 @@ import { Briefcase, Calendar } from 'lucide-react';
 const Experience: React.FC = () => {
   const experiences = [
     {
-      title: 'Software Developer (Fullstack & AI)',
+      title: 'Contract Fullstack Software Engineer (AI & Systems)',
       company: 'Nuvantica Software',
       period: '2025 - Present',
       location: 'Czech Republic',
       type: 'Remote',
       description: [
-        "Architecting and developing AI-dense software solutions using a fullstack architecture comprising React, TypeScript, and Tailwind CSS on the frontend, with Python and FastAPI on the backend.",
-        "Implementing advanced AI capabilities, including Computer Vision and LLM integrations.",
-        "Managing production deployments on Ubuntu servers using Nginx and ASGI, ensuring high availability and performance.",
-        "Designing and maintaining robust PostgreSQL database schemas for complex data requirements."
+        "Serve as the primary external engineer, taking full end-to-end ownership of development from coding to production deployment.",
+        "Build AI-focused systems using React, TypeScript, Tailwind CSS, and backend services in Python (FastAPI).",
+        "Implement practical AI solutions including Computer Vision and LLM-driven workflows.",
+        "Handle all infrastructure setup and maintenance using Ubuntu, and Nginx for production reliability.",
+        "Design and manage relational data structures using PostgreSQL."
       ]
     },
     {
@@ -30,19 +31,19 @@ const Experience: React.FC = () => {
       ]
     },
     {
-      title: 'Fullstack Software Developer ',
+      title: 'Contract Fullstack Software Developer',
       company: 'ESpace',
       period: '2021 - 2023',
       location: 'Harare, Zimbabwe',
       type: 'Remote',
       description: [
-        "Collaborated remotely as the primary Fullstack Developer, delivering web and mobile solutions for clients sourced by the agency.",
-        "Built scalable applications using ReactJS, React Native, Python, and MongoDB.",
-        "Translated client requirements into functional, high-performance software products within strict deadlines."
+        "Engaged as the dedicated external developer responsible for executing all software development tasks for agency clients.",
+        "Built and deployed full-stack applications using ReactJS, React Native, Python, and MongoDB.",
+        "Operated as the sole engineer on assigned projects, converting requirements directly into complete, production-ready systems."
       ]
     },
     {
-      title: 'Intern FullStack Developer',
+      title: 'Intern Fullstack Software Developer',
       company: 'Health Informatics Training and Research Advancement Center (HITRAC)',
       period: '2019 - 2020',
       location: 'Harare, Zimbabwe',
