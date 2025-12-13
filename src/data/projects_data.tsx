@@ -312,9 +312,36 @@ import GoldenKnotHoldingsImage24 from '../images/projects/Golden Knot Holdings/2
 import GoldenKnotHoldingsImage25 from '../images/projects/Golden Knot Holdings/25.png'
 import GoldenKnotHoldingsImage26 from '../images/projects/Golden Knot Holdings/26.png'
 // ****************************************************************************
+// Skinraya *******************************************************************
+import SkinrayaImage1 from '../images/projects/Skinraya/1.png'
+import SkinrayaImage2 from '../images/projects/Skinraya/2.png'
+import SkinrayaImage3 from '../images/projects/Skinraya/3.png'
+import SkinrayaImage4 from '../images/projects/Skinraya/4.png'
+import SkinrayaImage5 from '../images/projects/Skinraya/5.png'
+import SkinrayaImage6 from '../images/projects/Skinraya/6.png'
+import SkinrayaImage7 from '../images/projects/Skinraya/7.png'
+import SkinrayaImage8 from '../images/projects/Skinraya/8.png'
+import SkinrayaImage9 from '../images/projects/Skinraya/9.png'
+// ****************************************************************************
 
 // list of projects done and their attributes
 export const ProjectsData = [
+    {
+        title: 'Skinraya',
+        category: 'Web App',
+        description: `
+            A B2B SaaS platform that acts as a virtual dermatologist for e-commerce brands. Skinraya / Renovality Health Hub uses real time computer vision to guide users through capturing a high quality selfie by validating lighting conditions, face positioning, and distance from the camera before triggering an automatic countdown and capture. This ensures consistent and reliable image inputs without requiring user expertise.
+
+            Once captured, the image is processed through an advanced segmentation model and supporting analysis functions to identify skin types and detect visible conditions such as wrinkles, texture, and hydration related indicators. These objective skin metrics are then interpreted by AI to generate clear, empathetic skin health summaries, along with personalized skincare recommendations and step by step routines. The routines are tailored to the individual and seamlessly aligned with the client’s product catalog, allowing brands to deliver data driven, highly personalized skincare experiences at scale.
+        `,
+        main_url: '#',
+        backup_url: '#',
+        images: [
+            SkinrayaImage1, SkinrayaImage2, SkinrayaImage3, SkinrayaImage4, SkinrayaImage5,
+            SkinrayaImage6, SkinrayaImage7, SkinrayaImage8, SkinrayaImage9
+        ],
+        technologies: 'ReactJs, TypeScript, Tailwind CSS, Python, FastAPI, PostgreSQL, Computer Vision, LLM Integration'
+    },
     {
         title: 'Golden Knot Holdings',
         category: 'Web App',
@@ -333,7 +360,7 @@ export const ProjectsData = [
             GoldenKnotHoldingsImage21, GoldenKnotHoldingsImage22, GoldenKnotHoldingsImage23, GoldenKnotHoldingsImage24, GoldenKnotHoldingsImage25,
             GoldenKnotHoldingsImage26
         ],
-        technologies: 'ReactJs, TypeScript, Supabase, PostgreSQL, Tailwind CSS'
+        technologies: 'ReactJs, TypeScript, Tailwind CSS, Supabase, PostgreSQL'
     },
     {
         title: 'Wisdom Library',
