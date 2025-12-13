@@ -340,7 +340,9 @@ export const ProjectsData = [
             SkinrayaImage1, SkinrayaImage2, SkinrayaImage3, SkinrayaImage4, SkinrayaImage5,
             SkinrayaImage6, SkinrayaImage7, SkinrayaImage8, SkinrayaImage9
         ],
-        technologies: 'ReactJs, TypeScript, Tailwind CSS, Python, FastAPI, PostgreSQL, Computer Vision, LLM Integration'
+        technologies: 'ReactJs, TypeScript, Tailwind CSS, Python, FastAPI, PostgreSQL, Computer Vision, LLM Integration',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Nuvantica Software', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Golden Knot Holdings',
@@ -360,7 +362,9 @@ export const ProjectsData = [
             GoldenKnotHoldingsImage21, GoldenKnotHoldingsImage22, GoldenKnotHoldingsImage23, GoldenKnotHoldingsImage24, GoldenKnotHoldingsImage25,
             GoldenKnotHoldingsImage26
         ],
-        technologies: 'ReactJs, TypeScript, Tailwind CSS, Supabase, PostgreSQL'
+        technologies: 'ReactJs, TypeScript, Tailwind CSS, Supabase, PostgreSQL',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Wisdom Library',
@@ -375,7 +379,9 @@ export const ProjectsData = [
             WisdomLibraryImage6, WisdomLibraryImage7, WisdomLibraryImage8, WisdomLibraryImage9, WisdomLibraryImage10,
             WisdomLibraryImage11, WisdomLibraryImage12, WisdomLibraryImage13
         ],
-        technologies: 'ReactJs, Python, Flask, SQLite, RESTful API, Paynow'
+        technologies: 'ReactJs, Python, Flask, SQLite, RESTful API, Paynow',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Beyond Motivation',
@@ -393,7 +399,9 @@ export const ProjectsData = [
             BeyondMotivationImage11, BeyondMotivationImage12, BeyondMotivationImage13, BeyondMotivationImage14, BeyondMotivationImage15,
             BeyondMotivationImage16
         ],
-        technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API, Paypal'
+        technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API, Paypal',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'ESpace', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Liberty Makuyana',
@@ -413,7 +421,9 @@ export const ProjectsData = [
             LibertyMakuyanaImage1, LibertyMakuyanaImage2, LibertyMakuyanaImage3, LibertyMakuyanaImage4, LibertyMakuyanaImage5, 
             LibertyMakuyanaImage6, LibertyMakuyanaImage7, LibertyMakuyanaImage8, LibertyMakuyanaImage9
         ],
-        technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API, Paypal'
+        technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API, Paypal',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Family Of Greatness',
@@ -434,7 +444,9 @@ export const ProjectsData = [
             FamilyofGreatnessImage26, FamilyofGreatnessImage27, FamilyofGreatnessImage28, FamilyofGreatnessImage29, FamilyofGreatnessImage30,
             FamilyofGreatnessImage31
         ],
-        technologies: 'React Native, Python, Flask, MongoDB, RESTful API'
+        technologies: 'React Native, Python, Flask, MongoDB, RESTful API',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Ocula Finance',
@@ -449,7 +461,9 @@ export const ProjectsData = [
             OculaFinanceImage7, OculaFinanceImage8, OculaFinanceImage9, OculaFinanceImage10, OculaFinanceImage11, OculaFinanceImage12,
             OculaFinanceImage13, OculaFinanceImage14, OculaFinanceImage15, OculaFinanceImage16
         ],
-        technologies: 'ReactJs, Python, Flask, AI / ML, MongoDB, RESTful API'
+        technologies: 'ReactJs, Python, Flask, AI / ML, MongoDB, RESTful API',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Personal', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Farmer Management App',
@@ -466,7 +480,9 @@ export const ProjectsData = [
             FarmerManagementApp13, FarmerManagementApp14, FarmerManagementApp15, FarmerManagementApp16, FarmerManagementApp17, FarmerManagementApp18,
             FarmerManagementApp19, FarmerManagementApp20
         ],
-        technologies: 'React Native, Python, Flask, MongoDB, SQLite, RESTful API'
+        technologies: 'React Native, Python, Flask, MongoDB, SQLite, RESTful API',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Personal', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Skin Sage',
@@ -486,7 +502,9 @@ export const ProjectsData = [
             SkinSageImage9, SkinSageImage10, SkinSageImage11, SkinSageImage12, SkinSageImage13, SkinSageImage14, SkinSageImage15,
             SkinSageImage16, SkinSageImage17, SkinSageImage18
         ],
-        technologies: 'React Native, Python, Flask, AI / ML, Computer Vision, MongoDB, RESTful API'
+        technologies: 'React Native, Python, Flask, AI / ML, Computer Vision, MongoDB, RESTful API',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Personal', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Eleanor Ross V1',
@@ -505,7 +523,9 @@ export const ProjectsData = [
             EleanorRossImage7, EleanorRossImage8, EleanorRossImage9, EleanorRossImage10, EleanorRossImage11, EleanorRossImage12, 
             EleanorRossImage13, EleanorRossImage14, EleanorRossImage15, EleanorRossImage16, EleanorRossImage17
         ],
-        technologies: 'ReactJs'
+        technologies: 'ReactJs',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'ESpace', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'A & E',
@@ -521,7 +541,9 @@ export const ProjectsData = [
             AandEImage1, AandEImage2, AandEImage3, AandEImage4, AandEImage5, AandEImage6, AandEImage7, AandEImage8, AandEImage9,
             AandEImage10, AandEImage11, AandEImage12, AandEImage13
         ],
-        technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API'
+        technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'ESpace', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Fafa Kitchen & Home',
@@ -535,7 +557,9 @@ export const ProjectsData = [
             FafaKitchenandHomeImage1, FafaKitchenandHomeImage2, FafaKitchenandHomeImage3, FafaKitchenandHomeImage4, FafaKitchenandHomeImage5,
             FafaKitchenandHomeImage6, FafaKitchenandHomeImage7, FafaKitchenandHomeImage8, FafaKitchenandHomeImage9, FafaKitchenandHomeImage10
         ],
-        technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API'
+        technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'ESpace', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Espace',
@@ -551,7 +575,9 @@ export const ProjectsData = [
             EspaceImage1, EspaceImage2, EspaceImage3, EspaceImage4, EspaceImage5, EspaceImage6, EspaceImage7, EspaceImage8, EspaceImage9,
             EspaceImage10, EspaceImage11, EspaceImage12, EspaceImage13, EspaceImage14, EspaceImage15
         ],
-        technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API'
+        technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'ESpace', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Ridley Valley Tutorial',
@@ -567,7 +593,9 @@ export const ProjectsData = [
             RidleyValleyTutorialImage9, RidleyValleyTutorialImage10, RidleyValleyTutorialImage11, RidleyValleyTutorialImage12,
             RidleyValleyTutorialImage13, RidleyValleyTutorialImage14
         ],
-        technologies: 'ReactJs'
+        technologies: 'ReactJs',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'First Medi-Careers Global',
@@ -587,7 +615,9 @@ export const ProjectsData = [
             FirstMediCareersGlobalImage17, FirstMediCareersGlobalImage18, FirstMediCareersGlobalImage19, FirstMediCareersGlobalImage20,
             FirstMediCareersGlobalImage21
         ],
-        technologies: 'ReactJs'
+        technologies: 'ReactJs',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Onfit',
@@ -603,7 +633,9 @@ export const ProjectsData = [
            OnfitImage1, OnfitImage2, OnfitImage3, OnfitImage4, OnfitImage5, OnfitImage6, OnfitImage7, OnfitImage8, OnfitImage9,
            OnfitImage10, OnfitImage11, OnfitImage12, OnfitImage13, OnfitImage14, OnfitImage15
         ],
-        technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API, Stripe'
+        technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API, Stripe',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'MyuzikHeadz',
@@ -617,7 +649,9 @@ export const ProjectsData = [
             MyuzikHeadz1, MyuzikHeadz2, MyuzikHeadz3, MyuzikHeadz4, MyuzikHeadz5, MyuzikHeadz6, MyuzikHeadz7, MyuzikHeadz8, MyuzikHeadz9,
             MyuzikHeadz10, MyuzikHeadz11, MyuzikHeadz12, MyuzikHeadz13
         ],
-        technologies: 'ReactJS, Python, Flask, MongoDB, RESTful API'
+        technologies: 'ReactJS, Python, Flask, MongoDB, RESTful API',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
     },
     {
         title: 'Bossalf International',
@@ -635,6 +669,8 @@ export const ProjectsData = [
             BossalfInternationalImage9, BossalfInternationalImage10, BossalfInternationalImage11, BossalfInternationalImage12,
             BossalfInternationalImage13
         ],
-        technologies: 'ReactJs'
+        technologies: 'ReactJs',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
     },
 ]

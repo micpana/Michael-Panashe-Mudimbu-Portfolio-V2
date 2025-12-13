@@ -10,6 +10,8 @@ interface Project {
   backup_url: string;
   images: string[];
   technologies: string;
+  build_type: 'Solo' | 'Team'; // Field for 'Solo' or 'Team' build
+  built_under: string; // Field for Company Name, 'Freelancer', or 'Personal' project
 }
 
 interface ProjectCardProps {
@@ -46,6 +48,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
           {project.description.slice(0, 150)}...
         </p>
+
+        {/* --- Build Metadata ----------------------------- */}
+        <div className="flex flex-wrap gap-3 mb-4">
+            <span className="text-xs font-medium text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Build:</span> {project.build_type}
+            </span>
+            <span className="text-xs font-medium text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Under:</span> {project.built_under}
+            </span>
+        </div>
+        {/* ------------------------------------------------ */}
 
         {/* Technologies */}
         <div className="mb-6">

@@ -80,6 +80,27 @@ const ProjectDetail: React.FC = () => {
                 <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                   {project.title}
                 </h1>
+
+                {/* --- Build Metadata ---------------- */}
+                <div className="flex flex-wrap gap-4 text-sm mt-4">
+                  <div className="flex items-center gap-1">
+                    <span className="font-semibold text-gray-700 dark:text-gray-200">
+                      Build Type:
+                    </span>
+                    <span className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-gray-800 dark:text-gray-100">
+                      {project.build_type}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <span className="font-semibold text-gray-700 dark:text-gray-200">
+                      Under:
+                    </span>
+                    <span className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-gray-800 dark:text-gray-100">
+                      {project.built_under}
+                    </span>
+                  </div>
+                </div>
+                {/* ----------------------------------- */}
               </div>
 
               {/* Description */}
