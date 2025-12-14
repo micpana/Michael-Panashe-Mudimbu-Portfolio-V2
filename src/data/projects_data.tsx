@@ -342,7 +342,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs, TypeScript, Tailwind CSS, Python, FastAPI, PostgreSQL, Computer Vision, LLM Integration',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Nuvantica Software', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Nuvantica Software', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Golden Knot Holdings',
@@ -364,7 +364,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs, TypeScript, Tailwind CSS, Supabase, PostgreSQL',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Freelancing', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Wisdom Library',
@@ -381,7 +381,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs, Python, Flask, SQLite, RESTful API, Paynow',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Freelancing', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Beyond Motivation',
@@ -401,7 +401,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API, Paypal',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'ESpace', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'ESpace', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Liberty Makuyana',
@@ -423,7 +423,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API, Paypal',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Freelancing', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Family Of Greatness',
@@ -446,7 +446,7 @@ export const ProjectsData = [
         ],
         technologies: 'React Native, Python, Flask, MongoDB, RESTful API',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Freelancing', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Ocula Finance',
@@ -463,7 +463,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs, Python, Flask, AI / ML, MongoDB, RESTful API',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Personal', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Personal', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Farmer Management App',
@@ -482,7 +482,7 @@ export const ProjectsData = [
         ],
         technologies: 'React Native, Python, Flask, MongoDB, SQLite, RESTful API',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Personal', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Personal', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Skin Sage',
@@ -504,7 +504,7 @@ export const ProjectsData = [
         ],
         technologies: 'React Native, Python, Flask, AI / ML, Computer Vision, MongoDB, RESTful API',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Personal', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Personal', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Eleanor Ross V1',
@@ -525,7 +525,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'ESpace', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'ESpace', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'A & E',
@@ -543,7 +543,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'ESpace', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'ESpace', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Fafa Kitchen & Home',
@@ -559,7 +559,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'ESpace', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'ESpace', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Espace',
@@ -577,7 +577,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'ESpace', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'ESpace', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Ridley Valley Tutorial',
@@ -595,7 +595,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Freelancing', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'First Medi-Careers Global',
@@ -617,7 +617,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Freelancing', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Onfit',
@@ -635,7 +635,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs, Python, Flask, MongoDB, RESTful API, Stripe',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Freelancing', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'MyuzikHeadz',
@@ -651,7 +651,7 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJS, Python, Flask, MongoDB, RESTful API',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Freelancing', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Bossalf International',
@@ -671,6 +671,6 @@ export const ProjectsData = [
         ],
         technologies: 'ReactJs',
         build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Freelancer', // Company Name | 'Freelancer' | 'Personal'
+        built_under: 'Freelancing', // Company Name | 'Freelancing' | 'Personal'
     },
 ]

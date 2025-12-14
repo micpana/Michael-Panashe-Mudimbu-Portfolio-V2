@@ -10,11 +10,11 @@ const Experience: React.FC = () => {
       location: 'Czech Republic',
       type: 'Remote',
       description: [
-        "Serve as the primary external engineer, taking full end-to-end ownership of development from coding to production deployment.",
-        "Build AI-focused systems using React, TypeScript, Tailwind CSS, and backend services in Python (FastAPI).",
-        "Implement practical AI solutions including Computer Vision and LLM-driven workflows.",
-        "Handle all infrastructure setup and maintenance using Ubuntu, and Nginx for production reliability.",
-        "Design and manage relational data structures using PostgreSQL."
+        "Serving as the primary external engineer, taking full end-to-end ownership of development from coding to production deployment.",
+        "Building AI-focused systems using React, TypeScript, Tailwind CSS, and backend services in Python (FastAPI).",
+        "Implementing practical AI solutions including Computer Vision and LLM-driven workflows.",
+        "Handling all infrastructure setup and maintenance using Ubuntu, and Nginx for production reliability.",
+        "Designing and managing relational data structures using PostgreSQL."
       ]
     },
     {

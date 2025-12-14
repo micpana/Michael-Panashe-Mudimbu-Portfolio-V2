@@ -11,7 +11,7 @@ interface Project {
   images: string[];
   technologies: string;
   build_type: 'Solo' | 'Team'; // Field for 'Solo' or 'Team' build
-  built_under: string; // Field for Company Name, 'Freelancer', or 'Personal' project
+  built_under: string; // Field for Company Name, 'Freelancing', or 'Personal' project
 }
 
 interface ProjectCardProps {
