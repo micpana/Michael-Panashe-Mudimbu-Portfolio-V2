@@ -323,6 +323,9 @@ import SkinrayaImage7 from '../images/projects/Skinraya/7.png'
 import SkinrayaImage8 from '../images/projects/Skinraya/8.png'
 import SkinrayaImage9 from '../images/projects/Skinraya/9.png'
 // ****************************************************************************
+// SkinSegmentationDatasetBuilder *********************************************
+import SkinSegmentationDatasetBuilderImage1 from '../images/projects/Skin Segmentation Dataset Builder/1.png'
+// ****************************************************************************
 
 // list of projects done and their attributes
 export const ProjectsData = [
@@ -365,6 +368,25 @@ export const ProjectsData = [
         technologies: 'ReactJs, TypeScript, Tailwind CSS, Supabase, PostgreSQL',
         build_type: 'Solo', // 'Solo' | 'Team'
         built_under: 'Freelancing', // Company Name | 'Freelancing' | 'Personal'
+    },
+    {
+        title: 'Skin Segmentation Dataset Builder',
+        category: 'Machine Learning Tool',
+        description: `
+            Skin Segmentation Dataset Builder is an automated Python tool that converts skin classification datasets into clean, background-free skin segmentation datasets.
+
+            It takes folder-based skin classification data (for example dry, normal, oily, acne) and automatically extracts skin-only regions, generates pixel-level segmentation masks, and restructures the data into a format suitable for training segmentation models.
+
+            The tool is designed for rapid prototyping and research, with a strong focus on facial skin segmentation while still supporting partial-skin and skin-only images. It removes background noise entirely, avoids background class domination, and includes human-readable mask previews for quality inspection.
+        `,
+        main_url: 'https://github.com/micpana/Skin-Segmentation-Dataset-Builder',
+        backup_url: '#',
+        images: [
+            SkinSegmentationDatasetBuilderImage1
+        ],
+        technologies: 'Python, OpenCV, MediaPipe, NumPy, Computer Vision, Dataset Engineering',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Personal', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Wisdom Library',
