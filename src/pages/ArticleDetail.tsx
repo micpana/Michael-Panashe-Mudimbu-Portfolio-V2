@@ -1,8 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import ReactGA from "react-ga4";
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, Tag } from 'lucide-react';
 import { ArticlesData } from '../data/articles_data';
+
+ReactGA.initialize("G-1KT6SKGTKG");
 
 const ArticleDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

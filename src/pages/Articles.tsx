@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import ReactGA from "react-ga4";
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { ArticlesData } from '../data/articles_data';
+
+ReactGA.initialize("G-1KT6SKGTKG");
 
 const Articles: React.FC = () => {
   const [filter, setFilter] = useState('All');

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import ReactGA from "react-ga4";
 import ProjectCard from '../components/ProjectCard';
 import { ProjectsData } from '../data/projects_data';
+
+ReactGA.initialize("G-1KT6SKGTKG");
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState('All');

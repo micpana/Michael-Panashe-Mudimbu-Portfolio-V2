@@ -1,9 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import ReactGA from "react-ga4";
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Github, Layers, User } from 'lucide-react';
 import ImageGallery from '../components/ImageGallery';
 import { ProjectsData } from '../data/projects_data';
+
+ReactGA.initialize("G-1KT6SKGTKG");
 
 const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

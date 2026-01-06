@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import ReactGA from "react-ga4";
 import Hero from '../components/Hero';
 import About from '../components/About';
 import FeaturedProjects from '../components/FeaturedProjects';
@@ -9,6 +10,8 @@ import Tools from '../components/Tools';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Contact from '../components/Contact';
+
+ReactGA.initialize("G-1KT6SKGTKG");
 
 const Home: React.FC = () => {
   return (
