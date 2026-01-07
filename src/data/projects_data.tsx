@@ -394,13 +394,13 @@ export const ProjectsData = [
         main_url: "#",
         backup_url: "https://github.com/micpana/Herbal-AI",
         images: [
-            "HerbalAIImage1", "HerbalAIImage2", "HerbalAIImage3", "HerbalAIImage4", "HerbalAIImage5",
-            "HerbalAIImage6", "HerbalAIImage7", "HerbalAIImage8", "HerbalAIImage9", "HerbalAIImage10",
-            "HerbalAIImage11", "HerbalAIImage12", "HerbalAIImage13", "HerbalAIImage14", "HerbalAIImage15"
+            HerbalAIImage1, HerbalAIImage2, HerbalAIImage3, HerbalAIImage4, HerbalAIImage5,
+            HerbalAIImage6, HerbalAIImage7, HerbalAIImage8, HerbalAIImage9, HerbalAIImage10,
+            HerbalAIImage11, HerbalAIImage12, HerbalAIImage13, HerbalAIImage14, HerbalAIImage15
         ],
         technologies: "React, Vite, TypeScript, Tailwind CSS, Python, FastAPI, SQLAlchemy, JWT Authentication, File Uploads, AI Integration (OpenAI/HuggingFace/Gemini/Grok), Axios, Lucide Icons",
-        build_type: "Solo",
-        built_under: "Personal"
+        build_type: "Solo", // 'Solo' | 'Team'
+        built_under: "Personal" // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Golden Knot Holdings',
