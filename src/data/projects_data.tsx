@@ -403,6 +403,28 @@ export const ProjectsData = [
         built_under: "Personal" // Company Name | 'Freelancing' | 'Personal'
     },
     {
+        title: 'Skin Sage',
+        category: 'AI-Powered Mobile App',
+        description: `
+            A mobile application developed as part of my dissertation, Skin Sage focuses on the Zimbabwean healthcare market, specifically addressing dermatological concerns. Designed for Android devices, the app uses artificial intelligence (AI) and computer vision to analyze user-uploaded selfies and diagnose various facial skin conditions such as acne and eczema.
+
+            The AI also determines the user's skin type (dry or oily) and provides tailored product recommendations based on the identified skin issue. Beyond product suggestions, the app offers instructional content on how to properly apply and use the recommended skincare solutions.
+
+            Skin Sage empowers users with valuable insights into their facial skin health, including potential issues, skin type, and personalized skincare routines.
+        `,
+        main_url: 'https://github.com/micpana/AI-Powered-Skin-Facial-Condition-Diagnosis-Mobile-Application',
+        backup_url: '#',
+        images: [
+            // SkinSageImage1, SkinSageImage2, 
+            SkinSageImage3, SkinSageImage4, SkinSageImage5, SkinSageImage6, SkinSageImage7, SkinSageImage8,
+            SkinSageImage9, SkinSageImage10, SkinSageImage11, SkinSageImage12, SkinSageImage13, SkinSageImage14, SkinSageImage15,
+            SkinSageImage16, SkinSageImage17, SkinSageImage18
+        ],
+        technologies: 'React Native, Python, Flask, AI / ML, Computer Vision, MongoDB, RESTful API',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Personal', // Company Name | 'Freelancing' | 'Personal'
+    },
+    {
         title: 'Golden Knot Holdings',
         category: 'Web App',
         description: `
