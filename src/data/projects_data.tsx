@@ -326,6 +326,23 @@ import SkinrayaImage9 from '../images/projects/Skinraya/9.png'
 // SkinSegmentationDatasetBuilder *********************************************
 import SkinSegmentationDatasetBuilderImage1 from '../images/projects/Skin Segmentation Dataset Builder/1.png'
 // ****************************************************************************
+// Herbal AI ******************************************************************
+import HerbalAIImage1 from '../images/projects/Herbal AI/1.png'
+import HerbalAIImage2 from '../images/projects/Herbal AI/2.png'
+import HerbalAIImage3 from '../images/projects/Herbal AI/3.png'
+import HerbalAIImage4 from '../images/projects/Herbal AI/4.png'
+import HerbalAIImage5 from '../images/projects/Herbal AI/5.png'
+import HerbalAIImage6 from '../images/projects/Herbal AI/6.png'
+import HerbalAIImage7 from '../images/projects/Herbal AI/7.png'
+import HerbalAIImage8 from '../images/projects/Herbal AI/8.png'
+import HerbalAIImage9 from '../images/projects/Herbal AI/9.png'
+import HerbalAIImage10 from '../images/projects/Herbal AI/10.png'
+import HerbalAIImage11 from '../images/projects/Herbal AI/11.png'
+import HerbalAIImage12 from '../images/projects/Herbal AI/12.png'
+import HerbalAIImage13 from '../images/projects/Herbal AI/13.png'
+import HerbalAIImage14 from '../images/projects/Herbal AI/14.png'
+import HerbalAIImage15 from '../images/projects/Herbal AI/15.png'
+// ****************************************************************************
 
 // list of projects done and their attributes
 export const ProjectsData = [
@@ -348,6 +365,44 @@ export const ProjectsData = [
         built_under: 'Nuvantica Software', // Company Name | 'Freelancing' | 'Personal'
     },
     {
+        title: 'Skin Segmentation Dataset Builder',
+        category: 'Machine Learning Tool',
+        description: `
+            Skin Segmentation Dataset Builder is an automated Python tool that converts skin classification datasets into clean, background-free skin segmentation datasets.
+
+            It takes folder-based skin classification data (for example dry, normal, oily, acne) and automatically extracts skin-only regions, generates pixel-level segmentation masks, and restructures the data into a format suitable for training segmentation models.
+
+            The tool is designed for rapid prototyping and research, with a strong focus on facial skin segmentation while still supporting partial-skin and skin-only images. It removes background noise entirely, avoids background class domination, and includes human-readable mask previews for quality inspection.
+        `,
+        main_url: 'https://github.com/micpana/Skin-Segmentation-Dataset-Builder',
+        backup_url: '#',
+        images: [
+            SkinSegmentationDatasetBuilderImage1
+        ],
+        technologies: 'Python, OpenCV, MediaPipe, NumPy, Computer Vision, Dataset Engineering',
+        build_type: 'Solo', // 'Solo' | 'Team'
+        built_under: 'Personal', // Company Name | 'Freelancing' | 'Personal'
+    },
+    {
+        title: "Herbal-AI",
+        category: "AI-Powered Web App",
+        description: `
+            A full-stack AI-driven platform that serves as a virtual herbalist, providing personalized herbal remedy recommendations based on user symptoms, age, gender, and pregnancy status. The app uses advanced AI models to analyze user inputs against a curated database of herbs and combinations, generating safe, empathetic suggestions with usage instructions and safety disclaimers.    The frontend, built with React and Vite, features an intuitive user interface for submitting queries and an admin dashboard for managing herbs, products, and usage stats. The backend, powered by FastAPI, handles authentication with JWT, file uploads for product images, and integrates with AI APIs for real-time recommendations. It ensures data integrity with SQLAlchemy ORM and SQLite/PostgreSQL, while incorporating tools for loading herb data from JSON files.
+
+            This project demonstrates end-to-end development from AI prompt engineering to deployment-ready features, emphasizing ethical AI use in health-related applications with strong emphasis on disclaimers that it's not medical advice. It's designed to be extensible for monetization via ads or affiliates, and includes real-time AI responses for a seamless user experience.
+        `,
+        main_url: "#",
+        backup_url: "https://github.com/micpana/Herbal-AI",
+        images: [
+            "HerbalAIImage1", "HerbalAIImage2", "HerbalAIImage3", "HerbalAIImage4", "HerbalAIImage5",
+            "HerbalAIImage6", "HerbalAIImage7", "HerbalAIImage8", "HerbalAIImage9", "HerbalAIImage10",
+            "HerbalAIImage11", "HerbalAIImage12", "HerbalAIImage13", "HerbalAIImage14", "HerbalAIImage15"
+        ],
+        technologies: "React, Vite, TypeScript, Tailwind CSS, Python, FastAPI, SQLAlchemy, JWT Authentication, File Uploads, AI Integration (OpenAI/HuggingFace/Gemini/Grok), Axios, Lucide Icons",
+        build_type: "Solo",
+        built_under: "Personal"
+    },
+    {
         title: 'Golden Knot Holdings',
         category: 'Web App',
         description: `
@@ -368,25 +423,6 @@ export const ProjectsData = [
         technologies: 'ReactJs, TypeScript, Tailwind CSS, Supabase, PostgreSQL',
         build_type: 'Solo', // 'Solo' | 'Team'
         built_under: 'Freelancing', // Company Name | 'Freelancing' | 'Personal'
-    },
-    {
-        title: 'Skin Segmentation Dataset Builder',
-        category: 'Machine Learning Tool',
-        description: `
-            Skin Segmentation Dataset Builder is an automated Python tool that converts skin classification datasets into clean, background-free skin segmentation datasets.
-
-            It takes folder-based skin classification data (for example dry, normal, oily, acne) and automatically extracts skin-only regions, generates pixel-level segmentation masks, and restructures the data into a format suitable for training segmentation models.
-
-            The tool is designed for rapid prototyping and research, with a strong focus on facial skin segmentation while still supporting partial-skin and skin-only images. It removes background noise entirely, avoids background class domination, and includes human-readable mask previews for quality inspection.
-        `,
-        main_url: 'https://github.com/micpana/Skin-Segmentation-Dataset-Builder',
-        backup_url: '#',
-        images: [
-            SkinSegmentationDatasetBuilderImage1
-        ],
-        technologies: 'Python, OpenCV, MediaPipe, NumPy, Computer Vision, Dataset Engineering',
-        build_type: 'Solo', // 'Solo' | 'Team'
-        built_under: 'Personal', // Company Name | 'Freelancing' | 'Personal'
     },
     {
         title: 'Wisdom Library',
