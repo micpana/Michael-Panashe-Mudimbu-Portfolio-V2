@@ -348,7 +348,7 @@ import HerbalAIImage15 from '../images/projects/Herbal AI/15.png'
 export const ProjectsData = [
     {
         title: 'Skinraya',
-        category: 'Web App',
+        category: 'AI-Powered Web App',
         description: `
             A B2B SaaS platform that acts as a virtual dermatologist for e-commerce brands. Skinraya / Renovality Health Hub uses real time computer vision to guide users through capturing a high quality selfie by validating lighting conditions, face positioning, and distance from the camera before triggering an automatic countdown and capture. This ensures consistent and reliable image inputs without requiring user expertise.
 
@@ -508,7 +508,7 @@ export const ProjectsData = [
     },
     {
         title: 'Ocula Finance',
-        category: 'Web App',
+        category: 'AI-Powered Web App',
         description: `
             An AI-driven trading assistant that delivers high-probability trade signals with a maximum holding time of 3 hours and 30 minutes. Each trade includes predefined take-profit and stop-loss levels, maintaining a minimum 1:2 risk-to-reward ratio. The system leverages dedicated AI models for each instrument, achieving over 80% win rates. Designed for accessibility, Ocula Finance empowers traders with data-backed insights to minimize risk and maximize returns.
         `,
@@ -544,7 +544,7 @@ export const ProjectsData = [
     },
     {
         title: 'Skin Sage',
-        category: 'Mobile App',
+        category: 'AI-Powered Mobile App',
         description: `
             A mobile application developed as part of my dissertation, Skin Sage focuses on the Zimbabwean healthcare market, specifically addressing dermatological concerns. Designed for Android devices, the app uses artificial intelligence (AI) and computer vision to analyze user-uploaded selfies and diagnose various facial skin conditions such as acne and eczema.
 
