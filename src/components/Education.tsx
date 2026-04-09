@@ -6,7 +6,7 @@ const Education: React.FC = () => {
     {
       degree: 'Bachelor of Technology Honours Degree in Information Technology',
       institution: 'Harare Institute of Technology',
-      period: '2016 - 2025 (deferment inbetween)',
+      period: '',
       location: 'Harare, Zimbabwe',
       description: [
         'Dissertation: "AI-Powered Skin Facial Condition Diagnosis Mobile Application"',
@@ -40,7 +40,7 @@ const Education: React.FC = () => {
     {
       name: 'Computer Operations and Packages',
       issuer: 'HEXCO',
-      year: '2013',
+      year: '',
       description: 'Foundational training in essential computer skills, and basic IT operations'
     }
   ];
