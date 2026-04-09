@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-6 mb-8">
             <a
-              href="https://www.linkedin.com/in/michael-panashe-mudimbu/"
+              href="https://www.linkedin.com/in/michael-p-mudimbu/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-gray-800 hover:bg-blue-600 transition-colors duration-200 hover:scale-105 transform"
