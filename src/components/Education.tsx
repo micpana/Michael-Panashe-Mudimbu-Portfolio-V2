@@ -86,7 +86,7 @@ const Education: React.FC = () => {
                           {edu.institution}
                         </p>
                         <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                          {edu.period} • {edu.location}
+                          {edu.period}  {edu.location}
                         </p>
                         
                         <ul className="space-y-1">
