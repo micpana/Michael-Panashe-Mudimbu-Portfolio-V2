@@ -10,11 +10,12 @@ const Experience: React.FC = () => {
       location: 'Czech Republic',
       type: 'Remote',
       description: [
-        "Serving as the primary external engineer, taking full end-to-end ownership of development from coding to production deployment.",
-        "Building AI-focused systems using React, TypeScript, Tailwind CSS, and backend services in Python (FastAPI).",
-        "Implementing practical AI solutions including Computer Vision and LLM-driven workflows.",
-        "Handling all infrastructure setup and maintenance using Ubuntu, and Nginx for production reliability.",
-        "Designing and managing relational data structures using PostgreSQL."
+        "Primary external engineer responsible for building and deploying AI powered systems",
+        "Designed and implemented fullstack applications using React, TypeScript and FastAPI",
+        "Built computer vision and LLM driven workflows used in production",
+        "Designed PostgreSQL data architecture and backend services",
+        "Managed Ubuntu servers, Nginx and deployment infrastructure",
+        "Delivered complete features independently from concept to production"
       ]
     },
     {
@@ -24,10 +25,11 @@ const Experience: React.FC = () => {
       location: 'Worldwide',
       type: 'Remote',
       description: [
-        "Developing web applications using a ReactJS, Python, MongoDB, and REST API technology stack",
-        "Building and maintaining websites and web applications for various clients",
-        "Developing mobile applications using React Native, Python, MongoDB, and REST API technology stack",
-        "Creating AI-driven systems using Python for various domains, including data analysis and automation"
+        "Designed and built production web and mobile applications for international clients",
+        "Developed fullstack systems using React, Python and REST APIs",
+        "Built AI automation tools, data systems and messaging bots",
+        "Handled cloud deployment, infrastructure and production maintenance",
+        "Regularly worked as the sole engineer delivering complete systems end-to-end"
       ]
     },
     {
@@ -37,9 +39,11 @@ const Experience: React.FC = () => {
       location: 'Harare, Zimbabwe',
       type: 'Remote',
       description: [
-        "Engaged as the dedicated external developer responsible for executing all software development tasks for agency clients.",
-        "Built and deployed full-stack applications using ReactJS, React Native, Python, and MongoDB.",
-        "Operated as the sole engineer on assigned projects, converting requirements directly into complete, production-ready systems."
+        "Served as the dedicated external engineer delivering software solutions for agency clients",
+        "Designed and built fullstack web and mobile applications using React, React Native and Python",
+        "Translated client requirements directly into production-ready systems",
+        "Worked independently as the sole engineer on assigned projects",
+        "Handled deployment, debugging and ongoing system improvements"
       ]
     },
     {
@@ -49,10 +53,11 @@ const Experience: React.FC = () => {
       location: 'Harare, Zimbabwe',
       type: 'On-site',
       description: [
-        "Developed frontend components using ReactJS and mobile applications with React Native",
-        "Assisted in backend development using Java Spring Boot",
-        "Trained healthcare professionals on the use of Impilo, Zimbabwe's Electronic Health Records (EHR) system",
-        "Provided on-the-ground support for EHR implementation at Arcadia Clinic and Mbare Poly Clinic"
+        "Developed frontend components using React and mobile applications using React Native",
+        "Contributed to backend development using Java Spring Boot",
+        "Trained healthcare professionals on the use of Zimbabwe’s national Electronic Health Records system (Impilo)",
+        "Provided on-site technical support during EHR implementation at healthcare facilities",
+        "Gained experience working on real-world health information systems"
       ]
     },
     {
@@ -62,9 +67,10 @@ const Experience: React.FC = () => {
       location: 'Harare, Zimbabwe',
       type: 'On-site',
       description: [
-        "Developed websites for clients using WordPress",
-        "Managed bulk SMS platform operations, ensuring seamless delivery and performance",
-        "Handled client communications, including renewal notices for domains and hosting"
+        "Built and maintained client websites using WordPress",
+        "Supported operations of a bulk SMS platform ensuring reliable message delivery",
+        "Managed domain and hosting renewals and communicated directly with clients",
+        "Gained early experience working with production systems and real business workflows"
       ]
     }
   ];
