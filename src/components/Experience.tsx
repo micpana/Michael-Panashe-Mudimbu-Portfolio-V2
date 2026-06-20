@@ -5,65 +5,94 @@ const Experience: React.FC = () => {
   const experiences = [
     {
       title: 'Contract Fullstack Software Engineer (AI & Systems)',
-      company: 'Nuvantica Software',
-      period: '2025 - Present',
+      company: 'Nuvantica Software (Renovality Group)',
+      period: 'September 2025 - Present',
       location: 'Czech Republic',
       type: 'Remote',
       description: [
-        "Primary external engineer responsible for building and deploying AI powered systems",
-        "Designed and implemented fullstack applications using React, TypeScript and FastAPI",
-        "Built computer vision and LLM driven workflows used in production",
-        "Designed PostgreSQL data architecture and backend services",
-        "Managed Ubuntu servers, Nginx and deployment infrastructure",
-        "Delivered complete features independently from concept to production"
+        "Lead engineer responsible for building and deploying AI-powered production systems for commercial use.",
+        "Architected and delivered the Skinraya AI skincare analysis platform, independently owning frontend, backend, AI workflows, database architecture and deployment infrastructure.",
+        "Developed computer vision and LLM-powered workflows that automate skincare analysis and recommendation generation.",
+        "Designed PostgreSQL data architecture and backend APIs supporting production workloads.",
+        "Managed Linux infrastructure, Nginx, Docker deployments and cloud-hosted services to ensure reliable system availability.",
+        "Consistently deliver complete features independently from requirements gathering through production release."
       ]
     },
     {
-      title: 'Freelance Software Developer',
-      company: 'Self-Employed',
-      period: '2019 - Present',
+      title: 'Customer Experience Associate – Outbound',
+      company: 'Omni Contact Centre',
+      period: 'April 2026 – Present',
+      location: 'Harare, Zimbabwe',
+      type: 'Onsite',
+      description: [
+        "Concurrent role focused on customer engagement, communication, sales and relationship management.",
+        "Conduct high-volume customer engagement campaigns while maintaining service quality standards.",
+        "Resolve customer issues, enquiries and retention challenges through effective communication and problem solving.",
+        "Maintain CRM accuracy and compliance with operational procedures.",
+        "Collaborate with internal teams to improve customer experience outcomes.",
+        "Strengthened communication, negotiation and relationship management skills applicable to client-facing software projects."
+      ]
+    },
+    {
+      title: 'Independent Fullstack Software Engineer',
+      company: 'Freelance Client Projects',
+      period: 'July 2023 – August 2025',
       location: 'Worldwide',
       type: 'Remote',
       description: [
-        "Designed and built production web and mobile applications for international clients",
-        "Developed fullstack systems using React, Python and REST APIs",
-        "Built AI automation tools, data systems and messaging bots",
-        "Handled cloud deployment, infrastructure and production maintenance",
-        "Regularly worked as the sole engineer delivering complete systems end-to-end"
+        "Designed and delivered production SaaS, AI and business systems for clients across multiple industries.",
+        "Built fullstack applications using React, TypeScript, Python, FastAPI, Flask, MongoDB and PostgreSQL.",
+        "Developed AI-powered automation tools, messaging platforms and workflow systems to improve operational efficiency.",
+        "Managed software architecture, cloud infrastructure, deployment pipelines and ongoing production maintenance.",
+        "Delivered complete solutions independently from requirements gathering through deployment and support."
       ]
     },
     {
       title: 'Contract Fullstack Software Developer',
       company: 'ESpace',
-      period: '2021 - 2023',
+      period: 'February 2021 – July 2023',
       location: 'Harare, Zimbabwe',
       type: 'Remote',
       description: [
-        "Served as the dedicated external engineer delivering software solutions for agency clients",
-        "Designed and built fullstack web and mobile applications using React, React Native and Python",
-        "Translated client requirements directly into production-ready systems",
-        "Worked independently as the sole engineer on assigned projects",
-        "Handled deployment, debugging and ongoing system improvements"
+        "Served as the primary external engineer delivering software solutions for agency clients.",
+        "Built and deployed fullstack web and mobile applications using React, React Native and Python.",
+        "Translated client requirements into production-ready software solutions.",
+        "Worked independently as the sole engineer on assigned projects.",
+        "Managed deployment, debugging, maintenance and feature enhancements throughout project lifecycles."
+      ]
+    },
+    {
+      title: 'Freelance Software Developer',
+      company: 'Independent Client Projects',
+      period: 'July 2019 – January 2021',
+      location: 'Worldwide',
+      type: 'Remote',
+      description: [
+        "Developed websites, web applications and business systems for local and international clients.",
+        "Built frontend interfaces using React and backend services using Python and REST APIs.",
+        "Worked directly with clients to gather requirements and translate business needs into software solutions.",
+        "Managed application deployment, hosting, maintenance and troubleshooting.",
+        "Established practical experience delivering production software independently."
       ]
     },
     {
       title: 'Intern Fullstack Software Developer',
-      company: 'Health Informatics Training and Research Advancement Center (HITRAC)',
-      period: '2019 - 2020',
+      company: 'Health Informatics Training and Research Advancement Centre (HITRAC)',
+      period: 'August 2018 – July 2019',
       location: 'Harare, Zimbabwe',
       type: 'On-site',
       description: [
-        "Developed frontend components using React and mobile applications using React Native",
-        "Contributed to backend development using Java Spring Boot",
-        "Trained healthcare professionals on the use of Zimbabwe’s national Electronic Health Records system (Impilo)",
-        "Provided on-site technical support during EHR implementation at healthcare facilities",
-        "Gained experience working on real-world health information systems"
+        "Developed frontend applications using React and mobile applications using React Native.",
+        "Contributed to backend development using Java Spring Boot.",
+        "Supported implementation of Zimbabwe's national Electronic Health Records system (Impilo).",
+        "Trained healthcare professionals on EHR usage and provided technical support during deployments.",
+        "Gained practical experience building and supporting large-scale health information systems."
       ]
     },
     {
       title: 'Intern Web Developer',
       company: 'Hansole Investments',
-      period: '2019 - 2019',
+      period: 'June 2019 - June 2019',
       location: 'Harare, Zimbabwe',
       type: 'On-site',
       description: [

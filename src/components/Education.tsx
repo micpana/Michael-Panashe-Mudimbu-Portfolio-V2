@@ -6,7 +6,7 @@ const Education: React.FC = () => {
     {
       degree: 'Bachelor of Technology Honours Degree in Information Technology',
       institution: 'Harare Institute of Technology',
-      period: '',
+      period: 'Graduated 2025',
       location: 'Harare, Zimbabwe',
       description: [
         'Dissertation: "AI-Powered Skin Facial Condition Diagnosis Mobile Application"',
@@ -38,11 +38,29 @@ const Education: React.FC = () => {
 
   const certifications = [
     {
-      name: 'Computer Operations and Packages',
-      issuer: 'HEXCO',
-      year: '',
-      description: 'Foundational training in essential computer skills, and basic IT operations'
-    }
+      name: 'Data Labeling Job Simulation',
+      issuer: 'The Forage',
+      year: '2026',
+      // description: ''
+    },
+    {
+      name: 'Essentials of Data Labeling & Annotation for AI Development ',
+      issuer: 'DataLense',
+      year: '2026',
+      // description: ''
+    },
+    {
+      name: 'Human-in-the-Loop (HITL) QA & Data Quality Management',
+      issuer: 'DataLense',
+      year: '2026',
+      // description: ''
+    },
+    // {
+    //   name: 'Computer Operations and Packages',
+    //   issuer: 'HEXCO',
+    //   year: '2013',
+    //   description: 'Foundational training in essential computer skills, and basic IT operations'
+    // }
   ];
 
   return (
@@ -82,11 +100,14 @@ const Education: React.FC = () => {
                         <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
                           {edu.degree}
                         </h4>
-                        <p className="text-blue-600 dark:text-blue-400 font-medium mb-2">
+                        <p className="text-blue-600 dark:text-blue-400 font-medium mb-0">
                           {edu.institution}
                         </p>
                         <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                          {edu.period}  {edu.location}
+                          {edu.location}
+                        </p>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                          {edu.period}
                         </p>
                         
                         <ul className="space-y-1">
