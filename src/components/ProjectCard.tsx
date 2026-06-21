@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ExternalLink, Github } from 'lucide-react';
+import { getImagesForFolder } from '../utils/imageResolver';
 
 interface Project {
   title: string;
@@ -8,7 +9,9 @@ interface Project {
   description: string;
   main_url: string;
   backup_url: string;
-  images: string[];
+  // images can be an array of resolved URLs OR we can define an imagesFolder to lazily load images
+  images?: string[];
+  imagesFolder?: string;
   technologies: string;
   build_type: 'Solo' | 'Team'; // Field for 'Solo' or 'Team' build
   built_under: string; // Field for Company Name, 'Freelancing', or 'Personal' project
@@ -20,12 +23,39 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
+  const [cover, setCover] = useState<string | null>(null);
+
+  useEffect(() => {
+    let mounted = true;
+    async function resolveCover() {
+      if (project.images && project.images.length > 0) {
+        // if images are already URLs, use first
+        if (typeof project.images[0] === 'string' && project.images[0].startsWith('http')) {
+          if (mounted) setCover(project.images[0]);
+          return;
+        }
+        if (typeof project.images[0] === 'string') {
+          if (mounted) setCover(project.images[0]);
+          return;
+        }
+      }
+
+      if (project.imagesFolder) {
+        const imgs = await getImagesForFolder(project.imagesFolder);
+        if (mounted && imgs && imgs.length > 0) setCover(imgs[0]);
+      }
+    }
+
+    resolveCover();
+    return () => { mounted = false; };
+  }, [project]);
+
   return (
     <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-700">
       {/* Project Image */}
-      <div className="relative h-64 overflow-hidden">
+        <div className="relative h-64 overflow-hidden">
         <img
-          src={project.images[0]}
+          src={cover ?? ''}
           alt={project.title}
           className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
         />

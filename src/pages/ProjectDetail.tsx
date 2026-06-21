@@ -4,7 +4,7 @@ import ReactGA from "react-ga4";
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Github, Layers, User } from 'lucide-react';
 import ImageGallery from '../components/ImageGallery';
-import { ProjectsData } from '../data/projects_data';
+import { ProjectsData } from '../data/projects_data_lazy';
 
 ReactGA.initialize("G-1KT6SKGTKG");
 
@@ -73,7 +73,7 @@ const ProjectDetail: React.FC = () => {
             
             {/* Column 1: Project Images */}
             <div className="w-full">
-              <ImageGallery images={project.images} projectTitle={project.title} />
+              <ImageGallery images={project.images} imagesFolder={project.imagesFolder} projectTitle={project.title} />
             </div>
 
             {/* Column 2: Project Information */}

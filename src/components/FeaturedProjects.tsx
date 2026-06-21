@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import ProjectCard from './ProjectCard';
-import { ProjectsData } from '../data/projects_data';
+import { ProjectsData } from '../data/projects_data_lazy';
 
 const FeaturedProjects: React.FC = () => {
   // Show first 5 projects as featured

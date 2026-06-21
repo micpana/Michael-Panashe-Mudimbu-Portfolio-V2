@@ -1,6 +1,6 @@
 import React from 'react';
 import { User, Award, Target } from 'lucide-react';
-import { ProjectsData } from '../data/projects_data';
+import { ProjectsData } from '../data/projects_data_lazy';
 
 const About: React.FC = () => {
   return (
