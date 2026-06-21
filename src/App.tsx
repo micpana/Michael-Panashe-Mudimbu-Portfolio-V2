@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -28,6 +29,7 @@ function App() {
             </main>
             <Footer />
           </div>
+          <SpeedInsights />
         </Router>
       </ThemeProvider>
     </HelmetProvider>
