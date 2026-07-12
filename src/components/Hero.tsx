@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Github, Linkedin } from 'lucide-react';
+import { Download, Github, Linkedin, Facebook } from 'lucide-react';
 import IntroImage from '../images/intro_image.jpg'
 import MichaelPanasheMudimbuCV from '../documents/Michael Panashe Mudimbu - CV.pdf';
 
@@ -19,16 +19,28 @@ const Hero: React.FC = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                Hello, I'm{' '}
+                Fullstack Software Engineer{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  Michael.
+                  & Business Growth Partner
                 </span>
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                I'm a software developer passionate about building intuitive and efficient digital solutions. 
-                I craft seamless web and mobile experiences, from backend logic to frontend finesse, bringing 
-                ideas to life with clean, efficient code. Let's build something amazing!
+                I build AI-powered applications, SaaS platforms, and production software that solve real business challenges. 
+                Beyond engineering, I combine technical expertise with business development and consultative sales to help 
+                organizations grow, automate processes, and create measurable value.
               </p>
+            </div>
+
+            {/* Key Areas */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="text-sm">
+                <p className="font-semibold text-gray-900 dark:text-white mb-2">Technical Expertise</p>
+                <p className="text-gray-600 dark:text-gray-300">Fullstack • AI/ML • Cloud • SaaS</p>
+              </div>
+              <div className="text-sm">
+                <p className="font-semibold text-gray-900 dark:text-white mb-2">Business Impact</p>
+                <p className="text-gray-600 dark:text-gray-300">Sales • Partnerships • Growth • Automation</p>
+              </div>
             </div>
 
             {/* Contact Info */}
@@ -69,6 +81,15 @@ const Hero: React.FC = () => {
                   aria-label="GitHub"
                 >
                   <Github size={20} />
+                </a>
+                <a
+                  href="https://www.facebook.com/MichaelPMudimbu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 hover:scale-105"
+                  aria-label="Facebook"
+                >
+                  <Facebook size={20} />
                 </a>
               </div>
             </div>

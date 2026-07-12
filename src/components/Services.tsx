@@ -5,40 +5,42 @@ import {
   Brain, 
   MessageCircle, 
   Send, 
-  Settings 
+  Settings,
+  Handshake,
+  TrendingUp
 } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
     {
       icon: Globe,
-      title: 'Web Development',
-      description: 'I build high-performance, scalable, and visually stunning web applications using modern technologies like React.js and Flask. Whether it\'s a landing page, a complex web app, or an e-commerce platform, I create solutions that are fast, secure, and optimized for all devices.'
+      title: 'Web & Fullstack Development',
+      description: 'I build high-performance, scalable web applications using React, Python, and cloud technologies. From MVP to enterprise, I create solutions that are fast, secure, and optimized for growth.'
     },
     {
       icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'I develop cross-platform mobile apps using React Native, ensuring seamless performance on both Android and iOS. My focus is on creating intuitive, user-friendly, and high-performance applications that deliver exceptional user experiences.'
+      title: 'Mobile App Development',
+      description: 'Cross-platform mobile solutions using React Native that deliver seamless experiences on iOS and Android. Focus on intuitive design, performance, and user retention.'
     },
     {
       icon: Brain,
-      title: 'AI Systems Development',
-      description: 'Harnessing the power of Python and AI, I develop intelligent systems that automate tasks, analyze data, and enhance decision-making. Whether it\'s predictive analytics, machine learning models, or AI-powered automation, I can build solutions tailored to your needs.'
+      title: 'AI & Automation Systems',
+      description: 'Develop AI-powered applications that automate processes, analyze data, and enhance decision-making. From computer vision to LLM integration, I build intelligent systems that create competitive advantage.'
     },
     {
-      icon: MessageCircle,
-      title: 'WhatsApp Chatbots',
-      description: 'I develop WhatsApp chatbots using Python, enabling businesses to automate customer interactions, handle inquiries, process orders, and provide instant support—all within WhatsApp. These bots enhance engagement and streamline communication.'
+      icon: Handshake,
+      title: 'Business Development & Partnerships',
+      description: 'Combine technical expertise with strategic thinking to identify growth opportunities, build partnerships, and create pathways for business expansion. I understand both sides of the table.'
     },
     {
-      icon: Send,
-      title: 'Telegram Bots',
-      description: 'From automating business processes to managing communities, my Telegram bots can handle a variety of tasks. Whether you need a customer support bot, a content distribution system, or a trading assistant, I build efficient and scalable Telegram bot solutions.'
+      icon: TrendingUp,
+      title: 'Sales Consulting & Solution Selling',
+      description: 'Help sales and leadership teams close deals by translating business needs into technical solutions. I provide technical credibility, customer insight, and strategic guidance to drive revenue growth.'
     },
     {
       icon: Settings,
-      title: 'Custom Software Solutions',
-      description: 'Need something unique? I design and develop custom software that meets your specific business needs. Whether it\'s an internal tool, a SaaS platform, or a blockchain-integrated solution, I build robust, scalable, and high-performing applications.'
+      title: 'Custom Solutions & Strategy',
+      description: 'Tailor-made software, automation initiatives, and technology strategies for your unique business needs. Whether SaaS, internal tools, or digital transformation, I build solutions that deliver measurable ROI.'
     }
   ];
 
@@ -47,10 +49,10 @@ const Services: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            My Services
+            Services & Expertise
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I offer comprehensive digital solutions to bring your ideas to life
+            Technology solutions combined with business growth expertise
           </p>
         </div>
 

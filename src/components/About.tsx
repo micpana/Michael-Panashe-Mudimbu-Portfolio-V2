@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Award, Target } from 'lucide-react';
+import { Code, Briefcase, Target } from 'lucide-react';
 import { ProjectsData } from '../data/projects_data_lazy';
 
 const About: React.FC = () => {
@@ -11,7 +11,7 @@ const About: React.FC = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Passionate software developer with a focus on creating innovative digital solutions
+            Fullstack engineer combining technical excellence with business growth expertise
           </p>
         </div>
 
@@ -20,15 +20,32 @@ const About: React.FC = () => {
           <div className="space-y-6">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                <User className="text-white" size={24} />
+                <Code className="text-white" size={24} />
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Who I Am
+                  Technical Foundation
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  I'm Michael Panashe Mudimbu, a software developer passionate about building intuitive and efficient digital solutions. 
-                  I craft seamless web and mobile experiences, from backend logic to frontend finesse, bringing ideas to life with clean, efficient code.
+                  7+ years building fullstack applications, AI-powered systems, and SaaS platforms. 
+                  I architect scalable solutions across frontend, backend, cloud infrastructure, and DevOps - 
+                  always with a focus on creating products that users love and businesses value.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Briefcase className="text-white" size={24} />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Business Impact
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  I combine engineering expertise with business development and consultative sales skills. 
+                  I understand customer needs, translate them into technical solutions, and help organizations 
+                  grow through strategic partnerships, effective communication, and automation initiatives.
                 </p>
               </div>
             </div>
@@ -39,26 +56,12 @@ const About: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  My Mission
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  To create digital solutions that not only meet technical requirements but also provide exceptional user experiences. 
-                  I believe in the power of technology to transform businesses and improve lives.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Award className="text-white" size={24} />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   My Approach
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  I focus on understanding the unique needs of each project and client. Whether it's a complex web application, 
-                  a mobile app, or an AI-powered solution, I ensure every project is built with scalability, security, and user experience in mind.
+                  I believe the best technology isn't just well-built - it creates measurable value for users and businesses. 
+                  Whether developing software, integrating AI, improving operations, or building partnerships, 
+                  I focus on solutions that drive real growth and lasting impact.
                 </p>
               </div>
             </div>
@@ -67,20 +70,24 @@ const About: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 gap-6">
             <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">{ProjectsData.length}+</div>
-              <div className="text-gray-600 dark:text-gray-300">Public Projects Completed</div>
-            </div>
-            <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
               <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">7+</div>
-              <div className="text-gray-600 dark:text-gray-300">Years Experience</div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">Years Experience</div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Building production software</p>
             </div>
             <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">9+</div>
-              <div className="text-gray-600 dark:text-gray-300">Technologies</div>
+              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">{ProjectsData.length}+</div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">Projects Delivered</div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Across web, mobile & AI</p>
             </div>
             <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">100%</div>
-              <div className="text-gray-600 dark:text-gray-300">Client Satisfaction</div>
+              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">50+</div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">Clients & Partners</div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Startups to enterprises</p>
+            </div>
+            <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
+              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">∞</div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">Continuous Learning</div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Passionate about growth</p>
             </div>
           </div>
         </div>

@@ -8,8 +8,18 @@ const Education: React.FC = () => {
       institution: 'Harare Institute of Technology',
       period: 'Graduated 2025',
       location: 'Harare, Zimbabwe',
-      description: [
-        'Dissertation: "AI-Powered Skin Facial Condition Diagnosis Mobile Application"',
+      description: [        
+        <span key="dissertation">
+          Dissertation: "AI-Powered Skin Facial Condition Diagnosis Mobile Application" —{' '}
+          <a
+            href="http://github.com/micpana/AI-Powered-Skin-Facial-Condition-Diagnosis-Mobile-Application"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 dark:text-blue-400 underline"
+          >
+            http://github.com/micpana/AI-Powered-Skin-Facial-Condition-Diagnosis-Mobile-Application
+          </a>
+        </span>
         // 'Relevant coursework: Data Structures, Algorithms, Database Systems, Machine Learning'
       ],
       icon: GraduationCap

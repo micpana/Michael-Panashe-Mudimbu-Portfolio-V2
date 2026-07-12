@@ -30,7 +30,7 @@ const Experience: React.FC = () => {
         "Resolve customer issues, enquiries and retention challenges through effective communication and problem solving.",
         "Maintain CRM accuracy and compliance with operational procedures.",
         "Collaborate with internal teams to improve customer experience outcomes.",
-        "Strengthened communication, negotiation and relationship management skills applicable to client-facing software projects."
+        "Developed practical skills in sales communication, relationship building, and customer-centric problem solving applicable to business development and solution selling."
       ]
     },
     {
@@ -44,6 +44,7 @@ const Experience: React.FC = () => {
         "Built fullstack applications using React, TypeScript, Python, FastAPI, Flask, MongoDB and PostgreSQL.",
         "Developed AI-powered automation tools, messaging platforms and workflow systems to improve operational efficiency.",
         "Managed software architecture, cloud infrastructure, deployment pipelines and ongoing production maintenance.",
+        "Served as technical advisor and partner to clients, translating business needs into scalable solutions.",
         "Delivered complete solutions independently from requirements gathering through deployment and support."
       ]
     },
@@ -56,9 +57,10 @@ const Experience: React.FC = () => {
       description: [
         "Served as the primary external engineer delivering software solutions for agency clients.",
         "Built and deployed fullstack web and mobile applications using React, React Native and Python.",
-        "Translated client requirements into production-ready software solutions.",
+        "Collaborated with project managers and clients to translate requirements into production-ready software.",
         "Worked independently as the sole engineer on assigned projects.",
-        "Managed deployment, debugging, maintenance and feature enhancements throughout project lifecycles."
+        "Managed deployment, debugging, maintenance and feature enhancements throughout project lifecycles.",
+        "Gained experience in client communication, expectation management, and delivering value-driven solutions."
       ]
     },
     {
@@ -72,7 +74,8 @@ const Experience: React.FC = () => {
         "Built frontend interfaces using React and backend services using Python and REST APIs.",
         "Worked directly with clients to gather requirements and translate business needs into software solutions.",
         "Managed application deployment, hosting, maintenance and troubleshooting.",
-        "Established practical experience delivering production software independently."
+        "Established practical experience delivering production software independently and managing client relationships.",
+        "Developed foundational skills in understanding customer needs and business problem-solving."
       ]
     },
     {
@@ -86,7 +89,7 @@ const Experience: React.FC = () => {
         "Contributed to backend development using Java Spring Boot.",
         "Supported implementation of Zimbabwe's national Electronic Health Records system (Impilo).",
         "Trained healthcare professionals on EHR usage and provided technical support during deployments.",
-        "Gained practical experience building and supporting large-scale health information systems."
+        "Gained practical experience building and supporting large-scale health information systems and end-user support."
       ]
     },
     {
@@ -112,7 +115,7 @@ const Experience: React.FC = () => {
             Professional Experience
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            My journey in software development and the experiences that shaped my expertise
+            7+ years combining engineering excellence with business growth and customer success
           </p>
         </div>
 

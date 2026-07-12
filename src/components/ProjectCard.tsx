@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ExternalLink, Github } from 'lucide-react';
 import { getImagesForFolder } from '../utils/imageResolver';
 
@@ -24,6 +24,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const [cover, setCover] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     let mounted = true;
@@ -50,10 +51,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     return () => { mounted = false; };
   }, [project]);
 
+  const handleClick = (e: React.MouseEvent) => {
+    // if click was on an anchor or button, don't navigate (let the element handle it)
+    const el = (e.target as HTMLElement).closest('a,button');
+    if (el) return;
+    navigate(`/project/${index}`);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      const el = (e.target as HTMLElement).closest('a,button');
+      if (el) return;
+      navigate(`/project/${index}`);
+    }
+  };
+
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-700">
+    <div
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+      className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-700 cursor-pointer"
+      aria-label={`Open project ${project.title}`}
+    >  
       {/* Project Image */}
-        <div className="relative h-64 overflow-hidden">
+      <div className="relative h-64 overflow-hidden">
         <img
           src={cover ?? ''}
           alt={project.title}
