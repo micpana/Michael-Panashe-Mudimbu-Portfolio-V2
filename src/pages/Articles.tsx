@@ -1,22 +1,35 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import ReactGA from "react-ga4";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { ArticlesData } from '../data/articles_data';
 
 ReactGA.initialize("G-1KT6SKGTKG");
 
 const Articles: React.FC = () => {
+  const navigate = useNavigate();
   const [filter, setFilter] = useState('All');
-  
-  // Get unique categories
-  const categories = ['All', ...Array.from(new Set(ArticlesData.map(article => article.category)))];
-  
-  // Filter articles based on selected category
-  const filteredArticles = filter === 'All' 
-    ? ArticlesData 
-    : ArticlesData.filter(article => article.category === filter);
+
+  const sortedArticles = [...ArticlesData].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
+  const categories = ['All', ...Array.from(new Set(sortedArticles.map(article => article.category)))];
+
+  const filteredArticles = filter === 'All'
+    ? sortedArticles
+    : sortedArticles.filter(article => article.category === filter);
+
+  const resolveImage = (img: string) => {
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const src = img.startsWith('http') || img.startsWith('/') ? img : `${baseUrl}${img}`;
+    return encodeURI(src);
+  };
+
+  const handleArticleClick = (id: number) => {
+    navigate(`/article/${id}`);
+  };
 
   return (
     <>
@@ -67,12 +80,18 @@ const Articles: React.FC = () => {
             {filteredArticles.map((article) => (
               <article
                 key={article.id}
-                className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-700"
+                onClick={() => handleArticleClick(article.id)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') handleArticleClick(article.id);
+                }}
+                role="button"
+                tabIndex={0}
+                className="cursor-pointer bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-700"
               >
                 {/* Article Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src={article.image}
+                    src={resolveImage(article.image)}
                     alt={article.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />

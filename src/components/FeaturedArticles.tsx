@@ -1,11 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, Calendar, Clock } from 'lucide-react';
 import { ArticlesData } from '../data/articles_data';
 
 const FeaturedArticles: React.FC = () => {
+  const navigate = useNavigate();
+  const sortedArticles = [...ArticlesData].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   // Show first 3 articles as featured
-  const featuredArticles = ArticlesData.slice(0, 3);
+  const featuredArticles = sortedArticles.slice(0, 3);
+
+  const resolveImage = (img: string) => {
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const src = img.startsWith('http') || img.startsWith('/') ? img : `${baseUrl}${img}`;
+    return encodeURI(src);
+  };
+
+  const handleArticleClick = (id: number) => {
+    navigate(`/article/${id}`);
+  };
 
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-800" id="articles">
@@ -24,12 +39,18 @@ const FeaturedArticles: React.FC = () => {
           {featuredArticles.map((article) => (
             <article
               key={article.id}
-              className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-700"
+              onClick={() => handleArticleClick(article.id)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') handleArticleClick(article.id);
+              }}
+              role="button"
+              tabIndex={0}
+              className="cursor-pointer bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-700"
             >
               {/* Article Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src={article.image}
+                  src={resolveImage(article.image)}
                   alt={article.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />

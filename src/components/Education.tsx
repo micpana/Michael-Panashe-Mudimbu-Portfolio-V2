@@ -6,11 +6,11 @@ const Education: React.FC = () => {
     {
       degree: 'Bachelor of Technology Honours Degree in Information Technology',
       institution: 'Harare Institute of Technology',
-      period: 'Graduated 2025',
+      period: '',
       location: 'Harare, Zimbabwe',
       description: [        
         <span key="dissertation">
-          Dissertation: "AI-Powered Skin Facial Condition Diagnosis Mobile Application" —{' '}
+          Dissertation: "AI-Powered Skin Facial Condition Diagnosis Mobile Application" -{' '}
           <a
             href="http://github.com/micpana/AI-Powered-Skin-Facial-Condition-Diagnosis-Mobile-Application"
             target="_blank"
@@ -24,26 +24,6 @@ const Education: React.FC = () => {
       ],
       icon: GraduationCap
     }
-    // {
-    //   degree: 'Advanced Level Certificate',
-    //   institution: 'Kwekwe High School',
-    //   period: '2014 - 2015',
-    //   location: 'Kwekwe, Zimbabwe',
-    //   description: [
-    //     // 'Mathematics, Physics, and Computer Science',
-    //   ],
-    //   icon: BookOpen
-    // },
-    // {
-    //   degree: 'Ordinary Level Certificate',
-    //   institution: 'Rio Tinto Zhombe High School',
-    //   period: '2010 - 2013',
-    //   location: 'Zhombe, Zimbabwe',
-    //   description: [
-    //     // 'Mathematics, Physics, Biology, Integrated Science, Geography, Accounting, History, English Language, and Shona Language'
-    //   ],
-    //   icon: BookIcon
-    // }
   ];
 
   const certifications = [

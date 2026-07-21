@@ -11,6 +11,12 @@ const ArticleDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const article = ArticlesData.find(a => a.id === parseInt(id || '0'));
 
+  const resolveImage = (img: string) => {
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const src = img.startsWith('http') || img.startsWith('/') ? img : `${baseUrl}${img}`;
+    return encodeURI(src);
+  };
+
   if (!article) {
     return (
       <>
@@ -73,7 +79,7 @@ const ArticleDetail: React.FC = () => {
             {/* Featured Image */}
             <div className="relative h-64 sm:h-80 overflow-hidden">
               <img
-                src={article.image}
+                src={resolveImage(article.image)}
                 alt={article.title}
                 className="w-full h-full object-cover"
               />
@@ -173,7 +179,7 @@ const ArticleDetail: React.FC = () => {
                       Michael Panashe Mudimbu
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300">
-                      Software Developer & Tech Enthusiast
+                      Fullstack Software Engineer & Business Growth Partner
                     </p>
                   </div>
                 </div>
@@ -198,7 +204,7 @@ const ArticleDetail: React.FC = () => {
                   >
                     <div className="flex gap-4">
                       <img
-                        src={relatedArticle.image}
+                        src={resolveImage(relatedArticle.image)}
                         alt={relatedArticle.title}
                         className="w-20 h-20 object-cover rounded-lg flex-shrink-0"
                       />

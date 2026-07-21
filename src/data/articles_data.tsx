@@ -58,5 +58,47 @@ export const ArticlesData = [
     readTime: '7 min read',
     image: 'https://images.pexels.com/photos/1181676/pexels-photo-1181676.jpeg?auto=compress&cs=tinysrgb&w=1600',
     tags: ['Fullstack', 'React', 'Python', 'MongoDB', 'SQL', 'APIs', 'Developer Mindset']
+  },
+  {
+    id: 2,
+    title: 'The Best Engineers Solve Business Problems',
+    excerpt: 'The best software starts by asking "What problem are we actually trying to solve?" - build technology that creates measurable value.',
+    content: `
+When people think about software engineering, they usually think about programming languages, frameworks and algorithms.
+
+Those things matter.
+
+But they're only part of the job.
+
+The best software isn't created by asking, "How do we build this?"
+
+It starts by asking, "What problem are we actually trying to solve?"
+
+Over the years, I've found that successful projects come from understanding people, business goals and customer needs before writing a single line of code.
+
+Whether I'm developing AI-powered applications, SaaS platforms or internal business systems, my goal remains the same:
+
+Build technology that creates measurable value.
+
+That's the philosophy behind every project I work on.
+    `,
+    category: 'Software Engineering',
+    date: '2026-07-21',
+    readTime: '4 min read',
+    // Local image placed in public/article-images folder:
+    image: 'article-images/The Best Engineers Solve Business Problems.png',
+    tags: [
+      'Engineering',
+      'Product',
+      'Business',
+      'Mindset',
+      'Software Engineering',
+      'Business Strategy',
+      'Customer Needs',
+      'Value',
+      'AI',
+      'SaaS',
+      'Problem Solving'
+    ]
   }
-]
+];
