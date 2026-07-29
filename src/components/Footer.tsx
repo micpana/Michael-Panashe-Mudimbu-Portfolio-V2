@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, X, Facebook } from 'lucide-react';
+import { Github, Linkedin, X, Facebook, LucideMSquare } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -43,6 +43,15 @@ const Footer: React.FC = () => {
               aria-label="Facebook"
             >
               <Facebook size={20} />
+            </a>
+            <a
+              href="https://medium.com/@michaelmudimbu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-gray-800 hover:bg-blue-600 transition-colors duration-200 hover:scale-105 transform"
+              aria-label="Medium"
+            >
+              <LucideMSquare size={20} />
             </a>
           </div>
 
