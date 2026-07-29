@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import ReactGA from "react-ga4";
 import { useParams, Link } from 'react-router-dom';
@@ -11,6 +11,11 @@ const ArticleDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const article = ArticlesData.find(a => a.id === parseInt(id || '0'));
 
+  useEffect(() => {
+    // Ensure the viewport starts at the top when navigating to an article
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [id]);
+  
   const resolveImage = (img: string) => {
     const baseUrl = import.meta.env.BASE_URL || '/';
     const src = img.startsWith('http') || img.startsWith('/') ? img : `${baseUrl}${img}`;

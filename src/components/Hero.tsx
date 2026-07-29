@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Github, Linkedin, Facebook } from 'lucide-react';
+import { Download, Github, Linkedin, X, Facebook } from 'lucide-react';
 import IntroImage from '../images/intro_image.jpg'
 import MichaelPanasheMudimbuCV from '../documents/Michael Panashe Mudimbu - CV.pdf';
 
@@ -81,6 +81,15 @@ const Hero: React.FC = () => {
                   aria-label="GitHub"
                 >
                   <Github size={20} />
+                </a>
+                <a
+                  href="https://x.com/mudimbumichael"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900/20 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 hover:scale-105"
+                  aria-label="X (Twitter)"
+                >
+                  <X size={20} />
                 </a>
                 <a
                   href="https://www.facebook.com/MichaelPMudimbu"
