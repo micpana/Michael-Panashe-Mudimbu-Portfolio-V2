@@ -6,7 +6,7 @@ const Experience: React.FC = () => {
     {
       title: 'Contract Fullstack Software Engineer (AI & Systems)',
       company: 'Nuvantica Software (Renovality Group)',
-      period: 'September 2025 - Present',
+      period: 'September 2025 - August 2026',
       location: 'Czech Republic',
       type: 'Remote',
       description: [
@@ -19,19 +19,26 @@ const Experience: React.FC = () => {
       ]
     },
     {
-      title: 'Customer Experience Associate – Outbound',
-      company: 'Omni Contact Centre',
-      period: 'April 2026 – Present',
-      location: 'Harare, Zimbabwe',
-      type: 'Onsite',
+      title: "Sales Consultant & Client Engagement Specialist",
+      company: "Omni Contact Centre",
+      location: "Harare, Zimbabwe",
+      duration: "July 2026 - Present",
       description: [
-        "Concurrent role focused on customer engagement, communication, sales and relationship management.",
-        "Conduct high-volume customer engagement campaigns while maintaining service quality standards.",
-        "Resolve customer issues, enquiries and retention challenges through effective communication and problem solving.",
-        "Maintain CRM accuracy and compliance with operational procedures.",
-        "Collaborate with internal teams to improve customer experience outcomes.",
-        "Developed practical skills in sales communication, relationship building, and customer-centric problem solving applicable to business development and solution selling."
-      ]
+        "Execute high-value outbound sales and client engagement for a UK-based financial services organization (Diaspora Insurance), adhering to international professional communication standards.",
+        "Handle high-sensitivity client data with 100% CRM accuracy, ensuring full compliance with international data protection and privacy regulations.",
+        "Conduct professional negotiations and high-level client interactions, refining the communication skills required for technical requirements gathering and business analysis."
+      ],
+    },
+    {
+      title: "Customer Experience Associate",
+      company: "Omni Contact Centre",
+      location: "Harare, Zimbabwe",
+      duration: "April 2026 - June 2026",
+      description: [
+        "Handled day-to-day operations for high-volume customer engagement campaigns, ensuring consistent service quality and efficiency under high-pressure performance targets.",
+        "Addressed complex customer retention challenges through strategic negotiation and proactive problem-solving, demonstrating the independent troubleshooting mindset essential for technical ownership.",
+        "Facilitated communication between clients and internal teams, refining the ability to translate business needs into actionable results."
+      ],
     },
     {
       title: 'Independent Fullstack Software Engineer',
