@@ -28,22 +28,28 @@ const Education: React.FC = () => {
 
   const certifications = [
     {
+      name: 'Data Annotation',
+      issuer: 'Elevify',
+      year: '2026',
+      description: 'Mastered the techniques for accurately labeling and categorizing diverse datasets to train high-performance machine learning models, ensuring data precision and model reliability.'
+    },
+    {
       name: 'Data Labeling Job Simulation',
       issuer: 'The Forage',
       year: '2026',
-      // description: ''
+      description: 'Completed a professional job simulation focusing on real-world data labeling tasks, including bounding box creation, semantic segmentation, and quality assurance for computer vision datasets.'
     },
     {
-      name: 'Essentials of Data Labeling & Annotation for AI Development ',
+      name: 'Essentials of Data Labeling & Annotation for AI Development',
       issuer: 'DataLense',
       year: '2026',
-      // description: ''
+      description: 'Acquired core competencies in data labeling strategies, annotation tools, and dataset engineering principles essential for building robust AI and LLM processing pipelines.'
     },
     {
       name: 'Human-in-the-Loop (HITL) QA & Data Quality Management',
       issuer: 'DataLense',
       year: '2026',
-      // description: ''
+      description: 'Specialized in designing quality control workflows and human-in-the-loop feedback systems to maintain high data fidelity and improve the accuracy of AI-driven automation systems.'
     },
     // {
     //   name: 'Computer Operations and Packages',
