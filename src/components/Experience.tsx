@@ -21,8 +21,9 @@ const Experience: React.FC = () => {
     {
       title: "Sales Consultant & Client Engagement Specialist",
       company: "Omni Contact Centre",
+      period: "July 2026 - Present",
       location: "Harare, Zimbabwe",
-      duration: "July 2026 - Present",
+      type: 'On-site',
       description: [
         "Execute high-value outbound sales and client engagement for a UK-based financial services organization (Diaspora Insurance), adhering to international professional communication standards.",
         "Handle high-sensitivity client data with 100% CRM accuracy, ensuring full compliance with international data protection and privacy regulations.",
@@ -32,8 +33,9 @@ const Experience: React.FC = () => {
     {
       title: "Customer Experience Associate",
       company: "Omni Contact Centre",
+      period: "April 2026 - June 2026",
       location: "Harare, Zimbabwe",
-      duration: "April 2026 - June 2026",
+      type: 'On-site',
       description: [
         "Handled day-to-day operations for high-volume customer engagement campaigns, ensuring consistent service quality and efficiency under high-pressure performance targets.",
         "Addressed complex customer retention challenges through strategic negotiation and proactive problem-solving, demonstrating the independent troubleshooting mindset essential for technical ownership.",
