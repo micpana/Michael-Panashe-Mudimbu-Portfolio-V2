@@ -19,30 +19,6 @@ const Experience: React.FC = () => {
       ]
     },
     {
-      title: "Sales Consultant & Client Engagement Specialist",
-      company: "Omni Contact Centre",
-      period: "July 2026 - Present",
-      location: "Harare, Zimbabwe",
-      type: 'On-site',
-      description: [
-        "Execute high-value outbound sales and client engagement for a UK-based financial services organization (Diaspora Insurance), adhering to international professional communication standards.",
-        "Handle high-sensitivity client data with 100% CRM accuracy, ensuring full compliance with international data protection and privacy regulations.",
-        "Conduct professional negotiations and high-level client interactions, refining the communication skills required for technical requirements gathering and business analysis."
-      ],
-    },
-    {
-      title: "Customer Experience Associate",
-      company: "Omni Contact Centre",
-      period: "April 2026 - June 2026",
-      location: "Harare, Zimbabwe",
-      type: 'On-site',
-      description: [
-        "Handled day-to-day operations for high-volume customer engagement campaigns, ensuring consistent service quality and efficiency under high-pressure performance targets.",
-        "Addressed complex customer retention challenges through strategic negotiation and proactive problem-solving, demonstrating the independent troubleshooting mindset essential for technical ownership.",
-        "Facilitated communication between clients and internal teams, refining the ability to translate business needs into actionable results."
-      ],
-    },
-    {
       title: 'Independent Fullstack Software Engineer',
       company: 'Freelance Client Projects',
       period: 'July 2023 – August 2025',
@@ -113,6 +89,30 @@ const Experience: React.FC = () => {
         "Managed domain and hosting renewals and communicated directly with clients",
         "Gained early experience working with production systems and real business workflows"
       ]
+    },
+    {
+      title: "Sales Consultant & Client Engagement Specialist",
+      company: "Omni Contact Centre",
+      period: "July 2026 - Present",
+      location: "Harare, Zimbabwe",
+      type: 'On-site',
+      description: [
+        "Execute high-value outbound sales and client engagement for a UK-based financial services organization (Diaspora Insurance), adhering to international professional communication standards.",
+        "Handle high-sensitivity client data with 100% CRM accuracy, ensuring full compliance with international data protection and privacy regulations.",
+        "Conduct professional negotiations and high-level client interactions, refining the communication skills required for technical requirements gathering and business analysis."
+      ],
+    },
+    {
+      title: "Customer Experience Associate",
+      company: "Omni Contact Centre",
+      period: "April 2026 - June 2026",
+      location: "Harare, Zimbabwe",
+      type: 'On-site',
+      description: [
+        "Handled day-to-day operations for high-volume customer engagement campaigns, ensuring consistent service quality and efficiency under high-pressure performance targets.",
+        "Addressed complex customer retention challenges through strategic negotiation and proactive problem-solving, demonstrating the independent troubleshooting mindset essential for technical ownership.",
+        "Facilitated communication between clients and internal teams, refining the ability to translate business needs into actionable results."
+      ],
     }
   ];
 
