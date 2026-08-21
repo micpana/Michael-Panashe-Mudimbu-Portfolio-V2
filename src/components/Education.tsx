@@ -28,6 +28,12 @@ const Education: React.FC = () => {
 
   const certifications = [
     {
+      name: 'Agile Project Management',
+      issuer: 'HP Life | HP Foundation',
+      year: '2026',
+      description: 'Gained practical knowledge of agile project management principles and techniques, including Scrum and Kanban, for planning, organizing, and delivering projects effectively through iterative collaboration and continuous improvement.'
+    },
+    {
       name: 'Data Annotation',
       issuer: 'Elevify',
       year: '2026',
