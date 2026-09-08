@@ -768,7 +768,7 @@ You can design what happens next.
 And that is one of the most important responsibilities of a software engineer.
     `,
     category: 'Software Engineering',
-    date: '2026-08-15',
+    date: '2026-09-08',
     readTime: '8 min read',
     image: 'article-images/When Software Fails, Your Architecture Reveals Itself.png',
     tags: ['Reliability', 'Architecture', 'Engineering', 'Resilience', 'System Design', 'Failure Handling', 'Best Practices']
