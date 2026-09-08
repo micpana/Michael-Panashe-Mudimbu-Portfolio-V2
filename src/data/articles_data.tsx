@@ -695,7 +695,7 @@ If recommendations fail, the checkout should ideally continue.
 
 That's graceful degradation.
 
-The system provides less functionality—but remains useful.
+The system provides less functionality, but remains useful.
 
 ## Make Failure Observable
 
