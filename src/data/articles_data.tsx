@@ -4,9 +4,9 @@ export const ArticlesData = [
   {
     id: 1,
     title: 'What Fullstack Development Really Means in 2025',
-    excerpt: '"Fullstack developer" gets thrown around a lot, but what does it actually mean in practice today? In this article, I break down the real skills, decisions, and mindset behind being effective across the stack.',
+    excerpt: '"Fullstack developer" gets thrown around a lot, but what does it actually mean in practice today? In this article, I break down the real skills, decisions, and mindset behind being ef[...]
     content: `
-In 2025, "fullstack" isn't just a title—it's a responsibility. You're expected to move comfortably between frontend and backend, wire up databases, manage deployments, and sometimes even touch AI or DevOps. But doing everything isn't the point. Knowing how to think across layers is.
+In 2025, "fullstack" isn't just a title—it's a responsibility. You're expected to move comfortably between frontend and backend, wire up databases, manage deployments, and sometimes even touch AI[...]
 
 ## The Modern Stack
 
@@ -539,5 +539,238 @@ But to those who combine expertise with it.
     readTime: '4 min read',
     image: 'article-images/AI Is Changing Work—But Not in the Way Most People Think.png',
     tags: ['AI', 'Work', 'Decision Making', 'Productivity']
+  },
+  {
+    id: 8,
+    title: 'Design for Failure: What Separates Robust Software From Software That Merely Works',
+    excerpt: 'Most software is designed around success. Real systems operate in environments where networks fail, dependencies become unavailable, and data becomes unexpected. Good engineering means designing what the system should do when something doesn\'t.',
+    content: `
+Most software is designed around success.
+
+The user submits a form.
+
+The API responds.
+
+The database is available.
+
+The payment succeeds.
+
+The external service responds in time.
+
+The deployment works.
+
+That's the happy path.
+
+And it's necessary.
+
+But production doesn't live exclusively on the happy path.
+
+Real systems operate in environments where networks fail, dependencies become unavailable, requests are duplicated, data becomes unexpected, and services behave slower than anticipated.
+
+This creates an important engineering principle:
+
+Don't only design what the system should do when everything works. Design what it should do when something doesn't.
+
+## Start With Failure Modes
+
+Before implementing a feature, identify how it can fail.
+
+For an API call, consider:
+
+- No response
+- Slow response
+- Invalid response
+- Duplicate request
+- Partial failure
+- Authentication failure
+- Dependency outage
+
+This changes the design conversation.
+
+Instead of:
+
+"How do we implement this?"
+
+You start asking:
+
+"What states can this system enter?"
+
+That is a much stronger engineering question.
+
+## Timeouts Are Not Optional
+
+A dependency that never responds can consume resources indefinitely.
+
+Without appropriate timeouts, one failing dependency can cause:
+
+Dependency slowdown → Request accumulation → Resource exhaustion → Wider system failure
+
+A timeout creates a boundary.
+
+It tells the system:
+
+"We have waited long enough. Handle this differently."
+
+But timeout handling must also be designed carefully.
+
+A timeout doesn't necessarily mean the operation failed.
+
+The request might have succeeded while the response was lost.
+
+That distinction matters enormously for operations involving money or irreversible actions.
+
+## Retries Can Make Things Worse
+
+Retries are useful for temporary failures.
+
+But blindly retrying every failed request can amplify an outage.
+
+Imagine 10,000 requests hitting a service.
+
+The service becomes overloaded.
+
+Every client retries immediately.
+
+Now those 10,000 requests become 20,000.
+
+Then 40,000.
+
+A mechanism intended to improve reliability can actually accelerate failure.
+
+Good retry strategies therefore consider:
+
+- Which failures are retryable?
+- How many attempts are allowed?
+- How long should we wait?
+- Should delays increase between attempts?
+- Is the operation safe to repeat?
+
+Reliability requires controlled recovery, not simply more attempts.
+
+## Idempotency Protects Against Duplication
+
+Some operations can safely be repeated.
+
+Others cannot.
+
+Reading a customer profile twice is usually harmless.
+
+Charging a customer's card twice isn't.
+
+For operations with side effects, systems often need a way to recognize that two requests represent the same intended operation.
+
+That's where idempotency becomes valuable.
+
+For example:
+
+Request ID: PAY-84729
+
+If the same request arrives multiple times, the system can recognize it as the same operation rather than creating multiple charges.
+
+This is a small architectural decision with potentially enormous financial consequences.
+
+## Isolate Failures
+
+A failure in one component shouldn't automatically become a failure everywhere.
+
+Imagine an e-commerce application where the recommendation service goes offline.
+
+Should customers be prevented from purchasing?
+
+Probably not.
+
+The recommendation service is useful.
+
+It isn't necessarily essential.
+
+A resilient architecture distinguishes between:
+
+Critical functionality
+
+and
+
+Nice-to-have functionality.
+
+If recommendations fail, the checkout should ideally continue.
+
+That's graceful degradation.
+
+The system provides less functionality—but remains useful.
+
+## Make Failure Observable
+
+When something goes wrong, engineers need answers.
+
+What failed?
+
+When?
+
+For which users?
+
+Which dependency was involved?
+
+What happened immediately before the failure?
+
+Did retries occur?
+
+Did recovery happen?
+
+Without sufficient observability, engineers are forced to reconstruct production incidents from guesses.
+
+Logs, metrics, traces, alerts, and meaningful error information turn:
+
+"Something is broken."
+
+into:
+
+"The payment service began timing out at 14:32, affecting one endpoint, while database performance remained normal."
+
+That difference dramatically changes incident response.
+
+## Protect the User
+
+Technical resilience ultimately exists for a reason:
+
+to protect the business and the people using the system.
+
+If a payment fails, don't leave the customer wondering whether they were charged.
+
+If an upload fails, don't discard everything unnecessarily.
+
+If a service is temporarily unavailable, communicate clearly.
+
+If an operation is still being processed, represent that state accurately.
+
+Good engineering isn't just about keeping servers running.
+
+It's about ensuring users experience predictable behaviour even when the infrastructure underneath them isn't perfect.
+
+## The Engineering Mindset
+
+A beginner often asks:
+
+"How do I make this work?"
+
+A stronger engineer asks:
+
+"How can this fail?"
+
+An even stronger engineer asks:
+
+"When it fails, how can we contain the failure, recover safely, and protect the user?"
+
+That's the mindset behind resilient systems.
+
+You cannot eliminate failure.
+
+You can design what happens next.
+
+And that is one of the most important responsibilities of a software engineer.
+    `,
+    category: 'Software Engineering',
+    date: '2026-08-15',
+    readTime: '8 min read',
+    image: 'article-images/When Software Fails, Your Architecture Reveals Itself.png',
+    tags: ['Reliability', 'Architecture', 'Engineering', 'Resilience', 'System Design', 'Failure Handling', 'Best Practices']
   }
 ];
