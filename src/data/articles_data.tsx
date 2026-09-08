@@ -4,9 +4,9 @@ export const ArticlesData = [
   {
     id: 1,
     title: 'What Fullstack Development Really Means in 2025',
-    excerpt: '"Fullstack developer" gets thrown around a lot, but what does it actually mean in practice today? In this article, I break down the real skills, decisions, and mindset behind being ef[...]
+    excerpt: '"Fullstack developer" gets thrown around a lot, but what does it actually mean in practice today? In this article, I break down the real skills, decisions, and mindset behind being effective across the stack.',
     content: `
-In 2025, "fullstack" isn't just a title—it's a responsibility. You're expected to move comfortably between frontend and backend, wire up databases, manage deployments, and sometimes even touch AI[...]
+In 2025, "fullstack" isn't just a title—it's a responsibility. You're expected to move comfortably between frontend and backend, wire up databases, manage deployments, and sometimes even touch AI or DevOps. But doing everything isn't the point. Knowing how to think across layers is.
 
 ## The Modern Stack
 
