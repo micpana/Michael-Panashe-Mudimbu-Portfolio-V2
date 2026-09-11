@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Github, Linkedin, X, Facebook, LucideMSquare } from 'lucide-react';
+import { Download, Github, Linkedin, X, Facebook, LucideMSquare, Newspaper } from 'lucide-react';
 import IntroImage from '../images/intro_image.jpg'
 import MichaelPanasheMudimbuCV from '../documents/Michael Panashe Mudimbu - CV.pdf';
 
@@ -108,6 +108,15 @@ const Hero: React.FC = () => {
                   aria-label="Medium"
                 >
                   <LucideMSquare size={20}/>
+                </a>
+                <a
+                  href="https://substack.com/@michaelmudimbu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-orange-100 dark:hover:bg-orange-900/20 hover:text-orange-600 dark:hover:text-orange-400 transition-all duration-200 hover:scale-105"
+                  aria-label="Substack"
+                >
+                  <Newspaper size={20} />
                 </a>
               </div>
             </div>

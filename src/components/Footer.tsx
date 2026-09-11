@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, X, Facebook, LucideMSquare } from 'lucide-react';
+import { Github, Linkedin, X, Facebook, LucideMSquare, Newspaper } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -52,6 +52,15 @@ const Footer: React.FC = () => {
               aria-label="Medium"
             >
               <LucideMSquare size={20} />
+            </a>
+            <a
+              href="https://substack.com/@michaelmudimbu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-lg bg-gray-800 hover:bg-orange-600 transition-colors duration-200 hover:scale-105 transform"
+              aria-label="Substack"
+            >
+              <Newspaper size={20} />
             </a>
           </div>
 
