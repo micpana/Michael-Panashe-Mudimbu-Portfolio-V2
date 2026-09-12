@@ -772,5 +772,42 @@ And that is one of the most important responsibilities of a software engineer.
     readTime: '8 min read',
     image: 'article-images/When Software Fails, Your Architecture Reveals Itself.png',
     tags: ['Reliability', 'Architecture', 'Engineering', 'Resilience', 'System Design', 'Failure Handling', 'Best Practices']
+  },
+  {
+    id: 9,
+    title: 'Growth Is a Systems Problem',
+    excerpt: 'Growth does not only create demand — it exposes the system’s weakest point. Scaling begins by identifying the bottleneck, measuring it, and improving it.',
+    content: `
+Businesses often think scaling means adding more people, technology, infrastructure, or capacity.
+
+But growth also increases pressure on the weakest part of the system.
+
+A business may have excellent marketing but weak fulfilment.
+
+A software platform may have scalable application servers but an overloaded database.
+
+An organisation may have strong sales but inadequate customer support.
+
+The system can only perform as well as its limiting constraint allows.
+
+This is why scaling should begin with a capacity question:
+
+> **Where will demand exceed capacity first?**
+
+Identify the constraint.
+
+Measure it.
+
+Understand why it exists.
+
+Then improve it.
+
+Otherwise, technology may simply allow the business to reach its bottleneck faster.
+    `,
+    category: 'Business Strategy',
+    date: '2026-09-12',
+    readTime: '4 min read',
+    image: 'article-images/Your Business Has a Capacity Limit. Technology Doesn\'t Remove It.png',
+    tags: ['Business', 'Systems', 'Scaling', 'Operations', 'Growth', 'Constraints']
   }
 ];
