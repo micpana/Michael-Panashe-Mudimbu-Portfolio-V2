@@ -776,7 +776,7 @@ And that is one of the most important responsibilities of a software engineer.
   {
     id: 9,
     title: 'Growth Is a Systems Problem',
-    excerpt: 'Growth does not only create demand — it exposes the system’s weakest point. Scaling begins by identifying the bottleneck, measuring it, and improving it.',
+    excerpt: 'Growth does not only create demand - it exposes the system’s weakest point. Scaling begins by identifying the bottleneck, measuring it, and improving it.',
     content: `
 Businesses often think scaling means adding more people, technology, infrastructure, or capacity.
 
@@ -792,7 +792,7 @@ The system can only perform as well as its limiting constraint allows.
 
 This is why scaling should begin with a capacity question:
 
-> **Where will demand exceed capacity first?**
+> Where will demand exceed capacity first?
 
 Identify the constraint.
 
