@@ -809,5 +809,91 @@ Otherwise, technology may simply allow the business to reach its bottleneck fast
     readTime: '4 min read',
     image: 'article-images/Your Business Has a Capacity Limit. Technology Doesn\'t Remove It.png',
     tags: ['Business', 'Systems', 'Scaling', 'Operations', 'Growth', 'Constraints']
+  },
+  {
+    id: 10,
+    title: 'Consistency Is a Business Decision',
+    excerpt: 'Consistency is not an abstract technical preference. It is a business decision shaped by the consequences of stale data, coordination costs, and the risks each system can safely tolerate.',
+    content: `
+Distributed systems introduce a problem that doesn't exist in quite the same way inside a simple application.
+
+Different services may hold different representations of the same information.
+
+A change happens in one service.
+
+That change is published.
+
+Other services receive it.
+
+For a period of time, the system may have different views of the same data.
+
+This is eventual consistency.
+
+The alternative is to coordinate operations so that all relevant components observe changes according to stronger consistency guarantees.
+
+The instinct can be to assume that stronger consistency is always better.
+
+But stronger guarantees usually come with trade-offs.
+
+More coordination can mean more network communication.
+
+More coordination can increase latency.
+
+Tighter coordination can make services more dependent on each other.
+
+And in distributed systems, dependencies introduce their own failure modes.
+
+So the engineering question shouldn't simply be:
+"How do we make everything strongly consistent?"
+
+It should be:
+"Where does strong consistency actually matter?"
+
+## Business Consequences
+
+Consider a customer changing their profile picture.
+
+If one service displays the old image for a few seconds, the business impact is probably negligible.
+
+Now consider a payment.
+
+If the payment service says a transaction succeeded while another service still believes it failed, the consequences can be much more serious.
+
+The difference isn't just technical.
+
+It is a business requirement.
+
+The acceptable level of inconsistency depends on what the system is doing and what happens when its data is temporarily out of sync.
+
+## Deriving Consistency Requirements
+
+This leads to an important design principle:
+
+Consistency requirements should be derived from business consequences.
+
+For each piece of data, ask:
+How important is accuracy at this moment?
+What happens if another service has stale information?
+How long can that inconsistency safely exist?
+What is the cost of stronger coordination?
+What happens if the coordinating service is unavailable?
+
+This doesn't mean choosing eventual consistency whenever possible.
+
+It means avoiding unnecessary guarantees where the business doesn't need them, while protecting the areas where inconsistency could cause real damage.
+
+## Designing Around Reality
+
+Good distributed-system design isn't about making every component behave identically at every moment.
+
+It's about understanding where consistency matters, where it doesn't, and designing the system around those realities.
+
+The strongest technical guarantee isn't always the best architectural choice. The right guarantee is the one the problem actually requires.
+    `,
+    category: 'Software Engineering',
+    date: '2026-09-16',
+    readTime: '3 min read',
+    image: 'article-images/Consistency Is a Business Decision.png',
+    tags: ['Distributed Systems', 'Consistency', 'Architecture', 'Software Engineering', 'Business Strategy']
   }
 ];
