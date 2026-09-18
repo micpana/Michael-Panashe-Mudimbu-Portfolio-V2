@@ -895,5 +895,67 @@ The strongest technical guarantee isn't always the best architectural choice. Th
     readTime: '3 min read',
     image: 'article-images/Consistency Is a Business Decision.png',
     tags: ['Distributed Systems', 'Consistency', 'Architecture', 'Software Engineering', 'Business Strategy']
+  },
+  {
+    id: 11,
+    title: 'Automation Can Make a Bad Process Worse',
+    excerpt: 'Automating a process before understanding it can multiply inefficiencies. Better results begin with analysing which steps create value, which should be redesigned, and which should disappear.',
+    content: `
+One of the easiest mistakes businesses make with technology is automating a process before understanding it.
+
+## Understand the Process First
+
+Imagine a workflow with ten steps.
+
+Three steps create value.
+Four exist because of historical decisions.
+Two exist because information is poorly organised.
+One exists because someone has to manually reconcile everything at the end.
+
+Automating that workflow doesn't necessarily make the business more efficient.
+
+It may simply make all ten steps happen faster.
+
+This is why process analysis should come before automation.
+
+Look at where work enters the system.
+Look at where decisions are made.
+Look at where people wait.
+Look at where information is duplicated.
+Look at where errors occur.
+Look at where work changes hands.
+
+Then ask which steps should exist in the first place.
+
+Some steps can be automated.
+Some can be eliminated.
+Some need to be redesigned.
+Some may require human judgment.
+
+The technology comes after that analysis.
+
+## Automation Has a Multiplier Effect
+
+This matters because automation has a multiplier effect.
+
+If a good process is automated, the business can often execute it more consistently and at greater scale.
+
+If a bad process is automated, the business can reproduce its inefficiencies more quickly and across a much larger volume of work.
+
+That can increase cost rather than reduce it.
+
+So when a business says, “We need to automate this,” the first question shouldn't always be which tool to use.
+
+It should be:
+
+**“Should this process work this way at all?”**
+
+That question can save more money than the automation itself.
+    `,
+    category: 'Business Strategy',
+    date: '2026-09-18',
+    readTime: '3 min read',
+    image: 'article-images/Automation Can Make a Bad Process Worse.png',
+    tags: ['Automation', 'Business Strategy', 'Process Improvement', 'Operations', 'Technology', 'Efficiency']
   }
 ];
