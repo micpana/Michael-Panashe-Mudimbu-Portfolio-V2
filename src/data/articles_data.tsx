@@ -948,7 +948,7 @@ So when a business says, “We need to automate this,” the first question shou
 
 It should be:
 
-**“Should this process work this way at all?”**
+“Should this process work this way at all?”
 
 That question can save more money than the automation itself.
     `,
