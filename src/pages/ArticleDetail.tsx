@@ -4,6 +4,7 @@ import ReactGA from "react-ga4";
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, Tag } from 'lucide-react';
 import { ArticlesData } from '../data/articles_data';
+import { slugify } from '../utils/slugify';
 
 ReactGA.initialize("G-1KT6SKGTKG");
 
@@ -204,7 +205,7 @@ const ArticleDetail: React.FC = () => {
                 .map((relatedArticle) => (
                   <Link
                     key={relatedArticle.id}
-                    to={`/article/${relatedArticle.id}`}
+                    to={`/article/${slugify(relatedArticle.title)}/${relatedArticle.id}`}
                     className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group"
                   >
                     <div className="flex gap-4">

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, Calendar, Clock } from 'lucide-react';
 import { ArticlesData } from '../data/articles_data';
+import { slugify } from '../utils/slugify';
 
 const FeaturedArticles: React.FC = () => {
   const navigate = useNavigate();
@@ -18,8 +19,8 @@ const FeaturedArticles: React.FC = () => {
     return encodeURI(src);
   };
 
-  const handleArticleClick = (id: number) => {
-    navigate(`/article/${id}`);
+  const handleArticleClick = (id: number, title: string) => {
+    navigate(`/article/${slugify(title)}/${id}`);
   };
 
   return (
@@ -39,9 +40,9 @@ const FeaturedArticles: React.FC = () => {
           {featuredArticles.map((article) => (
             <article
               key={article.id}
-              onClick={() => handleArticleClick(article.id)}
+              onClick={() => handleArticleClick(article.id, article.title)}
               onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') handleArticleClick(article.id);
+                if (e.key === 'Enter' || e.key === ' ') handleArticleClick(article.id, article.title);
               }}
               role="button"
               tabIndex={0}
@@ -87,7 +88,7 @@ const FeaturedArticles: React.FC = () => {
 
                 {/* Read More Link */}
                 <Link
-                  to={`/article/${article.id}`}
+                  to={`/article/${slugify(article.title)}/${article.id}`}
                   className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-200"
                 >
                   Read More

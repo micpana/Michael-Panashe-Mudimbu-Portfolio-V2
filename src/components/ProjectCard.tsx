@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ExternalLink, Github } from 'lucide-react';
 import { getImagesForFolder } from '../utils/imageResolver';
+import { slugify } from '../utils/slugify';
 
 interface Project {
   title: string;
@@ -55,14 +56,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     // if click was on an anchor or button, don't navigate (let the element handle it)
     const el = (e.target as HTMLElement).closest('a,button');
     if (el) return;
-    navigate(`/project/${index}`);
+    navigate(`/project/${slugify(project.title)}/${index}`);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       const el = (e.target as HTMLElement).closest('a,button');
       if (el) return;
-      navigate(`/project/${index}`);
+      navigate(`/project/${slugify(project.title)}/${index}`);
     }
   };
 
@@ -122,7 +123,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         {/* Action Buttons */}
         <div className="flex items-center justify-between">
           <Link
-            to={`/project/${index}`}
+            to={`/project/${slugify(project.title)}/${index}`}
             className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-blue-600 transition-all duration-200 text-sm"
           >
             View Details
