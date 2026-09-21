@@ -957,5 +957,58 @@ That question can save more money than the automation itself.
     readTime: '3 min read',
     image: 'article-images/Automation Can Make a Bad Process Worse.png',
     tags: ['Automation', 'Business Strategy', 'Process Improvement', 'Operations', 'Technology', 'Efficiency']
+  },
+  {
+    id: 12,
+    title: 'Temporary Has a Habit of Becoming Permanent',
+    excerpt: 'Temporary workarounds become expensive when their owners, reasons, dependencies, and replacement plans disappear. Make temporary decisions visible before they become architecture.',
+    content: `
+## One of the most expensive words in software can be:
+
+**temporary.**
+
+A workaround is introduced to solve an immediate problem.
+
+A value is hardcoded because there isn't time to build the configuration properly.
+
+A manual step is added because the integration isn't ready.
+
+A database change is made directly because the proper migration can wait.
+
+None of these decisions are necessarily wrong.
+
+The problem begins when the temporary decision becomes invisible.
+
+Nobody owns it.
+Nobody records why it exists.
+Nobody decides when it should be removed.
+
+Eventually, other parts of the system start depending on it.
+
+Now removing the workaround isn't a cleanup task anymore.
+
+It's a system change.
+
+That's why I don't think the lesson is “never take shortcuts.”
+
+Engineering often involves making pragmatic decisions under constraints.
+
+The better lesson is:
+
+## If something is temporary, make its temporary nature explicit.
+
+Give it an owner.
+Document the reason.
+Define what needs to replace it.
+Track the dependency.
+Set a point at which it should be revisited.
+
+Otherwise, today's shortcut can quietly become tomorrow's architecture.
+    `,
+    category: 'Software Engineering',
+    date: '2026-09-21',
+    readTime: '3 min read',
+    image: 'article-images/Temporary Has a Habit of Becoming Permanent.png',
+    tags: ['Technical Debt', 'Software Engineering', 'Architecture', 'Engineering Practices', 'Documentation', 'Systems']
   }
 ];
