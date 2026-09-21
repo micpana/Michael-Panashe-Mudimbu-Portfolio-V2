@@ -965,7 +965,7 @@ That question can save more money than the automation itself.
     content: `
 ## One of the most expensive words in software can be:
 
-**temporary.**
+temporary.
 
 A workaround is introduced to solve an immediate problem.
 
