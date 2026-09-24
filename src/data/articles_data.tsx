@@ -1010,5 +1010,90 @@ Otherwise, today's shortcut can quietly become tomorrow's architecture.
     readTime: '3 min read',
     image: 'article-images/Temporary Has a Habit of Becoming Permanent.png',
     tags: ['Technical Debt', 'Software Engineering', 'Architecture', 'Engineering Practices', 'Documentation', 'Systems']
+  },
+  {
+    id: 13,
+    title: 'An AI System Needs to Know When Not to Trust Itself',
+    excerpt: 'The hardest part of building a production AI system is often deciding what the model is allowed to do when its answer may not be reliable.',
+    content: `
+The hardest part of building a production AI system isn't always choosing the model.
+
+Often, it's deciding what the model is allowed to do when its answer may not be reliable.
+
+An AI customer-support agent might be able to understand questions, retrieve information, generate responses and trigger actions.
+
+That sounds useful.
+
+But a production system also needs to answer a different set of questions:
+
+## When Should the AI Stop?
+
+What happens when the information isn't available?
+
+What happens when the request is ambiguous?
+
+What happens when the model produces an unexpected output?
+
+What happens when an action could create financial, operational or customer risk?
+
+And most importantly:
+
+When should the AI stop?
+
+This is where AI engineering becomes systems engineering.
+
+A model should not be given unlimited authority simply because it can produce an answer.
+
+## Controls Around the Model
+
+The surrounding application can provide controls such as:
+
+- Structured output validation
+- Tool and permission boundaries
+- Business rules
+- Retrieval from approved information sources
+- Confidence or uncertainty handling
+- Human escalation
+- Audit logging
+- Fallback workflows
+
+The exact controls depend on the problem.
+
+A low-risk internal assistant may need very different safeguards from an AI system that can issue refunds, modify customer records or make decisions that affect a business process.
+
+The important principle is that model capability and system authority should not be treated as the same thing.
+
+An LLM may be capable of performing an action. That doesn't mean the system should allow it to perform that action without validation.
+
+## Capability Is Not Authority
+
+This changes how AI applications should be designed.
+
+Instead of asking only:
+
+“Which model should we use?”
+
+We should also ask:
+
+“What authority should the model have?”
+
+“What evidence should it need before acting?”
+
+“What happens when the evidence isn't sufficient?”
+
+“Who or what takes over?”
+
+A useful AI system isn't one where the model controls everything.
+
+It's one where the model has the right amount of responsibility for the problem it is solving.
+
+The model provides intelligence.
+The system provides control.
+    `,
+    category: 'Software Engineering',
+    date: '2026-09-24',
+    readTime: '5 min read',
+    image: "article-images/The hardest part of an AI system isn't always the model.png",
+    tags: ['AI', 'AI Engineering', 'Systems Engineering', 'Reliability', 'Safety', 'Automation', 'Software Engineering']
   }
 ];
