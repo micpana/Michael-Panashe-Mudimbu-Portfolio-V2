@@ -34,7 +34,7 @@ const Experience: React.FC = () => {
       ]
     },
     {
-      title: 'Contract Fullstack Software Developer',
+      title: 'Freelance Fullstack Software Developer',
       company: 'ESpace',
       period: 'February 2021 – July 2023',
       location: 'Harare, Zimbabwe',
