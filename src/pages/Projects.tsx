@@ -9,13 +9,17 @@ ReactGA.initialize("G-1KT6SKGTKG");
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState('All');
   
-  // Get unique categories
-  const categories = ['All', ...Array.from(new Set(ProjectsData.map(project => project.category)))];
-  
-  // Filter projects based on selected category
-  const filteredProjects = filter === 'All' 
-    ? ProjectsData 
-    : ProjectsData.filter(project => project.category === filter);
+  // Treat categories as multi-select metadata while supporting older records that only have category.
+  const getCategories = (project: (typeof ProjectsData)[number]): string[] =>
+    Array.from(new Set([...(project.categories ?? []), project.category].filter(Boolean)));
+
+  // Include every category represented by at least one project.
+  const categories = ['All', ...Array.from(new Set(ProjectsData.flatMap(getCategories)))];
+
+  // A project appears under every category it belongs to, not only its primary label.
+  const filteredProjects = filter === 'All'
+    ? ProjectsData
+    : ProjectsData.filter(project => getCategories(project).includes(filter));
 
   return (
     <>
