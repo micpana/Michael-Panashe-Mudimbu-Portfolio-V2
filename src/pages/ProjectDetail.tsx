@@ -22,17 +22,17 @@ const ProjectDetail: React.FC = () => {
           <title>Project Not Found - Michael Panashe Mudimbu</title>
           <meta name="description" content="The project you're looking for doesn't exist." />
         </Helmet>
-        <div className="min-h-screen pt-24 pb-16 bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
+        <div className="min-h-screen pt-24 pb-16 bg-[#f7f8fa] dark:bg-[#0b1220] flex items-center justify-center px-4">
           <div className="text-center max-w-md">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-slate-950 dark:text-white mb-4">
               Project Not Found
             </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-lg text-slate-600 dark:text-slate-300 mb-8">
               The project you're looking for doesn't exist or may have been moved.
             </p>
             <Link
               to="/projects"
-              className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-xl font-medium hover:bg-blue-700 transition-all duration-200 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 bg-sky-700 text-white dark:bg-sky-500 dark:text-slate-950 px-8 py-3 rounded-xl font-medium hover:bg-blue-700 transition-all duration-200 w-full sm:w-auto"
             >
               <ArrowLeft size={18} />
               Back to Projects
@@ -55,14 +55,14 @@ const ProjectDetail: React.FC = () => {
         <link rel="canonical" href={`https://michaelmudimbu.netlify.app/project/${projectIndex}`} />
       </Helmet>
 
-      <div className="min-h-screen pt-24 pb-16 bg-gray-50 dark:bg-gray-900">
+      <div className="min-h-screen pt-24 pb-16 bg-[#f7f8fa] dark:bg-[#0b1220]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Back Button - Increased hit area and margin */}
           <div className="mb-6 md:mb-10">
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium py-2"
+              className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium py-2"
             >
               <ArrowLeft size={20} />
               <span>Back to Projects</span>
@@ -87,7 +87,7 @@ const ProjectDetail: React.FC = () => {
                     {project.category}
                   </span>
                 </div>
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 dark:text-white leading-tight">
                   {project.title}
                 </h1>
 
@@ -114,13 +114,13 @@ const ProjectDetail: React.FC = () => {
 
               {/* Description */}
               <section>
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                <h2 className="text-xl font-bold text-slate-950 dark:text-white mb-4">
                   About This Project
                 </h2>
                 <div className="prose prose-blue dark:prose-invert max-w-none">
                   {project.description.split('\n').map((paragraph, index) => (
                     paragraph.trim() && (
-                      <p key={index} className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed text-base md:text-lg">
+                      <p key={index} className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed text-base md:text-lg">
                         {paragraph.trim()}
                       </p>
                     )
@@ -130,14 +130,14 @@ const ProjectDetail: React.FC = () => {
 
               {/* Technologies */}
               <section>
-                <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                <h2 className="text-xl font-bold text-slate-950 dark:text-white mb-4">
                   Technologies Used
                 </h2>
                 <div className="flex flex-wrap gap-2 md:gap-3">
                   {project.technologies.split(', ').map((tech, index) => (
                     <span
                       key={index}
-                      className="px-4 py-1.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm"
+                      className="px-4 py-1.5 bg-white dark:bg-gray-800 border border-slate-200 dark:border-slate-700 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 shadow-sm"
                     >
                       {tech}
                     </span>
@@ -152,7 +152,7 @@ const ProjectDetail: React.FC = () => {
                     href={project.main_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all duration-200 shadow-lg shadow-blue-600/20 w-full sm:w-auto text-center"
+                    className="inline-flex items-center justify-center gap-2 bg-sky-700 text-white dark:bg-sky-500 dark:text-slate-950 px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all duration-200 shadow-lg shadow-blue-600/20 w-full sm:w-auto text-center"
                   >
                     <ExternalLink size={20} />
                     View Live Project
@@ -166,7 +166,7 @@ const ProjectDetail: React.FC = () => {
                     className={`inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold transition-all duration-200 w-full sm:w-auto text-center border ${
                       project.backup_url.includes('github')
                         ? 'bg-gray-900 border-transparent hover:bg-black text-white'
-                        : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm'
+                        : 'bg-white dark:bg-gray-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm'
                     }`}
                   >
                     {project.backup_url.includes('github') ? (
