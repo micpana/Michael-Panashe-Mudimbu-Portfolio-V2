@@ -9,13 +9,13 @@ const FeaturedProjects: React.FC = () => {
   const featuredProjects = ProjectsData.slice(0, 6);
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900" id="projects">
+    <section className="py-20 bg-white dark:bg-slate-900" id="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-950 dark:text-white mb-4">
             Featured Projects
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             A showcase of some of my most impactful work across web development, mobile apps, and AI solutions
           </p>
         </div>
@@ -31,7 +31,7 @@ const FeaturedProjects: React.FC = () => {
         <div className="text-center">
           <Link
             to="/projects"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-sky-700 dark:bg-sky-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             View All Projects
             <ArrowRight size={18} />
