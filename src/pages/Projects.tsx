@@ -9,19 +9,23 @@ ReactGA.initialize("G-1KT6SKGTKG");
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState('All');
   
-  // Get unique categories
-  const categories = ['All', ...Array.from(new Set(ProjectsData.map(project => project.category)))];
-  
-  // Filter projects based on selected category
-  const filteredProjects = filter === 'All' 
-    ? ProjectsData 
-    : ProjectsData.filter(project => project.category === filter);
+  // Treat categories as multi-select metadata while supporting older records that only have category.
+  const getCategories = (project: (typeof ProjectsData)[number]): string[] =>
+    Array.from(new Set([...(project.categories ?? []), project.category].filter(Boolean)));
+
+  // Include every category represented by at least one project.
+  const categories = ['All', ...Array.from(new Set(ProjectsData.flatMap(getCategories)))];
+
+  // A project appears under every category it belongs to, not only its primary label.
+  const filteredProjects = filter === 'All'
+    ? ProjectsData
+    : ProjectsData.filter(project => getCategories(project).includes(filter));
 
   return (
     <>
       <Helmet>
         <title>Projects - Michael Panashe Mudimbu</title>
-        <meta name="description" content="Explore my complete portfolio of web applications, mobile apps, and digital solutions. 17+ projects showcasing expertise in React, Python, AI, and more." />
+        <meta name="description" content="Explore my complete portfolio of web applications, mobile apps, and digital solutions. 20 projects showcasing expertise in React, Python, AI, and more." />
         <meta name="keywords" content="projects, portfolio, web applications, mobile apps, React, Python, AI, software development" />
         <meta property="og:title" content="Projects - Michael Panashe Mudimbu" />
         <meta property="og:description" content="Explore my complete portfolio of web applications, mobile apps, and digital solutions." />
@@ -54,7 +58,7 @@ const Projects: React.FC = () => {
                 {category}
                 {category !== 'All' && (
                   <span className="ml-2 text-sm opacity-75">
-                    ({ProjectsData.filter(p => p.category === category).length})
+                    ({ProjectsData.filter(p => getCategories(p).includes(category)).length})
                   </span>
                 )}
               </button>

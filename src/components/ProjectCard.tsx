@@ -3,10 +3,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { getImagesForFolder } from '../utils/imageResolver';
 import { slugify } from '../utils/slugify';
+import { getBuildApproach, getProjectContext } from '../utils/projectMetadata';
 
 interface Project {
   title: string;
   category: string;
+  categories?: string[];
   description: string;
   main_url: string;
   backup_url: string;
@@ -67,7 +69,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         <span className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/60 bg-white/10 text-white backdrop-blur transition group-hover:bg-white group-hover:text-[#172033]"><ArrowUpRight size={19} /></span>
       </div>
       <div className="flex flex-1 flex-col border-x border-b border-slate-200 px-5 pb-6 pt-5 dark:border-slate-800 sm:px-6 sm:pb-7">
-        <div className="mb-3 flex items-center justify-between gap-3 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400"><span>{project.build_type} build</span><span className="truncate">{project.built_under}</span></div>
+        <div className="mb-4 flex flex-wrap items-center gap-2" aria-label="Project categories">
+          {Array.from(new Set([...(project.categories ?? []), project.category])).map((category) => (
+            <span key={category} className="inline-flex items-center rounded-full border border-[#f2b86b]/50 bg-[#f2b86b]/15 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-slate-800 dark:text-amber-100">{category}</span>
+          ))}
+        </div>
+        <div className="mb-4 flex flex-wrap items-center gap-2" aria-label="Project build and work context"><span className="inline-flex items-center rounded-full border border-[#3159d9]/20 bg-[#3159d9]/[0.06] px-2.5 py-1 text-[10px] font-semibold tracking-wide text-[#2445b3] dark:border-[#91a9ff]/25 dark:bg-[#91a9ff]/[0.08] dark:text-[#b7c7ff]">{getBuildApproach(project)}</span><span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300">{getProjectContext(project)}</span></div>
         <h3 className="text-2xl font-semibold tracking-tight text-slate-950 transition-colors group-hover:text-[#3159d9] dark:text-white dark:group-hover:text-[#91a9ff]">{project.title}</h3>
         <p className="mt-3 flex-1 text-sm leading-7 text-slate-600 dark:text-slate-300">{project.description.slice(0, 170)}{project.description.length > 170 ? '…' : ''}</p>
         <div className="mt-5 border-t border-slate-100 pt-4 dark:border-slate-800"><p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400">Built with</p><p className="mt-2 text-xs leading-6 text-[#3159d9] dark:text-[#91a9ff]">{project.technologies}</p></div>

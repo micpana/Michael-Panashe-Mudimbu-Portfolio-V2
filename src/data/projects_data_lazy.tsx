@@ -3,6 +3,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Skinraya',
     category: 'AI-Powered Web App',
+    categories: ["AI-Powered Web App","Web App"],
     description: `
       A B2B SaaS platform that acts as a virtual dermatologist for e-commerce skincare brands. Skinraya / Renovality Health Hub uses real-time computer vision to guide users through capturing a consistent, high-quality selfie by validating lighting, face position, and camera distance before triggering an automatic capture.
 
@@ -18,6 +19,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Skin Segmentation Dataset Builder',
     category: 'Machine Learning Tool',
+    categories: ["Machine Learning Tool"],
     description: `
       An automated Python toolkit that converts skin classification datasets into clean, background-free segmentation datasets with masks and preview artifacts.
 
@@ -35,6 +37,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Herbal-AI',
     category: 'AI-Powered Web App',
+    categories: ["AI-Powered Web App","Web App"],
     description: `
       A full-stack AI-driven platform that serves as a virtual herbalist, delivering personalized herbal remedy recommendations based on symptoms, age, gender, and pregnancy status.
 
@@ -50,6 +53,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Skin Sage',
     category: 'AI-Powered Mobile App',
+    categories: ["AI-Powered Mobile App","Mobile App"],
     description: `
       A dissertation project focused on the Zimbabwean healthcare market, Skin Sage is an Android application that analyzes selfies with AI and computer vision to diagnose facial skin conditions such as acne and eczema.
 
@@ -65,6 +69,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Golden Knot Holdings',
     category: 'Web App',
+    categories: ["Web App"],
     description: `
       A centralized executive dashboard built to modernize Golden Knot Holdings’ operations and replace fragmented manual processes with a unified digital platform.
 
@@ -80,6 +85,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Wisdom Library',
     category: 'Web App',
+    categories: ["Web App","Website"],
     description: `
       Wisdom Library is a Zimbabwean platform for books, podcasts, and publishing services focused on spiritual and personal development.
 
@@ -95,6 +101,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Beyond Motivation',
     category: 'Website',
+    categories: ["Website","Web App"],
     description: `
       A mentorship and coaching platform that helps people discover their purpose and make progress in life.
 
@@ -110,6 +117,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Liberty Makuyana',
     category: 'Website',
+    categories: ["Website"],
     description: `
       A personal brand website for speaker and coach Liberty Makuyana, centered on purpose-driven leadership and personal growth.
 
@@ -125,6 +133,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Family Of Greatness',
     category: 'Mobile App',
+    categories: ["Mobile App"],
     description: `
       A feature-rich mobile app designed to inspire and empower Christian youth with devotionals, podcasts, quotes, and structured growth programs.
 
@@ -140,6 +149,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Ocula Finance',
     category: 'AI-Powered Web App',
+    categories: ["AI-Powered Web App","Web App"],
     description: `
       An AI-driven trading assistant that generates high-probability trade signals with a maximum holding period of 3 hours and 30 minutes.
 
@@ -155,6 +165,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Farmer Management App',
     category: 'Mobile App',
+    categories: ["Mobile App"],
     description: `
       A React Native app for efficient farmer data collection and management, designed for offline-first use.
 
@@ -170,6 +181,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Eleanor Ross V1',
     category: 'Website',
+    categories: ["Website"],
     description: `
       A UK relocation service platform built to make moving easier and less stressful.
 
@@ -185,6 +197,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'A & E',
     category: 'Web App',
+    categories: ["Web App","Website"],
     description: `
       A lifestyle retail platform focused on convenience, quality, and curated solutions.
 
@@ -200,6 +213,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Fafa Kitchen & Home',
     category: 'Web App',
+    categories: ["Web App","Website"],
     description: `
       A digital storefront for premium kitchenware, décor, and home essentials.
 
@@ -215,6 +229,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Espace',
     category: 'Web App',
+    categories: ["Website"],
     description: `
       A digital services agency website built to elevate online presence, branding, and professional impact.
 
@@ -230,6 +245,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Ridley Valley Tutorial',
     category: 'Website',
+    categories: ["Website"],
     description: `
       A customized tutoring platform that helps students improve academic performance through tailored study plans and test preparation.
 
@@ -245,6 +261,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'First Medi-Careers Global',
     category: 'Website',
+    categories: ["Website"],
     description: `
       A skills development platform offering globally certified short courses in Zimbabwe, with a focus on rural communities.
 
@@ -260,6 +277,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Onfit',
     category: 'Web App',
+    categories: ["Web App"],
     description: `
       A virtual personal training platform that connects clients with fitness professionals for personalized workouts, nutrition guidance, and progress tracking.
 
@@ -275,6 +293,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'MyuzikHeadz',
     category: 'Web App',
+    categories: ["Web App"],
     description: `
       A music streaming platform where users can upload, curate, and enjoy tracks online.
 
@@ -290,6 +309,7 @@ export const ProjectsData: Array<any> = [
   {
     title: 'Bossalf International',
     category: 'Website',
+    categories: ["Website"],
     description: `
       A furniture manufacturing platform focused on ergonomic, durable solutions for institutions.
 
