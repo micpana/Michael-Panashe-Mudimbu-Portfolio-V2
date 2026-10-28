@@ -40,7 +40,7 @@ const ArticleDetail: React.FC = () => {
             </p>
             <Link
               to="/articles"
-              className="inline-flex items-center gap-2 bg-sky-700 dark:bg-sky-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200"
+              className="inline-flex items-center gap-2 bg-sky-700 dark:bg-sky-400 dark:text-slate-950 text-white px-6 py-3 rounded-lg font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200"
             >
               <ArrowLeft size={18} />
               Back to Articles
@@ -93,7 +93,7 @@ const ArticleDetail: React.FC = () => {
               
               {/* Category Badge */}
               <div className="absolute top-6 left-6">
-                <span className="px-4 py-2 bg-sky-700 text-white dark:bg-sky-500 dark:text-slate-950 font-medium rounded-full">
+                <span className="px-4 py-2 bg-sky-700 text-white dark:bg-sky-400 dark:text-slate-950 dark:text-slate-950 font-medium rounded-full">
                   {article.category}
                 </span>
               </div>
