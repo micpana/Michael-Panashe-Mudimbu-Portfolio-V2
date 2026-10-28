@@ -59,7 +59,7 @@ const FeaturedArticles: React.FC = () => {
                 
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-sky-700 text-white dark:bg-sky-500 dark:text-slate-950 text-sm font-medium rounded-full">
+                  <span className="px-3 py-1 bg-sky-700 text-white dark:bg-sky-400 dark:text-slate-950 dark:text-slate-950 text-sm font-medium rounded-full">
                     {article.category}
                   </span>
                 </div>
@@ -103,7 +103,7 @@ const FeaturedArticles: React.FC = () => {
         <div className="text-center">
           <Link
             to="/articles"
-            className="inline-flex items-center gap-2 bg-sky-700 dark:bg-sky-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-sky-700 dark:bg-sky-400 dark:text-slate-950 text-white px-8 py-3 rounded-lg font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             View All Articles
             <ArrowRight size={18} />
