@@ -32,7 +32,7 @@ const ProjectDetail: React.FC = () => {
             </p>
             <Link
               to="/projects"
-              className="inline-flex items-center justify-center gap-2 bg-sky-700 text-white dark:bg-sky-500 dark:text-slate-950 px-8 py-3 rounded-xl font-medium hover:bg-blue-700 transition-all duration-200 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 bg-sky-700 text-white dark:bg-sky-400 dark:text-slate-950 dark:text-slate-950 px-8 py-3 rounded-xl font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200 w-full sm:w-auto"
             >
               <ArrowLeft size={18} />
               Back to Projects
@@ -152,7 +152,7 @@ const ProjectDetail: React.FC = () => {
                     href={project.main_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-sky-700 text-white dark:bg-sky-500 dark:text-slate-950 px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all duration-200 shadow-lg shadow-blue-600/20 w-full sm:w-auto text-center"
+                    className="inline-flex items-center justify-center gap-2 bg-sky-700 text-white dark:bg-sky-400 dark:text-slate-950 dark:text-slate-950 px-8 py-4 rounded-xl font-bold hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200 shadow-lg shadow-blue-600/20 w-full sm:w-auto text-center"
                   >
                     <ExternalLink size={20} />
                     View Live Project
