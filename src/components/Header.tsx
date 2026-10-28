@@ -13,6 +13,7 @@ const Header: React.FC = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/#about', isHash: true },
+    { name: 'Experience', path: '/#experience', isHash: true },
     { name: 'Services', path: '/#services', isHash: true },
     { name: 'Skills', path: '/#tools', isHash: true },
     { name: 'Projects', path: '/projects' },
