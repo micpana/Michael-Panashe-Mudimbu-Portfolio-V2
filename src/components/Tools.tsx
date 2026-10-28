@@ -1,69 +1,35 @@
 import React from 'react';
-import { 
-  Code, 
-  Smartphone, 
-  Database, 
-  Coins, 
-  GitBranch, 
-  Container, 
-  Terminal, 
-  Server,
-  Database as DatabaseIcon, 
-  Network,
-  NetworkIcon
-} from 'lucide-react';
 
-const Tools: React.FC = () => {
-  const tools = [
-    { icon: Code, name: 'ReactJs', color: 'from-blue-500 to-cyan-500' },
-    { icon: Smartphone, name: 'React Native', color: 'from-blue-600 to-purple-600' },
-    { icon: Code, name: 'Python', color: 'from-yellow-500 to-blue-500' },
-    { icon: Coins, name: 'Solidity', color: 'from-gray-700 to-gray-900' },
-    { icon: Database, name: 'MongoDB', color: 'from-green-500 to-green-600' },
-    { icon: DatabaseIcon, name: 'SQL', color: 'from-orange-500 to-red-500' },
-    { icon: Database, name: 'PostgreSQL', color: 'from-blue-600 to-blue-800' },
-    { icon: DatabaseIcon, name: 'Supabase', color: 'from-yellow-400 to-yellow-600' },
-    { icon: Network, name: 'RestAPI', color: 'from-yellow-500 to-yellow-700' },
-    { icon: NetworkIcon, name: 'FastAPI', color: 'from-green-400 to-green-600' },
-    { icon: GitBranch, name: 'Git', color: 'from-orange-600 to-red-600' },
-    { icon: Container, name: 'Docker', color: 'from-blue-400 to-blue-600' },
-    { icon: Terminal, name: 'Ubuntu', color: 'from-orange-500 to-orange-600' },
-    { icon: Server, name: 'NGINX', color: 'from-orange-500 to-orange-600' },
-  ];
+const skillGroups = [
+  { title: 'Languages', skills: ['Python', 'JavaScript', 'TypeScript', 'SQL', 'Bash', 'Java', 'Solidity'] },
+  { title: 'Frontend & mobile', skills: ['React', 'React Native', 'HTML5', 'CSS3', 'Tailwind CSS', 'Responsive UI'] },
+  { title: 'Backend & integration', skills: ['Node.js', 'FastAPI', 'Flask', 'REST APIs', 'Microservices', 'WebSockets', 'Webhooks', 'WhatsApp Business API', 'Telegram Bot API'] },
+  { title: 'Data & storage', skills: ['PostgreSQL', 'MongoDB', 'Supabase', 'Relational modelling', 'Query optimisation', 'Data pipelines'] },
+  { title: 'AI, ML & automation', skills: ['TensorFlow', 'Keras', 'OpenAI API', 'LLM integrations', 'RAG', 'Prompt engineering', 'OpenCV', 'MediaPipe', 'Recommendation workflows', 'Dataset engineering', 'Selenium', 'Playwright', 'Web scraping', 'Browser automation'] },
+  { title: 'Cloud & operations', skills: ['Linux / Ubuntu', 'Docker', 'Nginx', 'AWS', 'Git & GitHub', 'CI/CD', 'GitHub Actions', 'Automated deployments', 'Monitoring', 'Cloud security'] },
+  { title: 'Engineering & delivery', skills: ['Software architecture', 'Secure coding', 'Code reviews', 'Testing', 'Production debugging', 'Performance optimisation', 'Reliability', 'Requirements', 'Technical estimation', 'Backlog prioritisation', 'Agile / Scrum', 'Stakeholder collaboration', 'Data annotation', 'HITL QA', 'Data quality'] },
+];
 
-  return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800" id="tools">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Tools & Technologies
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            The technologies I use to build robust and scalable solutions
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          {tools.map((tool, index) => {
-            const IconComponent = tool.icon;
-            return (
-              <div
-                key={index}
-                className="flex flex-col items-center p-6 bg-white dark:bg-gray-900 rounded-2xl hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 border border-gray-100 dark:border-gray-700"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${tool.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <IconComponent className="text-white" size={28} />
-                </div>
-                <h3 className="text-sm font-semibold text-gray-900 dark:text-white text-center group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
-                  {tool.name}
-                </h3>
-              </div>
-            );
-          })}
-        </div>
+const Tools: React.FC = () => (
+  <section className="bg-[#f1f5f9] py-20 dark:bg-[#111b2b]" id="tools">
+    <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+      <div className="max-w-3xl">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300">Technical toolkit</p>
+        <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-4xl">Tools are useful. Knowing where they fit matters more.</h2>
+        <p className="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300">A broad, hands-on toolkit across application engineering, AI systems, data, infrastructure and delivery.</p>
       </div>
-    </section>
-  );
-};
+      <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {skillGroups.map((group) => (
+          <section key={group.title} className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-900">
+            <h3 className="text-base font-semibold text-slate-950 dark:text-white">{group.title}</h3>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {group.skills.map((skill) => <span key={skill} className="rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-sm text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300">{skill}</span>)}
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 export default Tools;

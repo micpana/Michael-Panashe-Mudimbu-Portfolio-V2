@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { getImagesForFolder } from '../utils/imageResolver';
 import { slugify } from '../utils/slugify';
 
@@ -10,12 +10,11 @@ interface Project {
   description: string;
   main_url: string;
   backup_url: string;
-  // images can be an array of resolved URLs OR we can define an imagesFolder to lazily load images
   images?: string[];
   imagesFolder?: string;
   technologies: string;
-  build_type: 'Solo' | 'Team'; // Field for 'Solo' or 'Team' build
-  built_under: string; // Field for Company Name, 'Freelancing', or 'Personal' project
+  build_type: 'Solo' | 'Team';
+  built_under: string;
 }
 
 interface ProjectCardProps {
@@ -31,7 +30,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     let mounted = true;
     async function resolveCover() {
       if (project.images && project.images.length > 0) {
-        // if images are already URLs, use first
         if (typeof project.images[0] === 'string' && project.images[0].startsWith('http')) {
           if (mounted) setCover(project.images[0]);
           return;
@@ -41,121 +39,47 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           return;
         }
       }
-
       if (project.imagesFolder) {
         const imgs = await getImagesForFolder(project.imagesFolder);
         if (mounted && imgs && imgs.length > 0) setCover(imgs[0]);
       }
     }
-
     resolveCover();
     return () => { mounted = false; };
   }, [project]);
 
   const handleClick = (e: React.MouseEvent) => {
-    // if click was on an anchor or button, don't navigate (let the element handle it)
-    const el = (e.target as HTMLElement).closest('a,button');
-    if (el) return;
+    if ((e.target as HTMLElement).closest('a,button')) return;
+    navigate(`/project/${slugify(project.title)}/${index}`);
+  };
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    if ((e.target as HTMLElement).closest('a,button')) return;
     navigate(`/project/${slugify(project.title)}/${index}`);
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      const el = (e.target as HTMLElement).closest('a,button');
-      if (el) return;
-      navigate(`/project/${slugify(project.title)}/${index}`);
-    }
-  };
-
   return (
-    <div
-      onClick={handleClick}
-      onKeyDown={handleKeyDown}
-      role="button"
-      tabIndex={0}
-      className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-700 cursor-pointer"
-      aria-label={`Open project ${project.title}`}
-    >  
-      {/* Project Image */}
-      <div className="relative h-64 overflow-hidden">
-        <img
-          src={cover ?? ''}
-          alt={project.title}
-          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        
-        {/* Category Badge */}
-        <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">
-            {project.category}
-          </span>
-        </div>
+    <article onClick={handleClick} onKeyDown={handleKeyDown} role="button" tabIndex={0} className="group flex h-full cursor-pointer flex-col border-t-2 border-slate-200 bg-white transition-colors duration-300 hover:border-[#3159d9] focus:outline-none focus:ring-2 focus:ring-[#3159d9] dark:border-slate-700 dark:bg-[#0b1220] dark:hover:border-[#91a9ff]" aria-label={`Open project ${project.title}`}>
+      <div className="relative h-56 overflow-hidden bg-[#e8ebf2] dark:bg-[#151f33] sm:h-64">
+        <img src={cover ?? ''} alt={project.title} className="h-full w-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.035]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1020]/60 via-transparent to-transparent opacity-70" />
+        <span className="absolute left-4 top-4 bg-[#f2b86b] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#172033]">{project.category}</span>
+        <span className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/60 bg-white/10 text-white backdrop-blur transition group-hover:bg-white group-hover:text-[#172033]"><ArrowUpRight size={19} /></span>
       </div>
-
-      {/* Project Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
-          {project.title}
-        </h3>
-        
-        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
-          {project.description.slice(0, 150)}...
-        </p>
-
-        {/* --- Build Metadata ----------------------------- */}
-        <div className="flex flex-wrap gap-3 mb-4">
-            <span className="text-xs font-medium text-gray-600 dark:text-gray-300">
-                <span className="font-semibold">Build:</span> {project.build_type}
-            </span>
-            <span className="text-xs font-medium text-gray-600 dark:text-gray-300">
-                <span className="font-semibold">Under:</span> {project.built_under}
-            </span>
-        </div>
-        {/* ------------------------------------------------ */}
-
-        {/* Technologies */}
-        <div className="mb-6">
-          <p className="text-sm text-gray-500 dark:text-gray-400 font-medium mb-2">Technologies:</p>
-          <p className="text-sm text-blue-600 dark:text-blue-400">{project.technologies}</p>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex items-center justify-between">
-          <Link
-            to={`/project/${slugify(project.title)}/${index}`}
-            className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-blue-600 transition-all duration-200 text-sm"
-          >
-            View Details
-          </Link>
-
-          <div className="flex gap-2">
-            {project.main_url && project.main_url !== '#' && (
-              <a
-                href={project.main_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-                aria-label="View live project"
-              >
-                <ExternalLink size={18} />
-              </a>
-            )}
-            {project.backup_url && project.backup_url !== '#' && project.backup_url.includes('github') && (
-              <a
-                href={project.backup_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
-                aria-label="View on GitHub"
-              >
-                <Github size={18} />
-              </a>
-            )}
+      <div className="flex flex-1 flex-col border-x border-b border-slate-200 px-5 pb-6 pt-5 dark:border-slate-800 sm:px-6 sm:pb-7">
+        <div className="mb-3 flex items-center justify-between gap-3 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400"><span>{project.build_type} build</span><span className="truncate">{project.built_under}</span></div>
+        <h3 className="text-2xl font-semibold tracking-tight text-slate-950 transition-colors group-hover:text-[#3159d9] dark:text-white dark:group-hover:text-[#91a9ff]">{project.title}</h3>
+        <p className="mt-3 flex-1 text-sm leading-7 text-slate-600 dark:text-slate-300">{project.description.slice(0, 170)}{project.description.length > 170 ? '…' : ''}</p>
+        <div className="mt-5 border-t border-slate-100 pt-4 dark:border-slate-800"><p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400">Built with</p><p className="mt-2 text-xs leading-6 text-[#3159d9] dark:text-[#91a9ff]">{project.technologies}</p></div>
+        <div className="mt-5 flex items-center justify-between gap-3">
+          <Link to={`/project/${slugify(project.title)}/${index}`} className="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 hover:text-[#3159d9] dark:text-white dark:hover:text-[#91a9ff]">Read case study <ArrowUpRight size={16} /></Link>
+          <div className="flex gap-3">
+            {project.main_url && project.main_url !== '#' && <a href={project.main_url} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-[#3159d9] dark:text-slate-400 dark:hover:text-[#91a9ff]" aria-label="View live project"><ExternalLink size={17} /></a>}
+            {project.backup_url && project.backup_url !== '#' && project.backup_url.includes('github') && <a href={project.backup_url} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-[#3159d9] dark:text-slate-400 dark:hover:text-[#91a9ff]" aria-label="View on GitHub"><Github size={17} /></a>}
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

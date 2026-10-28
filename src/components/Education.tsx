@@ -7,7 +7,6 @@ const Education: React.FC = () => {
       degree: 'Bachelor of Technology Honours Degree in Information Technology',
       institution: 'Harare Institute of Technology',
       period: '',
-      location: 'Harare, Zimbabwe',
       description: [        
         <span key="dissertation">
           Dissertation: "AI-Powered Skin Facial Condition Diagnosis Mobile Application" -{' '}
@@ -104,9 +103,6 @@ const Education: React.FC = () => {
                         </h4>
                         <p className="text-blue-600 dark:text-blue-400 font-medium mb-0">
                           {edu.institution}
-                        </p>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
-                          {edu.location}
                         </p>
                         <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
                           {edu.period}

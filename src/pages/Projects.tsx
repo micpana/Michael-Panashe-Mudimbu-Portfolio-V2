@@ -27,14 +27,14 @@ const Projects: React.FC = () => {
         <meta property="og:description" content="Explore my complete portfolio of web applications, mobile apps, and digital solutions." />
         <link rel="canonical" href="https://michaelmudimbu.netlify.app/projects" />
       </Helmet>
-      <div className="min-h-screen pt-20 pb-16 bg-gray-50 dark:bg-gray-900">
+      <div className="min-h-screen pt-20 pb-16 bg-[#f7f8fa] dark:bg-[#0b1220]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-slate-950 dark:text-white mb-4">
               All Projects
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               Explore my complete portfolio of web applications, mobile apps, and digital solutions
             </p>
           </div>
@@ -47,8 +47,8 @@ const Projects: React.FC = () => {
                 onClick={() => setFilter(category)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
                   filter === category
-                    ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg'
-                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
+                    ? 'bg-sky-700 dark:bg-sky-400 dark:text-slate-950 text-white shadow-lg'
+                    : 'bg-white dark:bg-gray-800 text-slate-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-slate-200 dark:border-slate-700'
                 }`}
               >
                 {category}
@@ -75,7 +75,7 @@ const Projects: React.FC = () => {
           {/* No results message */}
           {filteredProjects.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-xl text-gray-600 dark:text-gray-400">
+              <p className="text-xl text-slate-600 dark:text-slate-400">
                 No projects found in this category.
               </p>
             </div>

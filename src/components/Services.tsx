@@ -1,85 +1,33 @@
 import React from 'react';
-import { 
-  Globe, 
-  Smartphone, 
-  Brain, 
-  MessageCircle, 
-  Send, 
-  Settings,
-  Handshake,
-  TrendingUp
-} from 'lucide-react';
+import { ArrowUpRight, BrainCircuit, CloudCog, Database, Layers3, Workflow } from 'lucide-react';
 
-const Services: React.FC = () => {
-  const services = [
-    {
-      icon: Globe,
-      title: 'Web & Fullstack Development',
-      description: 'I build high-performance, scalable web applications using React, Python, and cloud technologies. From MVP to enterprise, I create solutions that are fast, secure, and optimized for growth.'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile App Development',
-      description: 'Cross-platform mobile solutions using React Native that deliver seamless experiences on iOS and Android. Focus on intuitive design, performance, and user retention.'
-    },
-    {
-      icon: Brain,
-      title: 'AI & Automation Systems',
-      description: 'Develop AI-powered applications that automate processes, analyze data, and enhance decision-making. From computer vision to LLM integration, I build intelligent systems that create competitive advantage.'
-    },
-    {
-      icon: Handshake,
-      title: 'Business Development & Partnerships',
-      description: 'Combine technical expertise with strategic thinking to identify growth opportunities, build partnerships, and create pathways for business expansion. I understand both sides of the table.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Sales Consulting & Solution Selling',
-      description: 'Help sales and leadership teams close deals by translating business needs into technical solutions. I provide technical credibility, customer insight, and strategic guidance to drive revenue growth.'
-    },
-    {
-      icon: Settings,
-      title: 'Custom Solutions & Strategy',
-      description: 'Tailor-made software, automation initiatives, and technology strategies for your unique business needs. Whether SaaS, internal tools, or digital transformation, I build solutions that deliver measurable ROI.'
-    }
-  ];
+const capabilities = [
+  { number: '01', icon: Layers3, title: 'Product engineering', description: 'Full-stack web and mobile applications, from responsive interfaces to backend APIs and data models.', tags: 'React · TypeScript · Python · React Native' },
+  { number: '02', icon: BrainCircuit, title: 'Applied AI systems', description: 'LLM integrations, retrieval workflows, computer vision and recommendations connected to useful product behaviour.', tags: 'LLMs · RAG · TensorFlow · OpenCV' },
+  { number: '03', icon: Database, title: 'Data & integrations', description: 'Reliable pipelines, relational schemas, third-party APIs, webhooks and communication platform integrations.', tags: 'PostgreSQL · REST · WhatsApp · Telegram' },
+  { number: '04', icon: CloudCog, title: 'Cloud & operations', description: 'Deployment, containerisation, reverse proxies, monitoring and practical work to keep production systems dependable.', tags: 'Linux · Docker · Nginx · CI/CD' },
+  { number: '05', icon: Workflow, title: 'Automation & workflows', description: 'Connect repetitive processes and disconnected tools with browser automation, bots and purpose-built internal software.', tags: 'Playwright · Selenium · APIs · Bots' },
+];
 
-  return (
-    <section className="py-20 bg-white dark:bg-gray-900" id="services">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Services & Expertise
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Technology solutions combined with business growth expertise
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <div
-                key={index}
-                className="p-8 bg-gray-50 dark:bg-gray-800 rounded-2xl hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 shadow-sm hover:shadow-xl group border border-transparent hover:border-blue-100 dark:hover:border-blue-900/20"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <IconComponent className="text-white" size={24} />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+const Services: React.FC = () => (
+  <section className="bg-[#101a32] py-24 text-white dark:bg-[#080c15]" id="services">
+    <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-14">
+      <div className="grid gap-8 border-b border-white/15 pb-10 lg:grid-cols-[1fr_0.65fr] lg:items-end">
+        <div><p className="text-xs font-bold uppercase tracking-[0.22em] text-[#f2b86b]">Areas of practice / 03</p><h2 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.02] tracking-[-0.06em] sm:text-6xl">Where engineering meets the real world.</h2></div>
+        <p className="max-w-xl text-base leading-8 text-slate-300">I work across the boundaries that make modern software useful: product experience, AI behaviour, data, integrations and the environment that runs it.</p>
       </div>
-    </section>
-  );
-};
-
+      <div className="mt-5">
+        {capabilities.map(({number,icon:Icon,title,description,tags})=>(
+          <article key={number} className="group grid gap-5 border-b border-white/15 py-7 transition-colors hover:bg-white/[0.03] sm:grid-cols-[3rem_3rem_0.8fr_1.2fr] sm:items-start sm:gap-6 sm:py-9">
+            <span className="pt-1 font-mono text-xs text-slate-500">{number}</span>
+            <Icon size={24} className="text-[#f2b86b] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            <h3 className="text-xl font-semibold tracking-tight sm:text-2xl">{title}</h3>
+            <div><p className="max-w-2xl leading-7 text-slate-300">{description}</p><p className="mt-4 font-mono text-[11px] leading-6 tracking-wide text-[#91a9ff]">{tags}</p></div>
+          </article>
+        ))}
+      </div>
+      <a href="mailto:michaelmudimbu@gmail.com" className="mt-9 inline-flex items-center gap-3 bg-[#f2b86b] px-5 py-4 font-semibold text-[#172033] transition hover:bg-[#ffd08e]">Have a problem worth solving? <ArrowUpRight size={18} /></a>
+    </div>
+  </section>
+);
 export default Services;

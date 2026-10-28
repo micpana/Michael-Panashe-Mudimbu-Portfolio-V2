@@ -30,17 +30,17 @@ const ArticleDetail: React.FC = () => {
           <title>Article Not Found - Michael Panashe Mudimbu</title>
           <meta name="description" content="The article you're looking for doesn't exist." />
         </Helmet>
-        <div className="min-h-screen pt-20 pb-16 bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+        <div className="min-h-screen pt-20 pb-16 bg-[#f7f8fa] dark:bg-[#0b1220] flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-4xl font-bold text-slate-950 dark:text-white mb-4">
               Article Not Found
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-xl text-slate-600 dark:text-slate-300 mb-8">
               The article you're looking for doesn't exist.
             </p>
             <Link
               to="/articles"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-blue-600 transition-all duration-200"
+              className="inline-flex items-center gap-2 bg-sky-700 dark:bg-sky-400 dark:text-slate-950 text-white px-6 py-3 rounded-lg font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200"
             >
               <ArrowLeft size={18} />
               Back to Articles
@@ -67,13 +67,13 @@ const ArticleDetail: React.FC = () => {
         <meta property="article:tag" content={article.tags.join(', ')} />
         <link rel="canonical" href={`https://michaelmudimbu.netlify.app/article/${article.id}`} />
       </Helmet>
-      <div className="min-h-screen pt-20 pb-16 bg-gray-50 dark:bg-gray-900">
+      <div className="min-h-screen pt-20 pb-16 bg-[#f7f8fa] dark:bg-[#0b1220]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back Button */}
           <div className="mb-8">
             <Link
               to="/articles"
-              className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+              className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
             >
               <ArrowLeft size={18} />
               Back to Articles
@@ -93,7 +93,7 @@ const ArticleDetail: React.FC = () => {
               
               {/* Category Badge */}
               <div className="absolute top-6 left-6">
-                <span className="px-4 py-2 bg-blue-600 text-white font-medium rounded-full">
+                <span className="px-4 py-2 bg-sky-700 text-white dark:bg-sky-400 dark:text-slate-950 dark:text-slate-950 font-medium rounded-full">
                   {article.category}
                 </span>
               </div>
@@ -118,12 +118,12 @@ const ArticleDetail: React.FC = () => {
               </div>
 
               {/* Title */}
-              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl font-bold text-slate-950 dark:text-white mb-6 leading-tight">
                 {article.title}
               </h1>
 
               {/* Excerpt */}
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
                 {article.excerpt}
               </p>
 
@@ -134,7 +134,7 @@ const ArticleDetail: React.FC = () => {
                   {article.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm rounded-full"
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-slate-600 dark:text-slate-300 text-sm rounded-full"
                     >
                       {tag}
                     </span>
@@ -147,25 +147,25 @@ const ArticleDetail: React.FC = () => {
                 {article.content.split('\n').map((paragraph, index) => {
                   if (paragraph.trim().startsWith('## ')) {
                     return (
-                      <h2 key={index} className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+                      <h2 key={index} className="text-2xl font-bold text-slate-950 dark:text-white mt-8 mb-4">
                         {paragraph.replace('## ', '')}
                       </h2>
                     );
                   } else if (paragraph.trim().startsWith('### ')) {
                     return (
-                      <h3 key={index} className="text-xl font-bold text-gray-900 dark:text-white mt-6 mb-3">
+                      <h3 key={index} className="text-xl font-bold text-slate-950 dark:text-white mt-6 mb-3">
                         {paragraph.replace('### ', '')}
                       </h3>
                     );
                   } else if (paragraph.trim().startsWith('1. ') || paragraph.trim().startsWith('- ')) {
                     return (
-                      <li key={index} className="text-gray-600 dark:text-gray-300 mb-2 ml-6">
+                      <li key={index} className="text-slate-600 dark:text-slate-300 mb-2 ml-6">
                         {paragraph.replace(/^[1-9]\. |^- /, '')}
                       </li>
                     );
                   } else if (paragraph.trim()) {
                     return (
-                      <p key={index} className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                      <p key={index} className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                         {paragraph.trim()}
                       </p>
                     );
@@ -175,16 +175,16 @@ const ArticleDetail: React.FC = () => {
               </div>
 
               {/* Author Info */}
-              <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+              <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  <div className="w-16 h-16 bg-sky-700 dark:bg-sky-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
                     MPM
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                    <h3 className="text-lg font-bold text-slate-950 dark:text-white">
                       Michael Panashe Mudimbu
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-slate-600 dark:text-slate-300">
                       Fullstack Software Engineer & Business Growth Partner
                     </p>
                   </div>
@@ -195,7 +195,7 @@ const ArticleDetail: React.FC = () => {
 
           {/* Related Articles */}
           <div className="mt-12">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-2xl font-bold text-slate-950 dark:text-white mb-6">
               More Articles
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -215,10 +215,10 @@ const ArticleDetail: React.FC = () => {
                         className="w-20 h-20 object-cover rounded-lg flex-shrink-0"
                       />
                       <div>
-                        <h3 className="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                        <h3 className="font-bold text-slate-950 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                           {relatedArticle.title}
                         </h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-2">
+                        <p className="text-sm text-slate-600 dark:text-slate-300 line-clamp-2">
                           {relatedArticle.excerpt}
                         </p>
                       </div>

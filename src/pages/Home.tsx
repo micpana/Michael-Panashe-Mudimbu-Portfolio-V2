@@ -17,27 +17,27 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Michael Panashe Mudimbu - Software Developer Portfolio</title>
-        <meta name="description" content="Software developer passionate about building intuitive and efficient digital solutions. Specializing in web development, mobile apps, AI systems, and custom software solutions." />
-        <meta name="keywords" content="software developer, web development, mobile development, AI systems, React, Python, full stack developer, Michael Panashe Mudimbu" />
-        <meta property="og:title" content="Michael Panashe Mudimbu - Software Developer Portfolio" />
-        <meta property="og:description" content="Software developer passionate about building intuitive and efficient digital solutions. Specializing in web development, mobile apps, AI systems, and custom software solutions." />
+        <title>Michael Panashe Mudimbu | Software Engineer & AI Systems Architect</title>
+        <meta name="description" content="Senior Software Engineer and AI Systems Architect with 7+ years delivering production web, mobile, backend and AI systems." />
+        <meta name="keywords" content="Michael Panashe Mudimbu, Senior Software Engineer, AI Systems Architect, Python, TypeScript, React, FastAPI, LLM, computer vision, SaaS" />
+        <meta property="og:title" content="Michael Panashe Mudimbu | Software Engineer & AI Systems Architect" />
+        <meta property="og:description" content="Senior Software Engineer and AI Systems Architect with 7+ years delivering production web, mobile, backend and AI systems." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://michaelmudimbu.netlify.app/" />
+        <meta property="og:url" content="https://michaelmudimbu.vercel.app/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Michael Panashe Mudimbu - Software Developer Portfolio" />
-        <meta name="twitter:description" content="Software developer passionate about building intuitive and efficient digital solutions." />
-        <link rel="canonical" href="https://michaelmudimbu.netlify.app/" />
+        <meta name="twitter:title" content="Michael Panashe Mudimbu | Software Engineer & AI Systems Architect" />
+        <meta name="twitter:description" content="Production software, AI workflows and cloud systems designed with a systems-thinking approach." />
+        <link rel="canonical" href="https://michaelmudimbu.vercel.app/" />
       </Helmet>
       <div className="min-h-screen">
         <Hero />
         <About />
         <FeaturedProjects />
-        <Services />
-        <FeaturedArticles />
-        <Tools />
         <Experience />
+        <Tools />
+        <Services />
         <Education />
+        <FeaturedArticles />
         <Contact />
       </div>
     </>

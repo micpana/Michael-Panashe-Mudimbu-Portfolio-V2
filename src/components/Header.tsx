@@ -13,8 +13,9 @@ const Header: React.FC = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/#about', isHash: true },
+    { name: 'Experience', path: '/#experience', isHash: true },
     { name: 'Services', path: '/#services', isHash: true },
-    { name: 'Tools', path: '/#tools', isHash: true },
+    { name: 'Skills', path: '/#tools', isHash: true },
     { name: 'Projects', path: '/projects' },
     { name: 'Articles', path: '/articles' },
     { name: 'Contact', path: '/#contact', isHash: true },
@@ -35,12 +36,12 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#f7f8fa]/90 dark:bg-[#0b1220]/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+            <div className="w-10 h-10 bg-sky-700 dark:bg-sky-500 rounded-lg flex items-center justify-center text-white dark:text-slate-950 font-bold text-sm">
               MPM
             </div>
           </Link>
@@ -81,7 +82,7 @@ const Header: React.FC = () => {
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
-              aria-label="Toggle theme"
+              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
@@ -90,7 +91,7 @@ const Header: React.FC = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
-              aria-label="Toggle menu"
+              aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             >
               {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
