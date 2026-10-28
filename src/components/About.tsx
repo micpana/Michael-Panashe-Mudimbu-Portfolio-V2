@@ -1,99 +1,38 @@
 import React from 'react';
-import { Code, Briefcase, Target } from 'lucide-react';
+import { Code2, Network, Target } from 'lucide-react';
 import { ProjectsData } from '../data/projects_data_lazy';
 
-const About: React.FC = () => {
-  return (
-    <section className="py-20 bg-white dark:bg-gray-900" id="about">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            About Me
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Fullstack engineer combining technical excellence with business growth expertise
-          </p>
+const principles = [
+  { icon: Code2, title: 'Engineering with ownership', description: 'I work across the stack, from interfaces and backend services to data models, deployment and production maintenance. The goal is software that can be understood, operated and improved.' },
+  { icon: Network, title: 'Systems before silos', description: 'Features do not exist in isolation. I think about how data moves, how services fail, how people use the product and how architecture choices affect security, reliability and future change.' },
+  { icon: Target, title: 'Technology with purpose', description: 'Good engineering connects technical decisions to real needs. I translate requirements into practical systems, communicate trade-offs clearly and focus on outcomes over hype.' },
+];
+
+const About: React.FC = () => (
+  <section className="bg-white py-20 dark:bg-[#0b1220]" id="about">
+    <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+      <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300">A little about how I work</p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950 dark:text-white sm:text-4xl">Build the right thing. Build it well. Keep it dependable.</h2>
+          <p className="mt-6 text-base leading-8 text-slate-600 dark:text-slate-300">I am a software engineer and AI systems architect with 7+ years of experience delivering production web, mobile, backend and AI systems. My work spans full-stack development, LLM and computer-vision workflows, data pipelines, cloud infrastructure and production operations.</p>
+          <p className="mt-4 text-base leading-8 text-slate-600 dark:text-slate-300">I bring a practical, collaborative approach to technical work: understand the problem, make the architecture legible, ship carefully and stay accountable for how the system behaves after release.</p>
+          <div className="mt-8 grid grid-cols-2 gap-4">
+            <div className="border-l-2 border-sky-600 pl-4 dark:border-sky-400"><p className="text-3xl font-semibold tracking-tight text-slate-950 dark:text-white">7+</p><p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Years in software</p></div>
+            <div className="border-l-2 border-sky-600 pl-4 dark:border-sky-400"><p className="text-3xl font-semibold tracking-tight text-slate-950 dark:text-white">{ProjectsData.length}</p><p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Projects listed</p></div>
+          </div>
         </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Code className="text-white" size={24} />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Technical Foundation
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  7+ years building fullstack applications, AI-powered systems, and SaaS platforms. 
-                  I architect scalable solutions across frontend, backend, cloud infrastructure, and DevOps - 
-                  always with a focus on creating products that users love and businesses value.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Briefcase className="text-white" size={24} />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Business Impact
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  I combine engineering expertise with business development and consultative sales skills. 
-                  I understand customer needs, translate them into technical solutions, and help organizations 
-                  grow through strategic partnerships, effective communication, and automation initiatives.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Target className="text-white" size={24} />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  My Approach
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  I believe the best technology isn't just well-built - it creates measurable value for users and businesses. 
-                  Whether developing software, integrating AI, improving operations, or building partnerships, 
-                  I focus on solutions that drive real growth and lasting impact.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 gap-6">
-            <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">7+</div>
-              <div className="text-gray-600 dark:text-gray-300 font-medium">Years Experience</div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Building production software</p>
-            </div>
-            <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">{ProjectsData.length}+</div>
-              <div className="text-gray-600 dark:text-gray-300 font-medium">Projects Delivered</div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Across web, mobile & AI</p>
-            </div>
-            <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">50+</div>
-              <div className="text-gray-600 dark:text-gray-300 font-medium">Clients & Partners</div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Startups to enterprises</p>
-            </div>
-            <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">∞</div>
-              <div className="text-gray-600 dark:text-gray-300 font-medium">Continuous Learning</div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Passionate about growth</p>
-            </div>
-          </div>
+        <div className="space-y-4">
+          {principles.map(({ icon: Icon, title, description }, index) => (
+            <article key={title} className="grid gap-4 rounded-xl border border-slate-200 bg-[#f8fafc] p-6 dark:border-slate-700 dark:bg-slate-900 sm:grid-cols-[auto_1fr] sm:p-7">
+              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300"><Icon size={22} /></div>
+              <div><p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">0{index + 1}</p><h3 className="mt-1 text-lg font-semibold text-slate-950 dark:text-white">{title}</h3><p className="mt-2 leading-7 text-slate-600 dark:text-slate-300">{description}</p></div>
+            </article>
+          ))}
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default About;
