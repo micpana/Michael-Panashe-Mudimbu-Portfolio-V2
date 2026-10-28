@@ -62,7 +62,7 @@ const Articles: React.FC = () => {
                 onClick={() => setFilter(category)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
                   filter === category
-                    ? 'bg-sky-700 dark:bg-sky-500 text-white shadow-lg'
+                    ? 'bg-sky-700 dark:bg-sky-400 dark:text-slate-950 text-white shadow-lg'
                     : 'bg-white dark:bg-gray-800 text-slate-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-slate-200 dark:border-slate-700'
                 }`}
               >
@@ -100,7 +100,7 @@ const Articles: React.FC = () => {
                   
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-sky-700 text-white dark:bg-sky-500 dark:text-slate-950 text-sm font-medium rounded-full">
+                    <span className="px-3 py-1 bg-sky-700 text-white dark:bg-sky-400 dark:text-slate-950 dark:text-slate-950 text-sm font-medium rounded-full">
                       {article.category}
                     </span>
                   </div>
