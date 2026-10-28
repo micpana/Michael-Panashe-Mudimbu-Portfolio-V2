@@ -2,10 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import ReactGA from "react-ga4";
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Github, Layers, User } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Layers, BriefcaseBusiness } from 'lucide-react';
 import ImageGallery from '../components/ImageGallery';
 import { ProjectsData } from '../data/projects_data_lazy';
 import { slugify } from '../utils/slugify';
+import { getProjectContext } from '../utils/projectMetadata';
 
 ReactGA.initialize("G-1KT6SKGTKG");
 
@@ -91,20 +92,20 @@ const ProjectDetail: React.FC = () => {
                   {project.title}
                 </h1>
 
-                {/* Build Metadata - Better mobile layout */}
+                {/* Separate build approach from work context. */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
                   <div className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
                     <Layers className="text-blue-500" size={18} />
                     <div>
-                      <p className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">Build Type</p>
-                      <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">{project.build_type}</p>
+                      <p className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">Build approach</p>
+                      <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">{project.build_type === 'Team' ? 'Team build' : project.build_type === 'Solo' ? 'Solo build' : 'Not specified'}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                    <User className="text-blue-500" size={18} />
+                    <BriefcaseBusiness className="text-blue-500" size={18} />
                     <div>
-                      <p className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">Under</p>
-                      <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">{project.built_under}</p>
+                      <p className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">Work context</p>
+                      <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">{getProjectContext(project)}</p>
                     </div>
                   </div>
                 </div>
