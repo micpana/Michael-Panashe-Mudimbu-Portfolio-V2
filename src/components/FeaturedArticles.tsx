@@ -24,13 +24,13 @@ const FeaturedArticles: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800" id="articles">
+    <section className="py-20 bg-[#f1f5f9] dark:bg-[#111b2b]" id="articles">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-950 dark:text-white mb-4">
             Featured Articles
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Insights and thoughts on software development, technology trends, and best practices
           </p>
         </div>
@@ -46,7 +46,7 @@ const FeaturedArticles: React.FC = () => {
               }}
               role="button"
               tabIndex={0}
-              className="cursor-pointer bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-700"
+              className="cursor-pointer bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-gray-700"
             >
               {/* Article Image */}
               <div className="relative h-48 overflow-hidden">
@@ -59,7 +59,7 @@ const FeaturedArticles: React.FC = () => {
                 
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">
+                  <span className="px-3 py-1 bg-sky-700 text-white dark:bg-sky-500 dark:text-slate-950 text-sm font-medium rounded-full">
                     {article.category}
                   </span>
                 </div>
@@ -78,18 +78,18 @@ const FeaturedArticles: React.FC = () => {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                <h3 className="text-xl font-bold text-slate-950 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                   {article.title}
                 </h3>
                 
-                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                <p className="text-slate-600 dark:text-slate-300 mb-4 line-clamp-3">
                   {article.excerpt}
                 </p>
 
                 {/* Read More Link */}
                 <Link
                   to={`/article/${slugify(article.title)}/${article.id}`}
-                  className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-200"
+                  className="inline-flex items-center gap-2 text-sky-700 dark:text-sky-300 hover:text-sky-800 dark:hover:text-sky-200 font-medium transition-colors duration-200"
                 >
                   Read More
                   <ArrowRight size={16} />
@@ -103,7 +103,7 @@ const FeaturedArticles: React.FC = () => {
         <div className="text-center">
           <Link
             to="/articles"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-8 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-sky-700 dark:bg-sky-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             View All Articles
             <ArrowRight size={18} />
