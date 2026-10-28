@@ -87,7 +87,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         
         {/* Category Badge */}
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">
+          <span className="px-3 py-1 bg-sky-700 text-white dark:bg-sky-500 dark:text-slate-950 text-sm font-medium rounded-full">
             {project.category}
           </span>
         </div>
@@ -95,20 +95,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
 
       {/* Project Content */}
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+        <h3 className="text-xl font-bold text-slate-950 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
           {project.title}
         </h3>
         
-        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+        <p className="text-slate-600 dark:text-slate-300 mb-4 line-clamp-3">
           {project.description.slice(0, 150)}...
         </p>
 
         {/* --- Build Metadata ----------------------------- */}
         <div className="flex flex-wrap gap-3 mb-4">
-            <span className="text-xs font-medium text-gray-600 dark:text-gray-300">
+            <span className="text-xs font-medium text-slate-600 dark:text-slate-300">
                 <span className="font-semibold">Build:</span> {project.build_type}
             </span>
-            <span className="text-xs font-medium text-gray-600 dark:text-gray-300">
+            <span className="text-xs font-medium text-slate-600 dark:text-slate-300">
                 <span className="font-semibold">Under:</span> {project.built_under}
             </span>
         </div>
@@ -117,14 +117,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         {/* Technologies */}
         <div className="mb-6">
           <p className="text-sm text-gray-500 dark:text-gray-400 font-medium mb-2">Technologies:</p>
-          <p className="text-sm text-blue-600 dark:text-blue-400">{project.technologies}</p>
+          <p className="text-sm text-sky-700 dark:text-sky-300">{project.technologies}</p>
         </div>
 
         {/* Action Buttons */}
         <div className="flex items-center justify-between">
           <Link
             to={`/project/${slugify(project.title)}/${index}`}
-            className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-blue-600 transition-all duration-200 text-sm"
+            className="bg-sky-700 dark:bg-sky-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200 text-sm"
           >
             View Details
           </Link>
@@ -135,7 +135,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                 href={project.main_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                className="p-2 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                 aria-label="View live project"
               >
                 <ExternalLink size={18} />
@@ -146,7 +146,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                 href={project.backup_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
+                className="p-2 text-slate-600 dark:text-slate-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200"
                 aria-label="View on GitHub"
               >
                 <Github size={18} />
