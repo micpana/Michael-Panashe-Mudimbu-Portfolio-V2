@@ -84,9 +84,11 @@ const ProjectDetail: React.FC = () => {
               {/* Title and Category */}
               <section>
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="px-3 py-1 bg-blue-600/10 text-blue-600 dark:bg-blue-600/20 dark:text-blue-400 text-xs font-bold tracking-wider rounded-full uppercase">
-                    {project.category}
-                  </span>
+                  {Array.from(new Set([...(project.categories ?? []), project.category])).map((category) => (
+                    <span key={category} className="px-3 py-1 bg-blue-600/10 text-blue-600 dark:bg-blue-600/20 dark:text-blue-400 text-xs font-bold tracking-wider rounded-full uppercase">
+                      {category}
+                    </span>
+                  ))}
                 </div>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 dark:text-white leading-tight">
                   {project.title}
