@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import ReactGA from "react-ga4";
 import ProjectCard from '../components/ProjectCard';
+import { getProjectCategories } from '../utils/projectMetadata';
 import { ProjectsData } from '../data/projects_data_lazy';
 
 ReactGA.initialize("G-1KT6SKGTKG");
@@ -9,9 +10,8 @@ ReactGA.initialize("G-1KT6SKGTKG");
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState('All');
   
-  // Treat categories as multi-select metadata while supporting older records that only have category.
-  const getCategories = (project: (typeof ProjectsData)[number]): string[] =>
-    Array.from(new Set([...(project.categories ?? []), project.category].filter(Boolean)));
+  // Treat compound labels as distinct dimensions while supporting older records.
+  const getCategories = (project: (typeof ProjectsData)[number]): string[] => getProjectCategories(project);
 
   // Include every category represented by at least one project.
   const categories = ['All', ...Array.from(new Set(ProjectsData.flatMap(getCategories)))];
