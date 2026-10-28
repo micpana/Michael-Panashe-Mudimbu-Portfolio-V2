@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
       <div aria-hidden="true" className="absolute left-[8%] top-0 h-full w-px bg-[#dedbd2] dark:bg-white/5" />
       <div className="relative mx-auto grid min-h-[min(820px,calc(100vh-5rem))] max-w-[1600px] items-center gap-10 px-5 pb-16 pt-28 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14 lg:px-14 lg:pb-20 lg:pt-32">
         <div className="relative z-10">
-          <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-[#3159d9] dark:text-[#91a9ff]"><span className="h-px w-8 bg-current" /> Independent engineer · AI systems</div>
+          <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-[#3159d9] dark:text-[#91a9ff]"><span className="h-px w-8 bg-current" /> Software engineer · AI systems · Cloud infrastructure</div>
           <p className="mt-8 text-sm font-medium tracking-wide text-slate-500 dark:text-slate-400">Hello, I’m Michael Panashe Mudimbu.</p>
           <h1 className="mt-4 max-w-4xl text-[clamp(3.2rem,7.5vw,7.5rem)] font-semibold leading-[0.91] tracking-[-0.075em]">I build the <span className="text-[#3159d9] dark:text-[#91a9ff]">systems</span> behind the experience.</h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300 sm:text-xl">Senior Software Engineer &amp; AI Systems Architect. I connect product interfaces, backend services, data and AI into software people can depend on.</p>
