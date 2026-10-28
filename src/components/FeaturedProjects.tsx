@@ -31,7 +31,7 @@ const FeaturedProjects: React.FC = () => {
         <div className="text-center">
           <Link
             to="/projects"
-            className="inline-flex items-center gap-2 bg-sky-700 dark:bg-sky-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-sky-700 dark:bg-sky-400 dark:text-slate-950 text-white px-8 py-3 rounded-lg font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             View All Projects
             <ArrowRight size={18} />
