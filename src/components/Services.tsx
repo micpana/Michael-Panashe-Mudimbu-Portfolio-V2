@@ -45,13 +45,13 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900" id="services">
+    <section className="py-20 bg-white dark:bg-slate-900" id="services">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-950 dark:text-white mb-4">
             Services & Expertise
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
             Technology solutions combined with business growth expertise
           </p>
         </div>
@@ -62,15 +62,15 @@ const Services: React.FC = () => {
             return (
               <div
                 key={index}
-                className="p-8 bg-gray-50 dark:bg-gray-800 rounded-2xl hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 shadow-sm hover:shadow-xl group border border-transparent hover:border-blue-100 dark:hover:border-blue-900/20"
+                className="p-8 bg-[#f1f5f9] dark:bg-[#111b2b] rounded-2xl hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 shadow-sm hover:shadow-xl group border border-transparent hover:border-blue-100 dark:hover:border-blue-900/20"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-sky-700 dark:bg-sky-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <IconComponent className="text-white" size={24} />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                <h3 className="text-xl font-semibold text-slate-950 dark:text-white mb-4">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
                   {service.description}
                 </p>
               </div>
