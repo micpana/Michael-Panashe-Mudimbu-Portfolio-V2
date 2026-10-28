@@ -313,7 +313,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, imagesFolder, proje
           <footer className="relative z-20 border-t border-white/10 bg-black/20 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-3 sm:px-7 sm:pt-4">
             <div className="mx-auto flex max-w-5xl items-center justify-between gap-3">
               <p className="hidden text-xs text-white/45 sm:block">Use ← → to navigate · + / − to zoom · 0 to reset · Esc to close</p>
-              <p className="text-xs text-white/50 sm:hidden">Double-tap image to zoom · Pinch/drag when zoomed</p>
+              <p className="text-xs text-white/50 sm:hidden">Double-tap to zoom · Drag to explore when zoomed</p>
               {resolvedImages.length > 1 && (
                 <div className="flex max-w-[70%] gap-2 overflow-x-auto py-1 sm:max-w-[60%]" aria-label="Select image in viewer">
                   {resolvedImages.map((image, index) => (
