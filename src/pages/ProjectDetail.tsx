@@ -6,7 +6,7 @@ import { ArrowLeft, ExternalLink, Github, Layers, BriefcaseBusiness } from 'luci
 import ImageGallery from '../components/ImageGallery';
 import { ProjectsData } from '../data/projects_data_lazy';
 import { slugify } from '../utils/slugify';
-import { getProjectContext } from '../utils/projectMetadata';
+import { getBuildApproach, getProjectContext } from '../utils/projectMetadata';
 
 ReactGA.initialize("G-1KT6SKGTKG");
 
@@ -98,7 +98,7 @@ const ProjectDetail: React.FC = () => {
                     <Layers className="text-blue-500" size={18} />
                     <div>
                       <p className="text-[10px] uppercase tracking-wider text-gray-500 font-bold">Build approach</p>
-                      <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">{project.build_type === 'Team' ? 'Team build' : project.build_type === 'Solo' ? 'Solo build' : 'Not specified'}</p>
+                      <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">{getBuildApproach(project)}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
