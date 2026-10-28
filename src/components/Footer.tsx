@@ -1,79 +1,32 @@
 import React from 'react';
 import { Github, Linkedin, X, Facebook, LucideMSquare, Newspaper } from 'lucide-react';
 
-const Footer: React.FC = () => {
-  return (
-    <footer className="bg-gray-900 dark:bg-black text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          {/* Social Links */}
-          <div className="flex justify-center gap-6 mb-8">
-            <a
-              href="https://www.linkedin.com/in/michael-p-mudimbu/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-gray-800 hover:bg-blue-600 transition-colors duration-200 hover:scale-105 transform"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a
-              href="https://github.com/micpana/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors duration-200 hover:scale-105 transform"
-              aria-label="GitHub"
-            >
-              <Github size={20} />
-            </a>
-            <a
-              href="https://x.com/mudimbumichael"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-gray-800 hover:bg-blue-400 transition-colors duration-200 hover:scale-105 transform"
-              aria-label="X"
-            >
-              <X size={20} />
-            </a>
-            <a
-              href="https://www.facebook.com/MichaelPMudimbu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-gray-800 hover:bg-blue-600 transition-colors duration-200 hover:scale-105 transform"
-              aria-label="Facebook"
-            >
-              <Facebook size={20} />
-            </a>
-            <a
-              href="https://medium.com/@michaelmudimbu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-gray-800 hover:bg-blue-600 transition-colors duration-200 hover:scale-105 transform"
-              aria-label="Medium"
-            >
-              <LucideMSquare size={20} />
-            </a>
-            <a
-              href="https://substack.com/@michaelmudimbu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-gray-800 hover:bg-orange-600 transition-colors duration-200 hover:scale-105 transform"
-              aria-label="Substack"
-            >
-              <Newspaper size={20} />
-            </a>
-          </div>
+const socialLinks = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/michael-p-mudimbu/', icon: Linkedin },
+  { label: 'GitHub', href: 'https://github.com/micpana/', icon: Github },
+  { label: 'X', href: 'https://x.com/mudimbumichael', icon: X },
+  { label: 'Facebook', href: 'https://www.facebook.com/MichaelPMudimbu', icon: Facebook },
+  { label: 'Medium', href: 'https://medium.com/@michaelmudimbu', icon: LucideMSquare },
+  { label: 'Substack', href: 'https://substack.com/@michaelmudimbu', icon: Newspaper },
+];
 
-          {/* Copyright */}
-          <div className="pt-8 border-t border-gray-800">
-            <p className="text-gray-400">
-              © {new Date().getFullYear()} Michael Panashe Mudimbu. All rights reserved.
-            </p>
-          </div>
-        </div>
+const Footer: React.FC = () => (
+  <footer className="border-t border-slate-200 bg-[#f7f8fa] py-10 dark:border-slate-800 dark:bg-[#0b1220]">
+    <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-5 sm:px-8 md:flex-row lg:px-10">
+      <div className="text-center md:text-left">
+        <p className="font-semibold text-slate-950 dark:text-white">Michael Panashe Mudimbu</p>
+        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Software engineering · AI systems · cloud infrastructure</p>
       </div>
-    </footer>
-  );
-};
+      <nav aria-label="Social links" className="flex flex-wrap justify-center gap-2">
+        {socialLinks.map(({ label, href, icon: Icon }) => (
+          <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="rounded-lg border border-slate-200 bg-white p-2.5 text-slate-600 transition hover:border-sky-300 hover:text-sky-800 focus:outline-none focus:ring-2 focus:ring-sky-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:text-sky-300">
+            <Icon size={18} />
+          </a>
+        ))}
+      </nav>
+      <p className="text-sm text-slate-500 dark:text-slate-400">© {new Date().getFullYear()} Michael Panashe Mudimbu</p>
+    </div>
+  </footer>
+);
 
 export default Footer;
