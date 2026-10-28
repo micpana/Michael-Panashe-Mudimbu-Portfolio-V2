@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { getImagesForFolder } from '../utils/imageResolver';
 import { slugify } from '../utils/slugify';
-import { getBuildApproach, getProjectContext } from '../utils/projectMetadata';
+import { getBuildApproach, getProjectCategories, getProjectContext } from '../utils/projectMetadata';
 
 interface Project {
   title: string;
@@ -65,12 +65,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       <div className="relative h-56 overflow-hidden bg-[#e8ebf2] dark:bg-[#151f33] sm:h-64">
         <img src={cover ?? ''} alt={project.title} className="h-full w-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.035]" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a1020]/60 via-transparent to-transparent opacity-70" />
-        <span className="absolute left-4 top-4 bg-[#f2b86b] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#172033]">{project.category}</span>
+        <span className="absolute left-4 top-4 bg-[#f2b86b] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#172033]">{getProjectCategories(project)[0] ?? project.category}</span>
         <span className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/60 bg-white/10 text-white backdrop-blur transition group-hover:bg-white group-hover:text-[#172033]"><ArrowUpRight size={19} /></span>
       </div>
       <div className="flex flex-1 flex-col border-x border-b border-slate-200 px-5 pb-6 pt-5 dark:border-slate-800 sm:px-6 sm:pb-7">
         <div className="mb-4 flex flex-wrap items-center gap-2" aria-label="Project categories">
-          {Array.from(new Set([...(project.categories ?? []), project.category])).map((category) => (
+          {getProjectCategories(project).map((category) => (
             <span key={category} className="inline-flex items-center rounded-full border border-[#f2b86b]/50 bg-[#f2b86b]/15 px-2.5 py-1 text-[10px] font-semibold tracking-wide text-slate-800 dark:text-amber-100">{category}</span>
           ))}
         </div>
