@@ -1,7 +1,7 @@
 import React from 'react';
 
 const skillGroups = [
-  { title: 'Languages', skills: ['Python', 'JavaScript', 'TypeScript', 'SQL', 'Bash', 'Java'] },
+  { title: 'Languages', skills: ['Python', 'JavaScript', 'TypeScript', 'SQL', 'Bash', 'Java', 'Solidity'] },
   { title: 'Frontend & mobile', skills: ['React', 'React Native', 'HTML5', 'CSS3', 'Tailwind CSS', 'Responsive UI'] },
   { title: 'Backend & integration', skills: ['Node.js', 'FastAPI', 'Flask', 'REST APIs', 'Microservices', 'WebSockets', 'Webhooks', 'WhatsApp Business API', 'Telegram Bot API'] },
   { title: 'Data & storage', skills: ['PostgreSQL', 'MongoDB', 'Supabase', 'Relational modelling', 'Query optimisation', 'Data pipelines'] },
