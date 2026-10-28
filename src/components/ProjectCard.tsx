@@ -87,7 +87,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         
         {/* Category Badge */}
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-sky-700 text-white dark:bg-sky-500 dark:text-slate-950 text-sm font-medium rounded-full">
+          <span className="px-3 py-1 bg-sky-700 text-white dark:bg-sky-400 dark:text-slate-950 dark:text-slate-950 text-sm font-medium rounded-full">
             {project.category}
           </span>
         </div>
@@ -124,7 +124,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         <div className="flex items-center justify-between">
           <Link
             to={`/project/${slugify(project.title)}/${index}`}
-            className="bg-sky-700 dark:bg-sky-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200 text-sm"
+            className="bg-sky-700 dark:bg-sky-400 dark:text-slate-950 text-white px-4 py-2 rounded-lg font-medium hover:bg-sky-800 dark:hover:bg-sky-400 transition-all duration-200 text-sm"
           >
             View Details
           </Link>
