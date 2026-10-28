@@ -8,6 +8,7 @@ import { getBuildApproach, getProjectContext } from '../utils/projectMetadata';
 interface Project {
   title: string;
   category: string;
+  categories?: string[];
   description: string;
   main_url: string;
   backup_url: string;
