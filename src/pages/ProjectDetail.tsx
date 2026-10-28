@@ -6,7 +6,7 @@ import { ArrowLeft, ExternalLink, Github, Layers, BriefcaseBusiness } from 'luci
 import ImageGallery from '../components/ImageGallery';
 import { ProjectsData } from '../data/projects_data_lazy';
 import { slugify } from '../utils/slugify';
-import { getBuildApproach, getProjectContext } from '../utils/projectMetadata';
+import { getBuildApproach, getProjectCategories, getProjectContext } from '../utils/projectMetadata';
 
 ReactGA.initialize("G-1KT6SKGTKG");
 
@@ -84,7 +84,7 @@ const ProjectDetail: React.FC = () => {
               {/* Title and Category */}
               <section>
                 <div className="flex items-center gap-4 mb-4">
-                  {Array.from(new Set([...(project.categories ?? []), project.category])).map((category) => (
+                  {getProjectCategories(project).map((category) => (
                     <span key={category} className="px-3 py-1 bg-blue-600/10 text-blue-600 dark:bg-blue-600/20 dark:text-blue-400 text-xs font-bold tracking-wider rounded-full uppercase">
                       {category}
                     </span>
