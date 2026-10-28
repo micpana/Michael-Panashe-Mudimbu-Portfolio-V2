@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
                 onClick={() => setFilter(category)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
                   filter === category
-                    ? 'bg-sky-700 dark:bg-sky-500 text-white shadow-lg'
+                    ? 'bg-sky-700 dark:bg-sky-400 dark:text-slate-950 text-white shadow-lg'
                     : 'bg-white dark:bg-gray-800 text-slate-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-slate-200 dark:border-slate-700'
                 }`}
               >
