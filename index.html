@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f7f8fa" />
+    <meta name="theme-color" content="#0b1220" />
+    <script>
+      (() => {
+        const savedTheme = window.localStorage.getItem('theme');
+        const isDark = savedTheme === null || savedTheme === 'dark';
+        document.documentElement.classList.toggle('dark', isDark);
+        document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+      })();
+    </script>
     <meta name="description" content="Michael Panashe Mudimbu is a Senior Software Engineer and AI Systems Architect building production software, SaaS platforms, AI workflows and dependable cloud systems." />
     <meta name="keywords" content="Michael Panashe Mudimbu, Senior Software Engineer, AI Systems Architect, Python, TypeScript, React, FastAPI, LLM, computer vision, SaaS, cloud infrastructure" />
     <meta name="author" content="Michael Panashe Mudimbu" />
