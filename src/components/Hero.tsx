@@ -1,13 +1,13 @@
 import React from 'react';
 import { ArrowDownRight, ArrowUpRight, Download, Github, Linkedin, X, Facebook, LucideMSquare, Newspaper, MoveUpRight } from 'lucide-react';
 import IntroImage from '../images/intro_image.jpg';
-import MichaelPanasheMudimbuCV from '../documents/Michael Panashe Mudimbu - CV.pdf';
+const resumeUrl = '/resume/Michael_Panashe_Mudimbu_Resume.pdf';
 
 const Hero: React.FC = () => {
-  const handleDownloadCV = () => {
+  const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = MichaelPanasheMudimbuCV;
-    link.download = 'Michael Panashe Mudimbu - CV.pdf';
+    link.href = resumeUrl;
+    link.download = 'Michael_Panashe_Mudimbu_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     link.remove();
@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
           <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300 sm:text-xl">Senior Software Engineer &amp; AI Systems Architect. I connect product interfaces, backend services, data and AI into software people can depend on.</p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a href="#projects" className="group inline-flex items-center gap-3 bg-[#3159d9] px-5 py-4 font-semibold text-white transition hover:bg-[#2445b3] focus:outline-none focus:ring-2 focus:ring-[#3159d9] focus:ring-offset-2 dark:focus:ring-offset-[#090d17]">Explore selected work <ArrowDownRight size={18} className="transition-transform group-hover:translate-x-1 group-hover:translate-y-1" /></a>
-            <button onClick={handleDownloadCV} className="inline-flex items-center gap-2 border border-slate-300 bg-transparent px-5 py-4 font-semibold text-slate-800 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#3159d9] dark:border-slate-700 dark:text-white dark:hover:bg-white/5"><Download size={17} /> Download CV</button>
+            <button onClick={handleDownloadResume} className="inline-flex items-center gap-2 border border-slate-300 bg-transparent px-5 py-4 font-semibold text-slate-800 transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#3159d9] dark:border-slate-700 dark:text-white dark:hover:bg-white/5"><Download size={17} /> Download Resume</button>
           </div>
           <div className="mt-12 flex flex-wrap items-center gap-x-5 gap-y-3 border-t border-slate-300 pt-5 dark:border-slate-700">
             <span className="mr-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">Find me</span>
