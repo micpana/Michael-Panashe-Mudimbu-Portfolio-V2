@@ -21,7 +21,7 @@ You don't need to know everything deeply, but you should understand how these pa
 
 ## Fullstack ≠ Knowing All Frameworks
 
-It's not about listing 20 libraries on your CV. It's about:
+It's not about listing 20 libraries on your resume. It's about:
 - Structuring apps so that frontend and backend scale independently
 - Making database choices based on access patterns and performance
 - Writing APIs that are easy to consume and secure by design

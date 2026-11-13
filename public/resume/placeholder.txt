@@ -1,0 +1,7 @@
+Upload the new resume PDF into this directory using this exact filename:
+Michael_Panashe_Mudimbu_Resume.pdf
+
+The portfolio download button is configured to serve:
+/resume/Michael_Panashe_Mudimbu_Resume.pdf
+
+This placeholder can be removed after the PDF has been uploaded.
